@@ -23,3 +23,4 @@ C:\Users\WINDOWS\Desktop\Semestre 2 2025\ANALISIS DE SISTEMAS 2\Proyecto 1\Siste
 C:\Users\WINDOWS\Desktop\Semestre 2 2025\ANALISIS DE SISTEMAS 2\Proyecto 1\SistemaRepartoV1\obj\Debug\SistemaRepartoG4.csproj.CoreCompileInputs.cache
 C:\Users\WINDOWS\Desktop\Semestre 2 2025\ANALISIS DE SISTEMAS 2\Proyecto 1\SistemaRepartoV1\obj\Debug\SistemaRepartoG4.exe
 C:\Users\WINDOWS\Desktop\Semestre 2 2025\ANALISIS DE SISTEMAS 2\Proyecto 1\SistemaRepartoV1\obj\Debug\SistemaRepartoG4.pdb
+C:\Users\WINDOWS\Desktop\Semestre 2 2025\ANALISIS DE SISTEMAS 2\Proyecto 1\SistemaRepartoV1\obj\Debug\SistemaRepartoG4.Rutas.resources
