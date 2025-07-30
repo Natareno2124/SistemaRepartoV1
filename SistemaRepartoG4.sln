@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35219.272
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaRepartoG4", "SistemaRepartoG4.csproj", "{2C520217-A8F9-4125-A0AD-F6F4477B25AD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2C520217-A8F9-4125-A0AD-F6F4477B25AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C520217-A8F9-4125-A0AD-F6F4477B25AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C520217-A8F9-4125-A0AD-F6F4477B25AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C520217-A8F9-4125-A0AD-F6F4477B25AD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BD356FD8-C90B-4919-9C8B-10A9B73D0C3D}
+	EndGlobalSection
+EndGlobal
