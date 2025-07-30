@@ -33,18 +33,18 @@ namespace WinFormsApp1
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipal));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button10 = new System.Windows.Forms.Button();
+            this.btnAdministrador = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
+            this.btnUsuario = new System.Windows.Forms.Button();
+            this.btnPaquetes = new System.Windows.Forms.Button();
+            this.btnReportes = new System.Windows.Forms.Button();
+            this.btnRepartidores = new System.Windows.Forms.Button();
+            this.btnSucursales = new System.Windows.Forms.Button();
+            this.btnPilotos = new System.Windows.Forms.Button();
+            this.btnTransportes = new System.Windows.Forms.Button();
+            this.btnBodega = new System.Windows.Forms.Button();
+            this.btnRutas = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -87,25 +87,25 @@ namespace WinFormsApp1
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(153)))), ((int)(((byte)(174)))));
-            this.panel1.Controls.Add(this.button10);
+            this.panel1.Controls.Add(this.btnAdministrador);
             this.panel1.Location = new System.Drawing.Point(261, 1);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1055, 45);
             this.panel1.TabIndex = 0;
             // 
-            // button10
+            // btnAdministrador
             // 
-            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(153)))), ((int)(((byte)(174)))));
-            this.button10.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.ForeColor = System.Drawing.Color.White;
-            this.button10.Location = new System.Drawing.Point(828, 11);
-            this.button10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(172, 23);
-            this.button10.TabIndex = 19;
-            this.button10.Text = "User Administrador";
-            this.button10.UseVisualStyleBackColor = false;
+            this.btnAdministrador.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(153)))), ((int)(((byte)(174)))));
+            this.btnAdministrador.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdministrador.ForeColor = System.Drawing.Color.White;
+            this.btnAdministrador.Location = new System.Drawing.Point(828, 11);
+            this.btnAdministrador.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAdministrador.Name = "btnAdministrador";
+            this.btnAdministrador.Size = new System.Drawing.Size(172, 23);
+            this.btnAdministrador.TabIndex = 19;
+            this.btnAdministrador.Text = "User Administrador";
+            this.btnAdministrador.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
@@ -130,131 +130,131 @@ namespace WinFormsApp1
             this.label2.TabIndex = 2;
             this.label2.Text = "MENÚ PRINCIPAL";
             // 
-            // button1
+            // btnUsuario
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(162)))), ((int)(((byte)(190)))));
-            this.button1.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(290, 149);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(464, 85);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Usuarios";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(162)))), ((int)(((byte)(190)))));
+            this.btnUsuario.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsuario.ForeColor = System.Drawing.Color.White;
+            this.btnUsuario.Location = new System.Drawing.Point(290, 149);
+            this.btnUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnUsuario.Name = "btnUsuario";
+            this.btnUsuario.Size = new System.Drawing.Size(464, 85);
+            this.btnUsuario.TabIndex = 3;
+            this.btnUsuario.Text = "Usuarios";
+            this.btnUsuario.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnUsuario.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btnPaquetes
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(162)))), ((int)(((byte)(190)))));
-            this.button2.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(290, 239);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(464, 85);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Paquetes";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnPaquetes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(162)))), ((int)(((byte)(190)))));
+            this.btnPaquetes.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPaquetes.ForeColor = System.Drawing.Color.White;
+            this.btnPaquetes.Location = new System.Drawing.Point(290, 239);
+            this.btnPaquetes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPaquetes.Name = "btnPaquetes";
+            this.btnPaquetes.Size = new System.Drawing.Size(464, 85);
+            this.btnPaquetes.TabIndex = 4;
+            this.btnPaquetes.Text = "Paquetes";
+            this.btnPaquetes.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnPaquetes.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btnReportes
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(162)))), ((int)(((byte)(190)))));
-            this.button3.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(290, 329);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(464, 85);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Reportes";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnReportes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(162)))), ((int)(((byte)(190)))));
+            this.btnReportes.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReportes.ForeColor = System.Drawing.Color.White;
+            this.btnReportes.Location = new System.Drawing.Point(290, 329);
+            this.btnReportes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnReportes.Name = "btnReportes";
+            this.btnReportes.Size = new System.Drawing.Size(464, 85);
+            this.btnReportes.TabIndex = 5;
+            this.btnReportes.Text = "Reportes";
+            this.btnReportes.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnReportes.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // btnRepartidores
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(162)))), ((int)(((byte)(190)))));
-            this.button4.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(290, 418);
-            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(464, 85);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "Repartidores";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnRepartidores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(162)))), ((int)(((byte)(190)))));
+            this.btnRepartidores.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRepartidores.ForeColor = System.Drawing.Color.White;
+            this.btnRepartidores.Location = new System.Drawing.Point(290, 418);
+            this.btnRepartidores.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnRepartidores.Name = "btnRepartidores";
+            this.btnRepartidores.Size = new System.Drawing.Size(464, 85);
+            this.btnRepartidores.TabIndex = 6;
+            this.btnRepartidores.Text = "Repartidores";
+            this.btnRepartidores.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnRepartidores.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // btnSucursales
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(162)))), ((int)(((byte)(190)))));
-            this.button5.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(290, 508);
-            this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(464, 85);
-            this.button5.TabIndex = 7;
-            this.button5.Text = "Sucursales";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnSucursales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(162)))), ((int)(((byte)(190)))));
+            this.btnSucursales.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSucursales.ForeColor = System.Drawing.Color.White;
+            this.btnSucursales.Location = new System.Drawing.Point(290, 508);
+            this.btnSucursales.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSucursales.Name = "btnSucursales";
+            this.btnSucursales.Size = new System.Drawing.Size(464, 85);
+            this.btnSucursales.TabIndex = 7;
+            this.btnSucursales.Text = "Sucursales";
+            this.btnSucursales.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnSucursales.UseVisualStyleBackColor = false;
             // 
-            // button6
+            // btnPilotos
             // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(162)))), ((int)(((byte)(190)))));
-            this.button6.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(783, 418);
-            this.button6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(464, 85);
-            this.button6.TabIndex = 11;
-            this.button6.Text = "Pilotos";
-            this.button6.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button6.UseVisualStyleBackColor = false;
+            this.btnPilotos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(162)))), ((int)(((byte)(190)))));
+            this.btnPilotos.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPilotos.ForeColor = System.Drawing.Color.White;
+            this.btnPilotos.Location = new System.Drawing.Point(783, 418);
+            this.btnPilotos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPilotos.Name = "btnPilotos";
+            this.btnPilotos.Size = new System.Drawing.Size(464, 85);
+            this.btnPilotos.TabIndex = 11;
+            this.btnPilotos.Text = "Pilotos";
+            this.btnPilotos.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnPilotos.UseVisualStyleBackColor = false;
             // 
-            // button7
+            // btnTransportes
             // 
-            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(162)))), ((int)(((byte)(190)))));
-            this.button7.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(783, 329);
-            this.button7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(464, 85);
-            this.button7.TabIndex = 10;
-            this.button7.Text = "Transportes";
-            this.button7.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button7.UseVisualStyleBackColor = false;
+            this.btnTransportes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(162)))), ((int)(((byte)(190)))));
+            this.btnTransportes.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTransportes.ForeColor = System.Drawing.Color.White;
+            this.btnTransportes.Location = new System.Drawing.Point(783, 329);
+            this.btnTransportes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnTransportes.Name = "btnTransportes";
+            this.btnTransportes.Size = new System.Drawing.Size(464, 85);
+            this.btnTransportes.TabIndex = 10;
+            this.btnTransportes.Text = "Transportes";
+            this.btnTransportes.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnTransportes.UseVisualStyleBackColor = false;
             // 
-            // button8
+            // btnBodega
             // 
-            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(162)))), ((int)(((byte)(190)))));
-            this.button8.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Location = new System.Drawing.Point(783, 239);
-            this.button8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(464, 85);
-            this.button8.TabIndex = 9;
-            this.button8.Text = "Bodegas";
-            this.button8.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button8.UseVisualStyleBackColor = false;
+            this.btnBodega.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(162)))), ((int)(((byte)(190)))));
+            this.btnBodega.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBodega.ForeColor = System.Drawing.Color.White;
+            this.btnBodega.Location = new System.Drawing.Point(783, 239);
+            this.btnBodega.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBodega.Name = "btnBodega";
+            this.btnBodega.Size = new System.Drawing.Size(464, 85);
+            this.btnBodega.TabIndex = 9;
+            this.btnBodega.Text = "Bodegas";
+            this.btnBodega.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnBodega.UseVisualStyleBackColor = false;
             // 
-            // button9
+            // btnRutas
             // 
-            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(162)))), ((int)(((byte)(190)))));
-            this.button9.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.ForeColor = System.Drawing.Color.White;
-            this.button9.Location = new System.Drawing.Point(783, 149);
-            this.button9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(464, 85);
-            this.button9.TabIndex = 8;
-            this.button9.Text = "Rutas";
-            this.button9.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button9.UseVisualStyleBackColor = false;
+            this.btnRutas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(162)))), ((int)(((byte)(190)))));
+            this.btnRutas.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRutas.ForeColor = System.Drawing.Color.White;
+            this.btnRutas.Location = new System.Drawing.Point(783, 149);
+            this.btnRutas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnRutas.Name = "btnRutas";
+            this.btnRutas.Size = new System.Drawing.Size(464, 85);
+            this.btnRutas.TabIndex = 8;
+            this.btnRutas.Text = "Rutas";
+            this.btnRutas.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnRutas.UseVisualStyleBackColor = false;
             // 
             // pictureBox1
             // 
@@ -469,15 +469,15 @@ namespace WinFormsApp1
             this.Controls.Add(this.panel9);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnPilotos);
+            this.Controls.Add(this.btnTransportes);
+            this.Controls.Add(this.btnBodega);
+            this.Controls.Add(this.btnRutas);
+            this.Controls.Add(this.btnSucursales);
+            this.Controls.Add(this.btnRepartidores);
+            this.Controls.Add(this.btnReportes);
+            this.Controls.Add(this.btnPaquetes);
+            this.Controls.Add(this.btnUsuario);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
@@ -513,15 +513,15 @@ namespace WinFormsApp1
         private Panel panel1;
         private Label label1;
         private Label label2;
-        private Button button1;
-        private Button button2;
-        private Button button3;
-        private Button button4;
-        private Button button5;
-        private Button button6;
-        private Button button7;
-        private Button button8;
-        private Button button9;
+        private Button btnUsuario;
+        private Button btnPaquetes;
+        private Button btnReportes;
+        private Button btnRepartidores;
+        private Button btnSucursales;
+        private Button btnPilotos;
+        private Button btnTransportes;
+        private Button btnBodega;
+        private Button btnRutas;
         private PictureBox pictureBox1;
         private Panel panel2;
         private Panel panel3;
@@ -540,6 +540,6 @@ namespace WinFormsApp1
         private PictureBox pictureBox8;
         private Panel panel10;
         private PictureBox pictureBox9;
-        private Button button10;
+        private Button btnAdministrador;
     }
 }
