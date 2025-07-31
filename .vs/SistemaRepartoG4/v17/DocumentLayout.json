@@ -1,22 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\WINDOWS\\Desktop\\Semestre 2 2025\\ANALISIS DE SISTEMAS 2\\Proyecto 1\\SistemaRepartoV1\\",
+  "WorkspaceRootPath": "C:\\Users\\paula\\source\\repos\\SistemaRepartoV1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2C520217-A8F9-4125-A0AD-F6F4477B25AD}|SistemaRepartoG4.csproj|c:\\users\\windows\\desktop\\semestre 2 2025\\analisis de sistemas 2\\proyecto 1\\sistemarepartov1\\reportes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{2C520217-A8F9-4125-A0AD-F6F4477B25AD}|SistemaRepartoG4.csproj|solutionrelative:reportes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{2C520217-A8F9-4125-A0AD-F6F4477B25AD}|SistemaRepartoG4.csproj|c:\\users\\paula\\source\\repos\\sistemarepartov1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C520217-A8F9-4125-A0AD-F6F4477B25AD}|SistemaRepartoG4.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2C520217-A8F9-4125-A0AD-F6F4477B25AD}|SistemaRepartoG4.csproj|c:\\users\\windows\\desktop\\semestre 2 2025\\analisis de sistemas 2\\proyecto 1\\sistemarepartov1\\reportes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2C520217-A8F9-4125-A0AD-F6F4477B25AD}|SistemaRepartoG4.csproj|solutionrelative:reportes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2C520217-A8F9-4125-A0AD-F6F4477B25AD}|SistemaRepartoG4.csproj|C:\\Users\\WINDOWS\\Desktop\\Semestre 2 2025\\ANALISIS DE SISTEMAS 2\\Proyecto 1\\SistemaRepartoV1\\rutas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2C520217-A8F9-4125-A0AD-F6F4477B25AD}|SistemaRepartoG4.csproj|solutionrelative:rutas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2C520217-A8F9-4125-A0AD-F6F4477B25AD}|SistemaRepartoG4.csproj|C:\\Users\\WINDOWS\\Desktop\\Semestre 2 2025\\ANALISIS DE SISTEMAS 2\\Proyecto 1\\SistemaRepartoV1\\rutas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{2C520217-A8F9-4125-A0AD-F6F4477B25AD}|SistemaRepartoG4.csproj|solutionrelative:rutas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{2C520217-A8F9-4125-A0AD-F6F4477B25AD}|SistemaRepartoG4.csproj|c:\\users\\paula\\source\\repos\\sistemarepartov1\\usuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2C520217-A8F9-4125-A0AD-F6F4477B25AD}|SistemaRepartoG4.csproj|solutionrelative:usuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,52 +26,27 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Reportes.cs",
-              "DocumentMoniker": "C:\\Users\\WINDOWS\\Desktop\\Semestre 2 2025\\ANALISIS DE SISTEMAS 2\\Proyecto 1\\SistemaRepartoV1\\Reportes.cs",
-              "RelativeDocumentMoniker": "Reportes.cs",
-              "ToolTip": "C:\\Users\\WINDOWS\\Desktop\\Semestre 2 2025\\ANALISIS DE SISTEMAS 2\\Proyecto 1\\SistemaRepartoV1\\Reportes.cs",
-              "RelativeToolTip": "Reportes.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAArwB8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-31T01:02:15.894Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Reportes.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\WINDOWS\\Desktop\\Semestre 2 2025\\ANALISIS DE SISTEMAS 2\\Proyecto 1\\SistemaRepartoV1\\Reportes.cs",
-              "RelativeDocumentMoniker": "Reportes.cs",
-              "ToolTip": "C:\\Users\\WINDOWS\\Desktop\\Semestre 2 2025\\ANALISIS DE SISTEMAS 2\\Proyecto 1\\SistemaRepartoV1\\Reportes.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Reportes.cs [Dise\u00F1o]",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\paula\\source\\repos\\SistemaRepartoV1\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\paula\\source\\repos\\SistemaRepartoV1\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-31T00:59:30.671Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Rutas.cs",
-              "DocumentMoniker": "C:\\Users\\WINDOWS\\Desktop\\Semestre 2 2025\\ANALISIS DE SISTEMAS 2\\Proyecto 1\\SistemaRepartoV1\\Rutas.cs",
-              "RelativeDocumentMoniker": "Rutas.cs",
-              "ToolTip": "C:\\Users\\WINDOWS\\Desktop\\Semestre 2 2025\\ANALISIS DE SISTEMAS 2\\Proyecto 1\\SistemaRepartoV1\\Rutas.cs",
-              "RelativeToolTip": "Rutas.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAArwB8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-30T22:55:02.471Z",
+              "WhenOpened": "2025-07-31T14:17:45.623Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Rutas.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\WINDOWS\\Desktop\\Semestre 2 2025\\ANALISIS DE SISTEMAS 2\\Proyecto 1\\SistemaRepartoV1\\Rutas.cs",
-              "RelativeDocumentMoniker": "Rutas.cs",
-              "ToolTip": "C:\\Users\\WINDOWS\\Desktop\\Semestre 2 2025\\ANALISIS DE SISTEMAS 2\\Proyecto 1\\SistemaRepartoV1\\Rutas.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Rutas.cs [Dise\u00F1o]",
+              "DocumentIndex": 1,
+              "Title": "Usuarios.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\paula\\source\\repos\\SistemaRepartoV1\\Usuarios.cs",
+              "RelativeDocumentMoniker": "Usuarios.cs",
+              "ToolTip": "C:\\Users\\paula\\source\\repos\\SistemaRepartoV1\\Usuarios.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Usuarios.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-30T22:49:29.587Z",
+              "WhenOpened": "2025-07-31T14:17:11.17Z",
               "EditorCaption": " [Dise\u00F1o]"
             }
           ]

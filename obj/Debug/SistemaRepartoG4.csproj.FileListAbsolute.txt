@@ -24,3 +24,19 @@ C:\Users\WINDOWS\Desktop\Semestre 2 2025\ANALISIS DE SISTEMAS 2\Proyecto 1\Siste
 C:\Users\WINDOWS\Desktop\Semestre 2 2025\ANALISIS DE SISTEMAS 2\Proyecto 1\SistemaRepartoV1\obj\Debug\SistemaRepartoG4.exe
 C:\Users\WINDOWS\Desktop\Semestre 2 2025\ANALISIS DE SISTEMAS 2\Proyecto 1\SistemaRepartoV1\obj\Debug\SistemaRepartoG4.pdb
 C:\Users\WINDOWS\Desktop\Semestre 2 2025\ANALISIS DE SISTEMAS 2\Proyecto 1\SistemaRepartoV1\obj\Debug\SistemaRepartoG4.Rutas.resources
+C:\Users\paula\Source\Repos\SistemaRepartoV1\bin\Debug\SistemaRepartoG4.exe.config
+C:\Users\paula\Source\Repos\SistemaRepartoV1\bin\Debug\SistemaRepartoG4.exe
+C:\Users\paula\Source\Repos\SistemaRepartoV1\bin\Debug\SistemaRepartoG4.pdb
+C:\Users\paula\Source\Repos\SistemaRepartoV1\obj\Debug\SistemaRepartoG4.csproj.AssemblyReference.cache
+C:\Users\paula\Source\Repos\SistemaRepartoV1\obj\Debug\SistemaRepartoG4.exe.config
+C:\Users\paula\Source\Repos\SistemaRepartoV1\obj\Debug\SistemaRepartoG4.Form1.resources
+C:\Users\paula\Source\Repos\SistemaRepartoV1\obj\Debug\WinFormsApp1.MenuPrincipal.resources
+C:\Users\paula\Source\Repos\SistemaRepartoV1\obj\Debug\SistemaRepartoG4.Properties.Resources.resources
+C:\Users\paula\Source\Repos\SistemaRepartoV1\obj\Debug\SistemaRepartoG4.Reportes.resources
+C:\Users\paula\Source\Repos\SistemaRepartoV1\obj\Debug\SistemaRepartoG4.Rutas.resources
+C:\Users\paula\Source\Repos\SistemaRepartoV1\obj\Debug\SistemaRepartoG4.Sidebar.resources
+C:\Users\paula\Source\Repos\SistemaRepartoV1\obj\Debug\SistemaRepartoG4.Usuarios.resources
+C:\Users\paula\Source\Repos\SistemaRepartoV1\obj\Debug\SistemaRepartoG4.csproj.GenerateResource.cache
+C:\Users\paula\Source\Repos\SistemaRepartoV1\obj\Debug\SistemaRepartoG4.csproj.CoreCompileInputs.cache
+C:\Users\paula\Source\Repos\SistemaRepartoV1\obj\Debug\SistemaRepartoG4.exe
+C:\Users\paula\Source\Repos\SistemaRepartoV1\obj\Debug\SistemaRepartoG4.pdb
