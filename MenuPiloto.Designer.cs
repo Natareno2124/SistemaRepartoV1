@@ -102,6 +102,7 @@
             this.btnRutasPiloto.Text = "Rutas";
             this.btnRutasPiloto.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnRutasPiloto.UseVisualStyleBackColor = false;
+            this.btnRutasPiloto.Click += new System.EventHandler(this.btnRutasPiloto_Click);
             // 
             // pictureBox1
             // 

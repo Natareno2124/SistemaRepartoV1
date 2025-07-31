@@ -3,24 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\rober\\REPARTO\\SistemaRepartoV1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2C520217-A8F9-4125-A0AD-F6F4477B25AD}|SistemaRepartoG4.csproj|c:\\users\\rober\\reparto\\sistemarepartov1\\menupiloto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{2C520217-A8F9-4125-A0AD-F6F4477B25AD}|SistemaRepartoG4.csproj|solutionrelative:menupiloto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{2C520217-A8F9-4125-A0AD-F6F4477B25AD}|SistemaRepartoG4.csproj|c:\\users\\rober\\reparto\\sistemarepartov1\\misentregas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2C520217-A8F9-4125-A0AD-F6F4477B25AD}|SistemaRepartoG4.csproj|solutionrelative:misentregas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2C520217-A8F9-4125-A0AD-F6F4477B25AD}|SistemaRepartoG4.csproj|c:\\users\\rober\\reparto\\sistemarepartov1\\menupiloto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2C520217-A8F9-4125-A0AD-F6F4477B25AD}|SistemaRepartoG4.csproj|solutionrelative:menupiloto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2C520217-A8F9-4125-A0AD-F6F4477B25AD}|SistemaRepartoG4.csproj|c:\\users\\rober\\reparto\\sistemarepartov1\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{2C520217-A8F9-4125-A0AD-F6F4477B25AD}|SistemaRepartoG4.csproj|solutionrelative:menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{2C520217-A8F9-4125-A0AD-F6F4477B25AD}|SistemaRepartoG4.csproj|c:\\users\\rober\\reparto\\sistemarepartov1\\misentregas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C520217-A8F9-4125-A0AD-F6F4477B25AD}|SistemaRepartoG4.csproj|solutionrelative:misentregas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2C520217-A8F9-4125-A0AD-F6F4477B25AD}|SistemaRepartoG4.csproj|c:\\users\\rober\\reparto\\sistemarepartov1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2C520217-A8F9-4125-A0AD-F6F4477B25AD}|SistemaRepartoG4.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2C520217-A8F9-4125-A0AD-F6F4477B25AD}|SistemaRepartoG4.csproj|c:\\users\\rober\\reparto\\sistemarepartov1\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2C520217-A8F9-4125-A0AD-F6F4477B25AD}|SistemaRepartoG4.csproj|solutionrelative:menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2C520217-A8F9-4125-A0AD-F6F4477B25AD}|SistemaRepartoG4.csproj|c:\\users\\rober\\reparto\\sistemarepartov1\\menupiloto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C520217-A8F9-4125-A0AD-F6F4477B25AD}|SistemaRepartoG4.csproj|solutionrelative:menupiloto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C520217-A8F9-4125-A0AD-F6F4477B25AD}|SistemaRepartoG4.csproj|c:\\users\\rober\\reparto\\sistemarepartov1\\menupiloto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2C520217-A8F9-4125-A0AD-F6F4477B25AD}|SistemaRepartoG4.csproj|solutionrelative:menupiloto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -41,34 +41,63 @@
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "MisEntregas.cs",
+              "DocumentMoniker": "C:\\Users\\rober\\REPARTO\\SistemaRepartoV1\\MisEntregas.cs",
+              "RelativeDocumentMoniker": "MisEntregas.cs",
+              "ToolTip": "C:\\Users\\rober\\REPARTO\\SistemaRepartoV1\\MisEntregas.cs*",
+              "RelativeToolTip": "MisEntregas.cs*",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAywBoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-31T02:11:30.932Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MisEntregas.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\rober\\REPARTO\\SistemaRepartoV1\\MisEntregas.cs",
+              "RelativeDocumentMoniker": "MisEntregas.cs",
+              "ToolTip": "C:\\Users\\rober\\REPARTO\\SistemaRepartoV1\\MisEntregas.cs [Dise\u00F1o]*",
+              "RelativeToolTip": "MisEntregas.cs [Dise\u00F1o]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-31T00:53:54.781Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "MenuPiloto.cs",
               "DocumentMoniker": "C:\\Users\\rober\\REPARTO\\SistemaRepartoV1\\MenuPiloto.cs",
               "RelativeDocumentMoniker": "MenuPiloto.cs",
               "ToolTip": "C:\\Users\\rober\\REPARTO\\SistemaRepartoV1\\MenuPiloto.cs",
               "RelativeToolTip": "MenuPiloto.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAA4wCYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAIwCsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-30T23:57:54.226Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\rober\\REPARTO\\SistemaRepartoV1\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\rober\\REPARTO\\SistemaRepartoV1\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-30T23:50:55.257Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "MenuPiloto.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\rober\\REPARTO\\SistemaRepartoV1\\MenuPiloto.cs",
               "RelativeDocumentMoniker": "MenuPiloto.cs",
@@ -76,31 +105,6 @@
               "RelativeToolTip": "MenuPiloto.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-30T23:46:32.702Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Menu.cs",
-              "DocumentMoniker": "C:\\Users\\rober\\REPARTO\\SistemaRepartoV1\\Menu.cs",
-              "RelativeDocumentMoniker": "Menu.cs",
-              "ToolTip": "C:\\Users\\rober\\REPARTO\\SistemaRepartoV1\\Menu.cs",
-              "RelativeToolTip": "Menu.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-30T23:45:21.27Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Menu.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\rober\\REPARTO\\SistemaRepartoV1\\Menu.cs",
-              "RelativeDocumentMoniker": "Menu.cs",
-              "ToolTip": "C:\\Users\\rober\\REPARTO\\SistemaRepartoV1\\Menu.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Menu.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-30T23:46:42.003Z",
               "EditorCaption": " [Dise\u00F1o]"
             }
           ]

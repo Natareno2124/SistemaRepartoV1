@@ -24,3 +24,4 @@ C:\Users\rober\REPARTO\SistemaRepartoV1\obj\Debug\SistemaRepartoG4.csproj.CoreCo
 C:\Users\rober\REPARTO\SistemaRepartoV1\obj\Debug\SistemaRepartoG4.exe
 C:\Users\rober\REPARTO\SistemaRepartoV1\obj\Debug\SistemaRepartoG4.pdb
 C:\Users\rober\REPARTO\SistemaRepartoV1\obj\Debug\SistemaRepartoG4.MenuPiloto.resources
+C:\Users\rober\REPARTO\SistemaRepartoV1\obj\Debug\SistemaRepartoG4.MisEntregas.resources
