@@ -10,3 +10,17 @@ C:\SistemaRepartoG4\obj\Debug\SistemaRepartoG4.exe
 C:\SistemaRepartoG4\obj\Debug\SistemaRepartoG4.pdb
 C:\SistemaRepartoG4\obj\Debug\SistemaRepartoG4.Form1.resources
 C:\SistemaRepartoG4\obj\Debug\WinFormsApp1.MenuPrincipal.resources
+C:\Users\rober\REPARTO\SistemaRepartoV1\bin\Debug\SistemaRepartoG4.exe.config
+C:\Users\rober\REPARTO\SistemaRepartoV1\bin\Debug\SistemaRepartoG4.exe
+C:\Users\rober\REPARTO\SistemaRepartoV1\bin\Debug\SistemaRepartoG4.pdb
+C:\Users\rober\REPARTO\SistemaRepartoV1\obj\Debug\SistemaRepartoG4.csproj.AssemblyReference.cache
+C:\Users\rober\REPARTO\SistemaRepartoV1\obj\Debug\SistemaRepartoG4.exe.config
+C:\Users\rober\REPARTO\SistemaRepartoV1\obj\Debug\SistemaRepartoG4.Form1.resources
+C:\Users\rober\REPARTO\SistemaRepartoV1\obj\Debug\WinFormsApp1.MenuPrincipal.resources
+C:\Users\rober\REPARTO\SistemaRepartoV1\obj\Debug\SistemaRepartoG4.Properties.Resources.resources
+C:\Users\rober\REPARTO\SistemaRepartoV1\obj\Debug\SistemaRepartoG4.Sidebar.resources
+C:\Users\rober\REPARTO\SistemaRepartoV1\obj\Debug\SistemaRepartoG4.csproj.GenerateResource.cache
+C:\Users\rober\REPARTO\SistemaRepartoV1\obj\Debug\SistemaRepartoG4.csproj.CoreCompileInputs.cache
+C:\Users\rober\REPARTO\SistemaRepartoV1\obj\Debug\SistemaRepartoG4.exe
+C:\Users\rober\REPARTO\SistemaRepartoV1\obj\Debug\SistemaRepartoG4.pdb
+C:\Users\rober\REPARTO\SistemaRepartoV1\obj\Debug\SistemaRepartoG4.MenuPiloto.resources
