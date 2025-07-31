@@ -67,6 +67,11 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Sidebar.Designer.cs" />
+    <Compile Include="Sidebar1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sidebar.resx</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -86,7 +91,10 @@
     <EmbeddedResource Include="Rutas.resx">
       <DependentUpon>Rutas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Sidebar.resx" />
+    <EmbeddedResource Include="Sidebar.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Sidebar1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

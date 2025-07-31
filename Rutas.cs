@@ -16,5 +16,20 @@ namespace SistemaRepartoG4
         {
             InitializeComponent();
         }
+
+        private void bntAgregar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
