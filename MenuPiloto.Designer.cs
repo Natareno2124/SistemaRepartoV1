@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPiloto));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnUserPiloto = new System.Windows.Forms.Button();
             this.labelmenupiloto = new System.Windows.Forms.Label();
             this.lineadecorativa = new System.Windows.Forms.Label();
             this.btnMisEntregas = new System.Windows.Forms.Button();
             this.btnRutasPiloto = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnUserPiloto = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -46,17 +46,30 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(153)))), ((int)(((byte)(174)))));
             this.panel1.Controls.Add(this.btnUserPiloto);
-            this.panel1.Location = new System.Drawing.Point(266, -2);
+            this.panel1.Location = new System.Drawing.Point(-2, -2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(997, 56);
+            this.panel1.Size = new System.Drawing.Size(1265, 56);
             this.panel1.TabIndex = 0;
+            // 
+            // btnUserPiloto
+            // 
+            this.btnUserPiloto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(153)))), ((int)(((byte)(174)))));
+            this.btnUserPiloto.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUserPiloto.ForeColor = System.Drawing.Color.White;
+            this.btnUserPiloto.Location = new System.Drawing.Point(1030, 14);
+            this.btnUserPiloto.Name = "btnUserPiloto";
+            this.btnUserPiloto.Size = new System.Drawing.Size(172, 31);
+            this.btnUserPiloto.TabIndex = 0;
+            this.btnUserPiloto.Text = "User Repartidor";
+            this.btnUserPiloto.UseVisualStyleBackColor = false;
+            this.btnUserPiloto.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // labelmenupiloto
             // 
             this.labelmenupiloto.AutoSize = true;
             this.labelmenupiloto.Font = new System.Drawing.Font("Arial Black", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelmenupiloto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
-            this.labelmenupiloto.Location = new System.Drawing.Point(316, 77);
+            this.labelmenupiloto.Location = new System.Drawing.Point(72, 77);
             this.labelmenupiloto.Name = "labelmenupiloto";
             this.labelmenupiloto.Size = new System.Drawing.Size(346, 48);
             this.labelmenupiloto.TabIndex = 1;
@@ -68,12 +81,12 @@
             this.lineadecorativa.AutoSize = true;
             this.lineadecorativa.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lineadecorativa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
-            this.lineadecorativa.Location = new System.Drawing.Point(319, 125);
+            this.lineadecorativa.Location = new System.Drawing.Point(75, 125);
             this.lineadecorativa.Name = "lineadecorativa";
-            this.lineadecorativa.Size = new System.Drawing.Size(869, 29);
+            this.lineadecorativa.Size = new System.Drawing.Size(1125, 29);
             this.lineadecorativa.TabIndex = 2;
             this.lineadecorativa.Text = "---------------------------------------------------------------------------------" +
-    "--------------------------";
+    "----------------------------------------------------------";
             this.lineadecorativa.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnMisEntregas
@@ -81,9 +94,9 @@
             this.btnMisEntregas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(162)))), ((int)(((byte)(190)))));
             this.btnMisEntregas.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMisEntregas.ForeColor = System.Drawing.Color.White;
-            this.btnMisEntregas.Location = new System.Drawing.Point(324, 172);
+            this.btnMisEntregas.Location = new System.Drawing.Point(80, 172);
             this.btnMisEntregas.Name = "btnMisEntregas";
-            this.btnMisEntregas.Size = new System.Drawing.Size(421, 94);
+            this.btnMisEntregas.Size = new System.Drawing.Size(539, 94);
             this.btnMisEntregas.TabIndex = 3;
             this.btnMisEntregas.Text = "Mis entregas";
             this.btnMisEntregas.TextAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -95,9 +108,9 @@
             this.btnRutasPiloto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(162)))), ((int)(((byte)(190)))));
             this.btnRutasPiloto.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRutasPiloto.ForeColor = System.Drawing.Color.White;
-            this.btnRutasPiloto.Location = new System.Drawing.Point(763, 172);
+            this.btnRutasPiloto.Location = new System.Drawing.Point(656, 172);
             this.btnRutasPiloto.Name = "btnRutasPiloto";
-            this.btnRutasPiloto.Size = new System.Drawing.Size(421, 94);
+            this.btnRutasPiloto.Size = new System.Drawing.Size(539, 94);
             this.btnRutasPiloto.TabIndex = 4;
             this.btnRutasPiloto.Text = "Rutas";
             this.btnRutasPiloto.TextAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -118,23 +131,10 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(162)))), ((int)(((byte)(190)))));
             this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Location = new System.Drawing.Point(1062, 181);
+            this.panel2.Location = new System.Drawing.Point(1069, 183);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(95, 76);
             this.panel2.TabIndex = 6;
-            // 
-            // btnUserPiloto
-            // 
-            this.btnUserPiloto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(153)))), ((int)(((byte)(174)))));
-            this.btnUserPiloto.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUserPiloto.ForeColor = System.Drawing.Color.White;
-            this.btnUserPiloto.Location = new System.Drawing.Point(746, 14);
-            this.btnUserPiloto.Name = "btnUserPiloto";
-            this.btnUserPiloto.Size = new System.Drawing.Size(172, 31);
-            this.btnUserPiloto.TabIndex = 0;
-            this.btnUserPiloto.Text = "User Repartidor";
-            this.btnUserPiloto.UseVisualStyleBackColor = false;
-            this.btnUserPiloto.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // MenuPiloto
             // 
