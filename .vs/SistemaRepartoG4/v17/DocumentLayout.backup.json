@@ -1,7 +1,20 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\SistemaRepartoG4\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\dannus\\Desktop\\UMG\\Ing. Sistemas\\Analisis de Sistemas II\\Proyecto\\sistema3\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2C520217-A8F9-4125-A0AD-F6F4477B25AD}|SistemaRepartoG4.csproj|c:\\users\\dannus\\desktop\\umg\\ing. sistemas\\analisis de sistemas ii\\proyecto\\sistema3\\pilotosform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C520217-A8F9-4125-A0AD-F6F4477B25AD}|SistemaRepartoG4.csproj|solutionrelative:pilotosform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C520217-A8F9-4125-A0AD-F6F4477B25AD}|SistemaRepartoG4.csproj|C:\\Users\\dannus\\Desktop\\UMG\\Ing. Sistemas\\Analisis de Sistemas II\\Proyecto\\sistema3\\pilotosform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C520217-A8F9-4125-A0AD-F6F4477B25AD}|SistemaRepartoG4.csproj|solutionrelative:pilotosform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C520217-A8F9-4125-A0AD-F6F4477B25AD}|SistemaRepartoG4.csproj|C:\\Users\\dannus\\Desktop\\UMG\\Ing. Sistemas\\Analisis de Sistemas II\\Proyecto\\sistema3\\sidebar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C520217-A8F9-4125-A0AD-F6F4477B25AD}|SistemaRepartoG4.csproj|solutionrelative:sidebar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,19 +22,61 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 5,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
               "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{873151d0-cf2e-48cc-b4bf-ad0394f6a3c3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Sidebar.cs",
+              "DocumentMoniker": "C:\\Users\\dannus\\Desktop\\UMG\\Ing. Sistemas\\Analisis de Sistemas II\\Proyecto\\sistema3\\Sidebar.cs",
+              "RelativeDocumentMoniker": "Sidebar.cs",
+              "ToolTip": "C:\\Users\\dannus\\Desktop\\UMG\\Ing. Sistemas\\Analisis de Sistemas II\\Proyecto\\sistema3\\Sidebar.cs",
+              "RelativeToolTip": "Sidebar.cs",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAYwHgAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-31T00:54:38.855Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PilotosForm.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\dannus\\Desktop\\UMG\\Ing. Sistemas\\Analisis de Sistemas II\\Proyecto\\sistema3\\PilotosForm.Designer.cs",
+              "RelativeDocumentMoniker": "PilotosForm.Designer.cs",
+              "ToolTip": "C:\\Users\\dannus\\Desktop\\UMG\\Ing. Sistemas\\Analisis de Sistemas II\\Proyecto\\sistema3\\PilotosForm.Designer.cs*",
+              "RelativeToolTip": "PilotosForm.Designer.cs*",
+              "ViewState": "AgIAABcBAAAAAAAAAAAqwDEBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T23:56:32.613Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PilotosForm.cs",
+              "DocumentMoniker": "C:\\Users\\dannus\\Desktop\\UMG\\Ing. Sistemas\\Analisis de Sistemas II\\Proyecto\\sistema3\\PilotosForm.cs",
+              "RelativeDocumentMoniker": "PilotosForm.cs",
+              "ToolTip": "C:\\Users\\dannus\\Desktop\\UMG\\Ing. Sistemas\\Analisis de Sistemas II\\Proyecto\\sistema3\\PilotosForm.cs",
+              "RelativeToolTip": "PilotosForm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAABjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T23:56:09.282Z",
+              "EditorCaption": ""
             }
           ]
         }

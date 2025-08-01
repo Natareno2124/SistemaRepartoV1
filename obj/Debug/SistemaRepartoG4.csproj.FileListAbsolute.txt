@@ -23,3 +23,16 @@ C:\Users\WINDOWS\Desktop\Semestre 2 2025\ANALISIS DE SISTEMAS 2\Proyecto 1\Siste
 C:\Users\WINDOWS\Desktop\Semestre 2 2025\ANALISIS DE SISTEMAS 2\Proyecto 1\SistemaRepartoV1\obj\Debug\SistemaRepartoG4.csproj.CoreCompileInputs.cache
 C:\Users\WINDOWS\Desktop\Semestre 2 2025\ANALISIS DE SISTEMAS 2\Proyecto 1\SistemaRepartoV1\obj\Debug\SistemaRepartoG4.exe
 C:\Users\WINDOWS\Desktop\Semestre 2 2025\ANALISIS DE SISTEMAS 2\Proyecto 1\SistemaRepartoV1\obj\Debug\SistemaRepartoG4.pdb
+C:\Users\dannus\Desktop\UMG\Ing. Sistemas\Analisis de Sistemas II\Proyecto\sistema3\obj\Debug\SistemaRepartoG4.csproj.AssemblyReference.cache
+C:\Users\dannus\Desktop\UMG\Ing. Sistemas\Analisis de Sistemas II\Proyecto\sistema3\obj\Debug\SistemaRepartoG4.Form1.resources
+C:\Users\dannus\Desktop\UMG\Ing. Sistemas\Analisis de Sistemas II\Proyecto\sistema3\obj\Debug\WinFormsApp1.MenuPrincipal.resources
+C:\Users\dannus\Desktop\UMG\Ing. Sistemas\Analisis de Sistemas II\Proyecto\sistema3\obj\Debug\SistemaRepartoG4.PilotosForm.resources
+C:\Users\dannus\Desktop\UMG\Ing. Sistemas\Analisis de Sistemas II\Proyecto\sistema3\obj\Debug\SistemaRepartoG4.Properties.Resources.resources
+C:\Users\dannus\Desktop\UMG\Ing. Sistemas\Analisis de Sistemas II\Proyecto\sistema3\obj\Debug\SistemaRepartoG4.Sidebar.resources
+C:\Users\dannus\Desktop\UMG\Ing. Sistemas\Analisis de Sistemas II\Proyecto\sistema3\obj\Debug\SistemaRepartoG4.csproj.GenerateResource.cache
+C:\Users\dannus\Desktop\UMG\Ing. Sistemas\Analisis de Sistemas II\Proyecto\sistema3\obj\Debug\SistemaRepartoG4.csproj.CoreCompileInputs.cache
+C:\Users\dannus\Desktop\UMG\Ing. Sistemas\Analisis de Sistemas II\Proyecto\sistema3\obj\Debug\SistemaRepartoG4.exe
+C:\Users\dannus\Desktop\UMG\Ing. Sistemas\Analisis de Sistemas II\Proyecto\sistema3\obj\Debug\SistemaRepartoG4.pdb
+C:\Users\dannus\Desktop\UMG\Ing. Sistemas\Analisis de Sistemas II\Proyecto\sistema3\bin\Debug\SistemaRepartoG4.exe.config
+C:\Users\dannus\Desktop\UMG\Ing. Sistemas\Analisis de Sistemas II\Proyecto\sistema3\bin\Debug\SistemaRepartoG4.exe
+C:\Users\dannus\Desktop\UMG\Ing. Sistemas\Analisis de Sistemas II\Proyecto\sistema3\bin\Debug\SistemaRepartoG4.pdb

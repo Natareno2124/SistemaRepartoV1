@@ -1,8 +1,10 @@
-﻿using System;
+﻿using SistemaRepartoG4;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -58,18 +60,21 @@ namespace WinFormsApp1
             contenedorBotones.BackColor = ColorTranslator.FromHtml("#183446");
             this.Controls.Add(contenedorBotones);
 
+
             // Botones del menú
             string[] nombresBotones =
             {
-                "usuarios", "rutas", "paquetes", "bodegas", "reportes", "transportes", "repartidores",
-                "pilotos", "sucursales"
+                "Usuarios", "Rutas", "Paquetes", "Bodegas", "Reportes", "Transportes", "Repartidores",
+                "Pilotos", "Sucursales"
             };
 
+
             string[] rutasIconos =
-             {
-                "usuario.png", "ruta.png", "paquete.png", "bodega.png", "reporte.png", "transporte.png", "repartidor.png",
-                "piloto.png", "sucursal.png"
+            {
+                "usuarios.png", "rutas.png", "paquetes.png", "bodegas.png", "reportes.png",
+                "transportes.png", "repartidores.png", "pilotos.png", "sucursales.png"
             };
+
 
             for (int i = 0; i < nombresBotones.Length; i++)
             {
@@ -86,91 +91,71 @@ namespace WinFormsApp1
                 btn.Margin = new Padding(0, 10, 0, 10);
 
                 // Ruta del icono
-                string rutaIcono = System.IO.Path.Combine(Application.StartupPath, "img", rutasIconos[i]);
+              //  string rutaIcono = System.IO.Path.Combine(Application.StartupPath, "img", rutasIconos[i]);
 
-                /*if (System.IO.File.Exists(rutaIcono))
-                  {
-                      Image tempImg = Image.FromFile(rutaIcono);
-                      Image iconoReducido = new Bitmap(tempImg, new Size(24, 24));
-                      btn.Image = iconoReducido;
+              //  if (System.IO.File.Exists(rutaIcono))
+               // {
+              //      Image tempImg = Image.FromFile(rutaIcono);
+              //      Image iconoReducido = new Bitmap(tempImg, new Size(24, 24));
+              //      btn.Image = iconoReducido;
 
-                      btn.ImageAlign = ContentAlignment.MiddleLeft;
-                      btn.TextAlign = ContentAlignment.MiddleRight;
-                      btn.Padding = new Padding(10, 0, 0, 0);
-                      btn.TextImageRelation = TextImageRelation.ImageBeforeText;
-                  }
-                  else
-                  {
-                      MessageBox.Show("Ruta buscada: " + rutaIcono);
-                  }*/
-                try
-                {
-                    if (System.IO.File.Exists(rutaIcono))
-                    {
-                        Image tempImg = Image.FromFile(rutaIcono);
-                        Image iconoReducido = new Bitmap(tempImg, new Size(24, 24));
-                        btn.Image = iconoReducido;
-
-                        btn.ImageAlign = ContentAlignment.MiddleLeft;
-                        btn.TextAlign = ContentAlignment.MiddleRight;
-                        btn.Padding = new Padding(10, 0, 0, 0);
-                        btn.TextImageRelation = TextImageRelation.ImageBeforeText;
-                    }
-                    else
-                    {
-                        MessageBox.Show("Archivo no encontrado:\n" + rutaIcono);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error al cargar imagen:\n" + rutaIcono + "\n\n" + ex.Message);
-                }
-
+              //      btn.ImageAlign = ContentAlignment.MiddleLeft;
+              //      btn.TextAlign = ContentAlignment.MiddleRight;
+             //       btn.Padding = new Padding(10, 0, 0, 0);
+             //       btn.TextImageRelation = TextImageRelation.ImageBeforeText;
+             //   }
+               // else
+            //    {
+            //        MessageBox.Show("Ruta buscada: " + rutaIcono);
+             //   }
 
                 string nombreBoton = nombresBotones[i];
                 btn.Click += (s, e) => AbrirVentana(nombreBoton);
 
-                contenedorBotones.Controls.Add(btn);
+               contenedorBotones.Controls.Add(btn);
 
                 contenedorBotones.Controls.Add(btn);
             }
         }
 
-        private void AbrirVentana(string nombre){
+        private void AbrirVentana(string nombre)
+        {
             Form ventana = null;
-            switch (nombre){
+            switch (nombre)
+            {
                 case "Usuarios":
-                    //ventana = new Pilotos(); 
+                    ventana = new PilotosForm();
                     break;
                 case "Rutas":
-                    //ventana = new Pilotos();  
+                    ventana = new PilotosForm();
                     break;
                 case "Paquetes":
-                    //ventana = new Pilotos(); 
+                    ventana = new PilotosForm();
                     break;
                 case "Bodegas":
-                    //ventana = new Pilotos();  
+                    ventana = new PilotosForm();
                     break;
                 case "Reportes":
-                    //ventana = new Pilotos();   
+                    ventana = new PilotosForm();
                     break;
                 case "Transportes":
-                    //ventana = new Pilotos();  
+                    ventana = new PilotosForm();
                     break;
                 case "Repartidores":
-                    //ventana = new Pilotos(); 
+                    ventana = new PilotosForm();
                     break;
                 case "Pilotos":
-                    //ventana = new Pilotos();    
+                    ventana = new PilotosForm();
                     break;
                 case "Sucursales":
-                    //ventana = new Pilotos();   
+                    ventana = new PilotosForm();
                     break;
                 default:
                     MessageBox.Show("ERROR, CONTACTE A SERVICIO TECNICO");
                     break;
             }
-            if (ventana != null){
+            if (ventana != null)
+            {
                 ventana.Show();
             }
         }
