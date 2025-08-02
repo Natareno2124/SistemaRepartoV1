@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SistemaRepartoG4.Clases;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -17,7 +18,7 @@ namespace SistemaRepartoG4
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MisEntregas());
+            Application.Run(new Usuarios());
         }
     }
 }

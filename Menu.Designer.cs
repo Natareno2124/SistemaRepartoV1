@@ -63,6 +63,7 @@ namespace WinFormsApp1
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.panel10 = new System.Windows.Forms.Panel();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -87,6 +88,7 @@ namespace WinFormsApp1
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(153)))), ((int)(((byte)(174)))));
+            this.panel1.Controls.Add(this.txtNombre);
             this.panel1.Controls.Add(this.btnAdministrador);
             this.panel1.Location = new System.Drawing.Point(261, 1);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -454,6 +456,14 @@ namespace WinFormsApp1
             this.pictureBox9.TabIndex = 12;
             this.pictureBox9.TabStop = false;
             // 
+            // txtNombre
+            // 
+            this.txtNombre.Location = new System.Drawing.Point(36, 11);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(372, 22);
+            this.txtNombre.TabIndex = 20;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
+            // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -484,7 +494,9 @@ namespace WinFormsApp1
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MenuPrincipal";
             this.Text = "Menu";
+            this.Load += new System.EventHandler(this.MenuPrincipal_Load);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
@@ -541,5 +553,6 @@ namespace WinFormsApp1
         private Panel panel10;
         private PictureBox pictureBox9;
         private Button btnAdministrador;
+        private TextBox txtNombre;
     }
 }
