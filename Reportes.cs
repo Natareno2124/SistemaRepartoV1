@@ -31,5 +31,10 @@ namespace SistemaRepartoG4
         {
 
         }
+
+        private void bnt_Agregar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

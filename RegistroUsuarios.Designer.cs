@@ -272,6 +272,7 @@ namespace WinFormsApp1
             // 
             // panel1
             // 
+
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(12, 12);
@@ -288,6 +289,7 @@ namespace WinFormsApp1
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1139, 658);
             this.panel2.TabIndex = 0;
+
             // 
             // RegistroUsuarios
             // 
