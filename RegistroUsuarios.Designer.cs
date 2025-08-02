@@ -262,6 +262,7 @@ namespace WinFormsApp1
             this.button2.TabIndex = 15;
             this.button2.Text = "button2";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // RegistroUsuarios
             // 

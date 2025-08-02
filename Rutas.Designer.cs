@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.ordenar = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btn_Eliminar = new System.Windows.Forms.Button();
+            this.bnt_Guardar = new System.Windows.Forms.Button();
+            this.bnt_Editar = new System.Windows.Forms.Button();
+            this.bnt_Agregar = new System.Windows.Forms.Button();
             this.DB = new System.Windows.Forms.DataGridView();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -63,57 +63,57 @@
             this.ordenar.UseVisualStyleBackColor = false;
             this.ordenar.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button4
+            // btn_Eliminar
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
-            this.button4.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.SystemColors.Control;
-            this.button4.Location = new System.Drawing.Point(1583, 804);
-            this.button4.Margin = new System.Windows.Forms.Padding(4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(84, 71);
-            this.button4.TabIndex = 17;
-            this.button4.Text = "Eliminar";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btn_Eliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.btn_Eliminar.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Eliminar.ForeColor = System.Drawing.SystemColors.Control;
+            this.btn_Eliminar.Location = new System.Drawing.Point(1583, 804);
+            this.btn_Eliminar.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Eliminar.Name = "btn_Eliminar";
+            this.btn_Eliminar.Size = new System.Drawing.Size(84, 71);
+            this.btn_Eliminar.TabIndex = 17;
+            this.btn_Eliminar.Text = "Eliminar";
+            this.btn_Eliminar.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // bnt_Guardar
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
-            this.button3.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.Control;
-            this.button3.Location = new System.Drawing.Point(1491, 804);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(84, 71);
-            this.button3.TabIndex = 16;
-            this.button3.Text = "Guardar";
-            this.button3.UseVisualStyleBackColor = false;
+            this.bnt_Guardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.bnt_Guardar.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bnt_Guardar.ForeColor = System.Drawing.SystemColors.Control;
+            this.bnt_Guardar.Location = new System.Drawing.Point(1491, 804);
+            this.bnt_Guardar.Margin = new System.Windows.Forms.Padding(4);
+            this.bnt_Guardar.Name = "bnt_Guardar";
+            this.bnt_Guardar.Size = new System.Drawing.Size(84, 71);
+            this.bnt_Guardar.TabIndex = 16;
+            this.bnt_Guardar.Text = "Guardar";
+            this.bnt_Guardar.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // bnt_Editar
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
-            this.button2.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.Control;
-            this.button2.Location = new System.Drawing.Point(1399, 804);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(84, 71);
-            this.button2.TabIndex = 15;
-            this.button2.Text = "Editar";
-            this.button2.UseVisualStyleBackColor = false;
+            this.bnt_Editar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.bnt_Editar.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bnt_Editar.ForeColor = System.Drawing.SystemColors.Control;
+            this.bnt_Editar.Location = new System.Drawing.Point(1399, 804);
+            this.bnt_Editar.Margin = new System.Windows.Forms.Padding(4);
+            this.bnt_Editar.Name = "bnt_Editar";
+            this.bnt_Editar.Size = new System.Drawing.Size(84, 71);
+            this.bnt_Editar.TabIndex = 15;
+            this.bnt_Editar.Text = "Editar";
+            this.bnt_Editar.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // bnt_Agregar
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
-            this.button5.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.SystemColors.Control;
-            this.button5.Location = new System.Drawing.Point(1307, 804);
-            this.button5.Margin = new System.Windows.Forms.Padding(4);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(84, 71);
-            this.button5.TabIndex = 14;
-            this.button5.Text = "Agregar";
-            this.button5.UseVisualStyleBackColor = false;
+            this.bnt_Agregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.bnt_Agregar.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bnt_Agregar.ForeColor = System.Drawing.SystemColors.Control;
+            this.bnt_Agregar.Location = new System.Drawing.Point(1307, 804);
+            this.bnt_Agregar.Margin = new System.Windows.Forms.Padding(4);
+            this.bnt_Agregar.Name = "bnt_Agregar";
+            this.bnt_Agregar.Size = new System.Drawing.Size(84, 71);
+            this.bnt_Agregar.TabIndex = 14;
+            this.bnt_Agregar.Text = "Agregar";
+            this.bnt_Agregar.UseVisualStyleBackColor = false;
             // 
             // DB
             // 
@@ -279,10 +279,10 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.DB);
             this.Controls.Add(this.ordenar);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.btn_Eliminar);
+            this.Controls.Add(this.bnt_Guardar);
+            this.Controls.Add(this.bnt_Editar);
+            this.Controls.Add(this.bnt_Agregar);
             this.Name = "Rutas";
             this.Text = "Rutas";
             ((System.ComponentModel.ISupportInitialize)(this.DB)).EndInit();
@@ -298,10 +298,10 @@
 
         #endregion
         private System.Windows.Forms.Button ordenar;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btn_Eliminar;
+        private System.Windows.Forms.Button bnt_Guardar;
+        private System.Windows.Forms.Button bnt_Editar;
+        private System.Windows.Forms.Button bnt_Agregar;
         private System.Windows.Forms.DataGridView DB;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label1;
