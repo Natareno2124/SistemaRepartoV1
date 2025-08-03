@@ -1,12 +1,7 @@
 ﻿//TransporteFormDESIGNER
 
-using System;
 using System.Drawing;
-using System.Reflection;
-using System.Runtime.InteropServices;
 using System.Windows.Forms;
-using System.IO;
-using static System.Windows.Forms.AxHost;
 
 namespace SistemaRepartoG4
 {
@@ -357,7 +352,7 @@ namespace SistemaRepartoG4
                 {
                     Name = "capacidad",
                     HeaderText = "CAPACIDAD",
-                    DataPropertyName = "capacidad",   // Debes asegurarte de que tu SELECT devuelva v.capacidad AS capacidad
+                    DataPropertyName = "capacidad",   
                     MinimumWidth = 100
                 },
                 new DataGridViewTextBoxColumn()
@@ -365,7 +360,7 @@ namespace SistemaRepartoG4
                     Name = "SucursalID",
                     HeaderText = "ID SUCURSAL",
                     DataPropertyName = "SucursalID",
-                    Visible = false                // opcional: ocultar el ID si no quieres mostrarlo
+                    Visible = false               
                 },
                 new DataGridViewTextBoxColumn()
                 {
@@ -378,14 +373,14 @@ namespace SistemaRepartoG4
                 {
                     Name = "TipoID",
                     HeaderText = "ID TIPO",
-                    DataPropertyName = "TipoID",    // Si has hecho JOIN con tipoVehiculo y lo seleccionas como TipoID
+                    DataPropertyName = "TipoID",    
                     Visible = false
                 },
                 new DataGridViewTextBoxColumn()
                 {
                     Name = "Tipo",
                     HeaderText = "TIPO",
-                    DataPropertyName = "Tipo",      // Asegúrate de SELECT t.nombreTipo AS Tipo
+                    DataPropertyName = "Tipo",    
                     MinimumWidth = 120
                 },
                 new DataGridViewTextBoxColumn()
@@ -413,9 +408,7 @@ namespace SistemaRepartoG4
                 col.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
             }
 
-
-
-            //separacion de columas y encabezado
+            //simulacion de la separacion del encabezado con las tabas 
             Panel separatorPanel = new Panel();
             separatorPanel.Height = 15;
             separatorPanel.BackColor = Color.White;

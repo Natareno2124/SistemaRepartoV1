@@ -88,7 +88,7 @@ namespace SistemaRepartoG4
             }
         }
 
-        // Modificar vehículo existente
+        // Modificar
         public void ModificarTransporte(int placa, string marca, string modelo, string color, string capacidad,
                                         int idSucursal, int idTipo, int idEstado)
         {

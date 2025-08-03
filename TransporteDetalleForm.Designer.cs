@@ -8,7 +8,6 @@ namespace SistemaRepartoG4
 {
     partial class TransporteDetalleForm
     {
-        // Estos campos deben corresponderse con tus controles
         private TextBox txtPlaca;
         private TextBox txtMarca;
         private TextBox txtModelo;

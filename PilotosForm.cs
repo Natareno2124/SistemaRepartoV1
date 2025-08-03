@@ -62,7 +62,6 @@ namespace SistemaRepartoG4
                 {
                     if (detalle.ShowDialog() == DialogResult.OK)
                     {
-                        // Validación adicional (opcional pero recomendado)
                         if (string.IsNullOrWhiteSpace(detalle.Nombres) || string.IsNullOrWhiteSpace(detalle.Apellidos))
                         {
                             MessageBox.Show("Nombre y apellido son campos obligatorios", "Error",
@@ -87,15 +86,12 @@ namespace SistemaRepartoG4
                             detalle.IdSucursal
                         );
 
-                        // Actualizar el DataGridView con los nuevos datos
                         var datosActualizados = crud.ObtenerPilotos();
                         dgvPilotos.DataSource = datosActualizados;
 
-                        // Opcional: Mostrar mensaje de éxito
                         MessageBox.Show("Piloto agregado correctamente", "Éxito",
                                       MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        // Opcional: Seleccionar automáticamente el nuevo registro
                         if (dgvPilotos.Rows.Count > 0)
                         {
                             dgvPilotos.ClearSelection();
@@ -125,7 +121,6 @@ namespace SistemaRepartoG4
                 return;
             }
 
-            // Verificar que las columnas necesarias existen
             var requiredColumns = new[] { "colID", "colNombre", "colApellidos", "colFechaNacimiento",
                                  "colSexo", "colTipoLicencia", "colSucursalID" };
 

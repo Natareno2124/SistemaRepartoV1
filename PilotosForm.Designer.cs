@@ -120,7 +120,6 @@ namespace SistemaRepartoG4
             userIconLabel.Location = new Point(userComboBox.Left - 35, 9);
             userIconLabel.BackColor = Color.Transparent;
 
-            // Interacción mejorada
             userIconLabel.Click += (sender, e) => userComboBox.DroppedDown = true;
             userIconLabel.Cursor = Cursors.Hand;
 

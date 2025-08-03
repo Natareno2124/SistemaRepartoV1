@@ -122,7 +122,7 @@ namespace SistemaRepartoG4
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Cambios guardados");
+            MessageBox.Show("Guardado");
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
