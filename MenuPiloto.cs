@@ -31,7 +31,10 @@ namespace SistemaRepartoG4
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            MisEntregas ventanaEntregas = new MisEntregas(); 
+            ventanaEntregas.FormClosed += (s, args) => this.Show(); 
+            ventanaEntregas.Show(); 
+            this.Hide();
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -41,7 +44,10 @@ namespace SistemaRepartoG4
 
         private void btnRutasPiloto_Click(object sender, EventArgs e)
         {
-
+            RutasPiloto ventanaRutasPiloto = new RutasPiloto();
+            ventanaRutasPiloto.FormClosed += (s, args) => this.Show();
+            ventanaRutasPiloto.Show();
+            this.Hide();
         }
     }
 }

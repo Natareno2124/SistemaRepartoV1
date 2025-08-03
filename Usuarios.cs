@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WinFormsApp1;
 
 namespace SistemaRepartoG4
 {
@@ -30,6 +31,12 @@ namespace SistemaRepartoG4
         private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            RegistroUsuarios ventana = new RegistroUsuarios(); // Instanciar la ventana
+            ventana.Show(); // Mostrarla
         }
     }
 }

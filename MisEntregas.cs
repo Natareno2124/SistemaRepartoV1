@@ -19,10 +19,33 @@ namespace SistemaRepartoG4
 
         private void btnReportar_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Problema Reportado", "Reportar un problema", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MisEntregas_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            MenuPiloto ventanaMenuPiloto = new MenuPiloto();
+            ventanaMenuPiloto.FormClosed += (s, args) => this.Show();
+            ventanaMenuPiloto.Show();
+            this.Hide();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
         {
 
         }
