@@ -103,11 +103,9 @@
     <Compile Include="Clases\Validar.cs" />
     <Compile Include="Clases\Modelo.cs" />
     <Compile Include="Clases\UsuariosV.cs" />
-
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
-
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +144,12 @@
     <Compile Include="Rutas.Designer.cs">
       <DependentUpon>Rutas.cs</DependentUpon>
     </Compile>
+    <Compile Include="RutasPiloto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RutasPiloto.Designer.cs">
+      <DependentUpon>RutasPiloto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sidebar.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -161,11 +165,9 @@
     <Compile Include="Usuarios.Designer.cs">
       <DependentUpon>Usuarios.cs</DependentUpon>
     </Compile>
-
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
@@ -193,6 +195,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Rutas.resx">
       <DependentUpon>Rutas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RutasPiloto.resx">
+      <DependentUpon>RutasPiloto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sidebar.resx">
       <Generator>ResXFileCodeGenerator</Generator>
