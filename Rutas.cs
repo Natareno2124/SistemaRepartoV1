@@ -46,5 +46,13 @@ namespace SistemaRepartoG4
         {
 
         }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            Clases.RutaV objetoConexcion = new Clases.RutaV();
+            objetoConexcion.establecerConexion();
+            
+           // objetoConexcion.cerrarConexion();
+        }
     }
 }

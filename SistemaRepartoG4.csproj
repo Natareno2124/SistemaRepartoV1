@@ -99,6 +99,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\ConectarDB.cs" />
+    <Compile Include="Clases\RutaV.cs" />
     <Compile Include="Clases\Session.cs" />
     <Compile Include="Clases\Validar.cs" />
     <Compile Include="Clases\Modelo.cs" />
