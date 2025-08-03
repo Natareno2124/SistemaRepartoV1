@@ -38,5 +38,10 @@ namespace SistemaRepartoG4
             RegistroUsuarios ventana = new RegistroUsuarios(); // Instanciar la ventana
             ventana.Show(); // Mostrarla
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
