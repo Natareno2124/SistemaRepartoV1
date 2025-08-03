@@ -1,4 +1,4 @@
-﻿//PilotosForm.Designer.cs
+﻿//TransporteFormDESIGNER
 
 using System;
 using System.Drawing;
@@ -7,11 +7,10 @@ using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using System.IO;
 using static System.Windows.Forms.AxHost;
-using System.Data;
 
 namespace SistemaRepartoG4
 {
-    partial class PilotosForm
+    partial class TransporteForm
     {
         private System.ComponentModel.IContainer components = null;
 
@@ -29,9 +28,9 @@ namespace SistemaRepartoG4
         private void InitializeComponent()
         {
             //TAMAÑOS FIJOS 
-            this.Size = new Size(1280, 770); // Tamaño 
-            this.MaximumSize = new Size(1280, 770);
-            this.MinimumSize = new Size(1280, 770);
+            this.Size = new Size(1280, 770); // Tamaño inicial
+            this.MaximumSize = new Size(1280, 770); // Tamaño máximo
+            this.MinimumSize = new Size(1280, 770); // Tamaño mínimo
             this.StartPosition = FormStartPosition.CenterScreen; // Centrar en pantalla
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
 
@@ -46,7 +45,7 @@ namespace SistemaRepartoG4
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.cbRuta = new System.Windows.Forms.ComboBox();
             this.cbOrdenar = new System.Windows.Forms.ComboBox();
-            this.dgvPilotos = new System.Windows.Forms.DataGridView();
+            this.dgvTransporte = new System.Windows.Forms.DataGridView();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
@@ -55,17 +54,17 @@ namespace SistemaRepartoG4
 
             this.pnlBuscar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbBuscar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPilotos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTransporte)).BeginInit();
             this.SuspendLayout();
 
             int centerX = this.ClientSize.Width / 2;
 
-            //header
             Panel headerPanel = new Panel();
             headerPanel.Dock = DockStyle.Top;
             headerPanel.Height = 50; // Altura 
             headerPanel.BackColor = Color.FromArgb(141, 153, 174);
             this.Controls.Add(headerPanel);
+
 
             // Crear y configurar el ComboBox
             ComboBox userComboBox = new ComboBox();
@@ -138,7 +137,7 @@ namespace SistemaRepartoG4
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(99, 37);
             this.lblTitulo.TabIndex = 0;
-            this.lblTitulo.Text = "PILOTOS";
+            this.lblTitulo.Text = "TRANSPORTE";
 
             // pnlBuscar
             this.pnlBuscar.Controls.Add(this.pbBuscar);
@@ -157,6 +156,7 @@ namespace SistemaRepartoG4
             hrLine.Location = new Point(20, lblTitulo.Bottom + 10);
             this.Controls.Add(hrLine);
 
+
             // Selects
             int desplazamientoDerecha = 15;
             int espacioDespuesDeLinea = 15;
@@ -168,6 +168,8 @@ namespace SistemaRepartoG4
             pnlBuscarOriginalX,
             hrLine.Bottom + espacioDespuesDeLinea
             );
+
+
 
             //campo de búsqueda
             pnlBuscar.BackColor = Color.White;
@@ -188,12 +190,12 @@ namespace SistemaRepartoG4
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(200, 18);
             this.txtBuscar.TabIndex = 0;
-            this.txtBuscar.Text = "Buscar por nombre";
+            this.txtBuscar.Text = "Buscar por placa";
             this.txtBuscar.ForeColor = SystemColors.GrayText;
 
             this.txtBuscar.Enter += (sender, e) =>
             {
-                if (this.txtBuscar.Text == "Buscar por nombre")
+                if (this.txtBuscar.Text == "Buscar por placa")
                 {
                     this.txtBuscar.Text = "";
                     this.txtBuscar.ForeColor = SystemColors.WindowText; // Color normal al escribir
@@ -204,7 +206,7 @@ namespace SistemaRepartoG4
             {
                 if (string.IsNullOrWhiteSpace(this.txtBuscar.Text))
                 {
-                    this.txtBuscar.Text = "Buscar por nombre";
+                    this.txtBuscar.Text = "Buscar por placa";
                     this.txtBuscar.ForeColor = SystemColors.GrayText;
                 }
             };
@@ -213,12 +215,12 @@ namespace SistemaRepartoG4
             this.cbRuta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbRuta.FormattingEnabled = true;
             this.cbRuta.Items.AddRange(new object[] {
-                "Buscar por ruta",
-                "Todas las rutas",
-                "Ruta Norte",
-                "Ruta Sur",
-                "Ruta Este",
-                "Ruta Oeste"});
+                "Buscar por sucursal",
+                "Todas las sucursales",
+                "Sucursal Norte",
+                "Sucursal Sur",
+                "Sucursal Este",
+                "Sucursal Oeste"});
             this.cbRuta.SelectedIndex = 0;
             this.cbRuta.Location = new Point(
                 cbRutaOriginalX,
@@ -232,9 +234,8 @@ namespace SistemaRepartoG4
             this.cbOrdenar.FormattingEnabled = true;
             this.cbOrdenar.Items.AddRange(new object[] {
                 "Ordenar por",
-                "ID",
-                "Nombre",
-                "Nº Entregas"});
+                "Placa",
+                "Estado"});
             this.cbOrdenar.SelectedIndex = 0;
             this.cbOrdenar.Name = "cbOrdenar";
             this.cbOrdenar.Location = new Point(
@@ -245,23 +246,23 @@ namespace SistemaRepartoG4
             this.cbOrdenar.TabIndex = 3;
 
             // dgvPilotos
-            this.dgvPilotos = new System.Windows.Forms.DataGridView();
-            this.dgvPilotos.AutoGenerateColumns = false;
+            this.dgvTransporte = new System.Windows.Forms.DataGridView();
+            this.dgvTransporte.AutoGenerateColumns = false;
 
-            this.dgvPilotos.AllowUserToAddRows = false;
-            this.dgvPilotos.AllowUserToDeleteRows = false;
-            this.dgvPilotos.BackgroundColor = System.Drawing.Color.White;
-            this.dgvPilotos.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvPilotos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgvTransporte.AllowUserToAddRows = false;
+            this.dgvTransporte.AllowUserToDeleteRows = false;
+            this.dgvTransporte.BackgroundColor = System.Drawing.Color.White;
+            this.dgvTransporte.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvTransporte.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
 
-            this.dgvPilotos.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            this.dgvTransporte.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
 
-            this.dgvPilotos.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(248, 248, 248);
-            this.dgvPilotos.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvPilotos.GridColor = Color.FromArgb(24, 52, 70);
+            this.dgvTransporte.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(248, 248, 248);
+            this.dgvTransporte.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvTransporte.GridColor = Color.FromArgb(24, 52, 70);
 
             //simulación de separación de encabezado y contenido
-            this.dgvPilotos.CellPainting += (sender, e) =>
+            this.dgvTransporte.CellPainting += (sender, e) =>
             {
                 if (e.RowIndex == -1 && e.ColumnIndex >= 0)
                 {
@@ -279,30 +280,30 @@ namespace SistemaRepartoG4
                 }
             };
 
-            this.dgvPilotos.Name = "dgvPilotos";
-            this.dgvPilotos.ReadOnly = true;
-            this.dgvPilotos.RowHeadersVisible = false;
-            this.dgvPilotos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            this.dgvTransporte.Name = "dgvTransporte";
+            this.dgvTransporte.ReadOnly = true;
+            this.dgvTransporte.RowHeadersVisible = false;
+            this.dgvTransporte.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 
-            this.Controls.Add(this.dgvPilotos);
+            this.Controls.Add(this.dgvTransporte);
 
             int marginHorizontal = 40;
             int marginTop = 170;
             int marginBottom = 50;
 
-            this.dgvPilotos.Size = new Size(
+            this.dgvTransporte.Size = new Size(
                 1280 - (marginHorizontal * 2),
                 770 - marginTop - marginBottom
             );
-            this.dgvPilotos.Location = new Point(
+            this.dgvTransporte.Location = new Point(
                 marginHorizontal,
                 marginTop
             );
 
-            this.dgvPilotos.ColumnHeadersHeight = 55;
-            this.dgvPilotos.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            this.dgvPilotos.EnableHeadersVisualStyles = false;
-            this.dgvPilotos.ColumnHeadersDefaultCellStyle = new DataGridViewCellStyle
+            this.dgvTransporte.ColumnHeadersHeight = 55;
+            this.dgvTransporte.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            this.dgvTransporte.EnableHeadersVisualStyles = false;
+            this.dgvTransporte.ColumnHeadersDefaultCellStyle = new DataGridViewCellStyle
             {
                 Font = new Font("Segoe UI", 10.5F, FontStyle.Bold),
                 BackColor = Color.White,
@@ -311,7 +312,7 @@ namespace SistemaRepartoG4
                 Padding = new Padding(0, 10, 0, 10)  // Más espacio vertical
             };
 
-            this.dgvPilotos.DefaultCellStyle = new DataGridViewCellStyle
+            this.dgvTransporte.DefaultCellStyle = new DataGridViewCellStyle
             {
                 BackColor = Color.White,
                 Font = new Font("Segoe UI", 9.5F),
@@ -320,80 +321,99 @@ namespace SistemaRepartoG4
                 Padding = new Padding(5, 0, 5, 0)  // Espaciado interno horizontal
             };
 
-            this.dgvPilotos.RowTemplate.Height = 38;
+            this.dgvTransporte.RowTemplate.Height = 38;
 
-            this.dgvPilotos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-
-            this.dgvPilotos.Columns.Clear();
-            this.dgvPilotos.Columns.AddRange(
+            this.dgvTransporte.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvTransporte.Columns.AddRange(
                 new DataGridViewTextBoxColumn()
                 {
-                    DataPropertyName = "id_conductor",
-                    HeaderText = "ID",
-                    Name = "colID",
+                    Name = "placa",
+                    HeaderText = "PLACA",
+                    DataPropertyName = "Placa",
                     MinimumWidth = 60
                 },
                 new DataGridViewTextBoxColumn()
                 {
-                    DataPropertyName = "nombre_conductor",
-                    HeaderText = "Nombres",
-                    Name = "colNombre",
-                    Width = 150,
+                    Name = "marca",
+                    HeaderText = "MARCA",
+                    DataPropertyName = "marca",
                     MinimumWidth = 200
                 },
                 new DataGridViewTextBoxColumn()
                 {
-                    HeaderText = "Apellidos",
-                    Name = "colApellidos",
-                    DataPropertyName = "apellido_conductor",
-                    MinimumWidth = 200
-                },
-                new DataGridViewTextBoxColumn()
-                {
-                    HeaderText = "Fecha Nacimiento",
-                    Name = "colFechaNacimiento",
-                    DataPropertyName = "fecha_nacimiento_conductor",
+                    Name = "modelo",
+                    HeaderText = "MODELO",
+                    DataPropertyName = "modelo",
                     MinimumWidth = 120
                 },
                 new DataGridViewTextBoxColumn()
                 {
-                    HeaderText = "Sexo",
-                    Name = "colSexo",
-                    DataPropertyName = "sexo_conductor",
-                    MinimumWidth = 50
+                    Name = "color",
+                    HeaderText = "COLOR",
+                    DataPropertyName = "color",
+                    MinimumWidth = 150
                 },
                 new DataGridViewTextBoxColumn()
                 {
-                    HeaderText = "Licencia",
-                    Name = "colTipoLicencia",
-                    DataPropertyName = "tipo_licencia_conductor",
-                    MinimumWidth = 70
+                    Name = "capacidad",
+                    HeaderText = "CAPACIDAD",
+                    DataPropertyName = "capacidad",   // Debes asegurarte de que tu SELECT devuelva v.capacidad AS capacidad
+                    MinimumWidth = 100
                 },
                 new DataGridViewTextBoxColumn()
                 {
-                    HeaderText = "Sucursal",
-                    Name = "colSucursal",
-                    DataPropertyName = "Sucursal",
-                    Width = 100
-                },
-                new DataGridViewTextBoxColumn()
-                {
+                    Name = "SucursalID",
+                    HeaderText = "ID SUCURSAL",
                     DataPropertyName = "SucursalID",
-                    HeaderText = "SucursalID",
-                    Name = "colSucursalID",
+                    Visible = false                // opcional: ocultar el ID si no quieres mostrarlo
+                },
+                new DataGridViewTextBoxColumn()
+                {
+                    Name = "Sucursal",
+                    HeaderText = "SUCURSAL",
+                    DataPropertyName = "Sucursal",
+                    MinimumWidth = 150
+                },
+                new DataGridViewTextBoxColumn()
+                {
+                    Name = "TipoID",
+                    HeaderText = "ID TIPO",
+                    DataPropertyName = "TipoID",    // Si has hecho JOIN con tipoVehiculo y lo seleccionas como TipoID
                     Visible = false
+                },
+                new DataGridViewTextBoxColumn()
+                {
+                    Name = "Tipo",
+                    HeaderText = "TIPO",
+                    DataPropertyName = "Tipo",      // Asegúrate de SELECT t.nombreTipo AS Tipo
+                    MinimumWidth = 120
+                },
+                new DataGridViewTextBoxColumn()
+                {
+                    Name = "EstadoID",
+                    HeaderText = "ID ESTADO",
+                    DataPropertyName = "EstadoID",
+                    Visible = false
+                },
+                new DataGridViewTextBoxColumn()
+                {
+                    Name = "estado",
+                    HeaderText = "ESTADO",
+                    DataPropertyName = "EstadoVehiculo",
+                    MinimumWidth = 100
                 }
-
             );
 
-            PilotosCRUD crud = new PilotosCRUD();
-            dgvPilotos.DataSource = crud.ObtenerPilotos();
+            TransporteCRUD crud = new TransporteCRUD();
+            dgvTransporte.DataSource = crud.ObtenerTransportes();
 
-            foreach (DataGridViewColumn col in dgvPilotos.Columns)
+            foreach (DataGridViewColumn col in dgvTransporte.Columns)
             {
                 col.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
                 col.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
             }
+
+
 
             //separacion de columas y encabezado
             Panel separatorPanel = new Panel();
@@ -401,7 +421,7 @@ namespace SistemaRepartoG4
             separatorPanel.BackColor = Color.White;
             separatorPanel.Dock = DockStyle.Top;
 
-            this.dgvPilotos.Controls.Add(separatorPanel);
+            this.dgvTransporte.Controls.Add(separatorPanel);
             separatorPanel.BringToFront();
 
             //BOTONES
@@ -419,6 +439,7 @@ namespace SistemaRepartoG4
             this.btnEditar.Location = new Point(startX + 2 * (buttonSize + buttonSpacing), buttonY);
             this.btnGuardar.Location = new Point(startX + 3 * (buttonSize + buttonSpacing), buttonY);
             this.btnEliminar.Location = new Point(startX + 4 * (buttonSize + buttonSpacing), buttonY);
+
 
             // btnRetroceder
             this.btnRetroceder.Font = new System.Drawing.Font("Segoe UI", 12F);
@@ -470,18 +491,18 @@ namespace SistemaRepartoG4
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.dgvPilotos);
+            this.Controls.Add(this.dgvTransporte);
             this.Controls.Add(this.cbOrdenar);
             this.Controls.Add(this.cbRuta);
             this.Controls.Add(this.pnlBuscar);
             this.Controls.Add(this.lblTitulo);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            this.Name = "PilotosForm";
-            this.Text = "Gestión de Pilotos";
+            this.Name = "TransporteForm";
+            this.Text = "Gestión de Transporte";
             this.pnlBuscar.ResumeLayout(false);
             this.pnlBuscar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbBuscar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPilotos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTransporte)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
         }
@@ -494,7 +515,7 @@ namespace SistemaRepartoG4
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.ComboBox cbRuta;
         private System.Windows.Forms.ComboBox cbOrdenar;
-        private System.Windows.Forms.DataGridView dgvPilotos;
+        private System.Windows.Forms.DataGridView dgvTransporte;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnGuardar;

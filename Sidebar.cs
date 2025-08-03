@@ -60,16 +60,12 @@ namespace WinFormsApp1
             this.Controls.Add(contenedorBotones);
 
             // Botones del menú
+            // Botones del menú con emojis
             string[] nombresBotones =
             {
-                "usuarios", "rutas", "paquetes", "bodegas", "reportes", "transportes", "repartidores",
-                "pilotos", "sucursales"
-            };
-
-            string[] rutasIconos =
-             {
-                "usuario.png", "ruta.png", "paquete.png", "bodega.png", "reporte.png", "transporte.png", "repartidor.png",
-                "piloto.png", "sucursal.png"
+                "👤 Usuarios", "🗺️ Rutas", "📦 Paquetes", "🏢 Bodegas",
+                "📊 Reportes", "🚛 Transportes", "🚴 Repartidores",
+                "🧑‍ Pilotos", "🏬 Sucursales"
             };
 
             for (int i = 0; i < nombresBotones.Length; i++)
@@ -83,17 +79,15 @@ namespace WinFormsApp1
                 btn.BackColor = ColorTranslator.FromHtml("#183446");
                 btn.ForeColor = Color.White;
                 btn.TextAlign = ContentAlignment.MiddleLeft;
-                btn.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+                btn.Font = new Font("Segoe UI Emoji", 10, FontStyle.Bold); // Para que se vean bien los emojis
                 btn.Margin = new Padding(0, 10, 0, 10);
 
-
-                string nombreBoton = nombresBotones[i];
+                string nombreBoton = nombresBotones[i].Split(' ')[1].ToLower(); // Para que funcione AbrirVentana
                 btn.Click += (s, e) => AbrirVentana(nombreBoton);
 
                 contenedorBotones.Controls.Add(btn);
-
-                contenedorBotones.Controls.Add(btn);
             }
+
         }
 
         private void AbrirVentana(string nombre)
@@ -117,7 +111,7 @@ namespace WinFormsApp1
                     // ventana = new ReportesForm();
                     break;
                 case "transportes":
-                    // ventana = new TransportesForm();
+                     ventana = new TransporteForm();
                     break;
                 case "repartidores":
                     // ventana = new RepartidoresForm();

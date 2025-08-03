@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=9.4.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector NET 9.4\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CConexion.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,6 +72,13 @@
     <Compile Include="MisEntregas.Designer.cs">
       <DependentUpon>MisEntregas.cs</DependentUpon>
     </Compile>
+    <Compile Include="PilotoDetalleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PilotoDetalleForm.Designer.cs">
+      <DependentUpon>PilotoDetalleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PilotosCRUD.cs" />
     <Compile Include="PilotosForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +107,19 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Sidebar.resx</DependentUpon>
+    </Compile>
+    <Compile Include="TransporteCRUD.cs" />
+    <Compile Include="TransporteDetalleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransporteDetalleForm.Designer.cs">
+      <DependentUpon>TransporteDetalleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TransporteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransporteForm.Designer.cs">
+      <DependentUpon>TransporteForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Usuarios.cs">
       <SubType>Form</SubType>
