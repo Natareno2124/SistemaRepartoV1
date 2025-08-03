@@ -9,10 +9,12 @@ using System.Windows.Forms;
 
 //creada por Rocio Lopez 9959-23-740
 //Creando la clase modelo RutaV.cs
+
 namespace SistemaRepartoG4.Clases
 {
     internal class RutaV
     {
+
 
         MySqlConnection conex = new MySqlConnection();
 
@@ -72,3 +74,5 @@ namespace SistemaRepartoG4.Clases
 
 
 
+    }
+}
