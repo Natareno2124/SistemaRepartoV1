@@ -57,6 +57,7 @@
             this.rptproblema = new System.Windows.Forms.Label();
             this.cmReportar = new System.Windows.Forms.ComboBox();
             this.btnRegresar = new System.Windows.Forms.Button();
+            this.btnBuscarEntrega = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -407,11 +408,24 @@
             this.btnRegresar.UseVisualStyleBackColor = false;
             this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
+            // btnBuscarEntrega
+            // 
+            this.btnBuscarEntrega.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.btnBuscarEntrega.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btnBuscarEntrega.ForeColor = System.Drawing.Color.White;
+            this.btnBuscarEntrega.Location = new System.Drawing.Point(707, 167);
+            this.btnBuscarEntrega.Name = "btnBuscarEntrega";
+            this.btnBuscarEntrega.Size = new System.Drawing.Size(138, 43);
+            this.btnBuscarEntrega.TabIndex = 30;
+            this.btnBuscarEntrega.Text = "Buscar";
+            this.btnBuscarEntrega.UseVisualStyleBackColor = false;
+            // 
             // MisEntregas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1262, 723);
+            this.Controls.Add(this.btnBuscarEntrega);
             this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.cmReportar);
             this.Controls.Add(this.rptproblema);
@@ -469,5 +483,6 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button btnRegresar;
+        private System.Windows.Forms.Button btnBuscarEntrega;
     }
 }

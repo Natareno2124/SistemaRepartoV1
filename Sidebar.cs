@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SistemaRepartoG4;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -59,16 +60,12 @@ namespace WinFormsApp1
             this.Controls.Add(contenedorBotones);
 
             // Botones del menú
+            // Botones del menú con emojis
             string[] nombresBotones =
             {
-                "usuarios", "rutas", "paquetes", "bodegas", "reportes", "transportes", "repartidores",
-                "pilotos", "sucursales"
-            };
-
-            string[] rutasIconos =
-             {
-                "usuario.png", "ruta.png", "paquete.png", "bodega.png", "reporte.png", "transporte.png", "repartidor.png",
-                "piloto.png", "sucursal.png"
+                "👤 Usuarios", "🗺️ Rutas", "📦 Paquetes", "🏢 Bodegas",
+                "📊 Reportes", "🚛 Transportes", "🚴 Repartidores",
+                "🧑‍ Pilotos", "🏬 Sucursales"
             };
 
             for (int i = 0; i < nombresBotones.Length; i++)
@@ -82,97 +79,59 @@ namespace WinFormsApp1
                 btn.BackColor = ColorTranslator.FromHtml("#183446");
                 btn.ForeColor = Color.White;
                 btn.TextAlign = ContentAlignment.MiddleLeft;
-                btn.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+                btn.Font = new Font("Segoe UI Emoji", 10, FontStyle.Bold); // Para que se vean bien los emojis
                 btn.Margin = new Padding(0, 10, 0, 10);
 
-                // Ruta del icono
-                string rutaIcono = System.IO.Path.Combine(Application.StartupPath, "img", rutasIconos[i]);
-
-                /*if (System.IO.File.Exists(rutaIcono))
-                  {
-                      Image tempImg = Image.FromFile(rutaIcono);
-                      Image iconoReducido = new Bitmap(tempImg, new Size(24, 24));
-                      btn.Image = iconoReducido;
-
-                      btn.ImageAlign = ContentAlignment.MiddleLeft;
-                      btn.TextAlign = ContentAlignment.MiddleRight;
-                      btn.Padding = new Padding(10, 0, 0, 0);
-                      btn.TextImageRelation = TextImageRelation.ImageBeforeText;
-                  }
-                  else
-                  {
-                      MessageBox.Show("Ruta buscada: " + rutaIcono);
-                  }*/
-                try
-                {
-                    if (System.IO.File.Exists(rutaIcono))
-                    {
-                        Image tempImg = Image.FromFile(rutaIcono);
-                        Image iconoReducido = new Bitmap(tempImg, new Size(24, 24));
-                        btn.Image = iconoReducido;
-
-                        btn.ImageAlign = ContentAlignment.MiddleLeft;
-                        btn.TextAlign = ContentAlignment.MiddleRight;
-                        btn.Padding = new Padding(10, 0, 0, 0);
-                        btn.TextImageRelation = TextImageRelation.ImageBeforeText;
-                    }
-                    else
-                    {
-                        MessageBox.Show("Archivo no encontrado:\n" + rutaIcono);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error al cargar imagen:\n" + rutaIcono + "\n\n" + ex.Message);
-                }
-
-
-                string nombreBoton = nombresBotones[i];
+                string nombreBoton = nombresBotones[i].Split(' ')[1].ToLower(); // Para que funcione AbrirVentana
                 btn.Click += (s, e) => AbrirVentana(nombreBoton);
 
                 contenedorBotones.Controls.Add(btn);
-
-                contenedorBotones.Controls.Add(btn);
             }
+
         }
 
-        private void AbrirVentana(string nombre){
+        private void AbrirVentana(string nombre)
+        {
             Form ventana = null;
-            switch (nombre){
-                case "Usuarios":
-                    //ventana = new Pilotos(); 
+            switch (nombre)
+            {
+                case "usuarios":
+                    // ventana = new UsuariosForm();
                     break;
-                case "Rutas":
-                    //ventana = new Pilotos();  
+                case "rutas":
+                    // ventana = new RutasForm();
                     break;
-                case "Paquetes":
-                    //ventana = new Pilotos(); 
+                case "paquetes":
+                    // ventana = new PaquetesForm();
                     break;
-                case "Bodegas":
-                    //ventana = new Pilotos();  
+                case "bodegas":
+                    // ventana = new BodegasForm();
                     break;
-                case "Reportes":
-                    //ventana = new Pilotos();   
+                case "reportes":
+                    // ventana = new ReportesForm();
                     break;
-                case "Transportes":
-                    //ventana = new Pilotos();  
+                case "transportes":
+                     ventana = new TransporteForm();
                     break;
-                case "Repartidores":
-                    //ventana = new Pilotos(); 
+                case "repartidores":
+                    // ventana = new RepartidoresForm();
                     break;
-                case "Pilotos":
-                    //ventana = new Pilotos();    
+                case "pilotos":
+                    ventana = new PilotosForm();
                     break;
-                case "Sucursales":
-                    //ventana = new Pilotos();   
+                case "sucursales":
+                    // ventana = new SucursalesForm();
                     break;
                 default:
                     MessageBox.Show("ERROR, CONTACTE A SERVICIO TECNICO");
                     break;
             }
-            if (ventana != null){
+
+            if (ventana != null)
+            {
                 ventana.Show();
             }
         }
+
     }
 }
