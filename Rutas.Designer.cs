@@ -103,6 +103,7 @@
             this.bnt_Editar.TabIndex = 15;
             this.bnt_Editar.Text = "Editar";
             this.bnt_Editar.UseVisualStyleBackColor = false;
+            this.bnt_Editar.Click += new System.EventHandler(this.bnt_Editar_Click);
             // 
             // bnt_Agregar
             // 
@@ -116,6 +117,7 @@
             this.bnt_Agregar.TabIndex = 14;
             this.bnt_Agregar.Text = "Agregar";
             this.bnt_Agregar.UseVisualStyleBackColor = false;
+            this.bnt_Agregar.Click += new System.EventHandler(this.bnt_Agregar_Click);
             // 
             // DB
             // 

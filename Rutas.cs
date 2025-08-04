@@ -54,5 +54,16 @@ namespace SistemaRepartoG4
             
            // objetoConexcion.cerrarConexion();
         }
+
+        private void bnt_Agregar_Click(object sender, EventArgs e)
+        {
+            RegistroRuta registroRuta = new RegistroRuta();
+            registroRuta.Show();
+        }
+
+        private void bnt_Editar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
