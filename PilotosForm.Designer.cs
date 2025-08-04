@@ -1,10 +1,10 @@
 ﻿//PilotosForm.Designer.cs
-
-using System;
+//diseño forms visualizacion datos
 using System.Drawing;
+using System.Windows.Forms;
+using System;
 using System.Reflection;
 using System.Runtime.InteropServices;
-using System.Windows.Forms;
 using System.IO;
 using static System.Windows.Forms.AxHost;
 using System.Data;
@@ -52,6 +52,20 @@ namespace SistemaRepartoG4
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnRetroceder = new System.Windows.Forms.Button();
+            this.grpContacto = new System.Windows.Forms.GroupBox();
+            this.grpDireccion = new System.Windows.Forms.GroupBox();
+            this.txtSexo = new System.Windows.Forms.TextBox();
+
+            //controles
+            this.Controls.Add(txtSexo);
+            this.Controls.Add(txtLicencia);
+            this.Controls.Add(txtTelefono);
+            this.Controls.Add(txtCorreo);
+            this.Controls.Add(txtCalle);
+            this.Controls.Add(txtAvenida);
+            this.Controls.Add(txtZona);
+            this.Controls.Add(txtCiudad);
+            this.Controls.Add(txtMunicipio);
 
             this.pnlBuscar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbBuscar)).BeginInit();
@@ -92,6 +106,7 @@ namespace SistemaRepartoG4
             userComboBox.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             userComboBox.Location = new Point(headerPanel.Width - 120 - 10, 12); // 10px de margen derecho
 
+            //mensajes para cada selecion del select de usuarios
             userComboBox.SelectedIndexChanged += (sender, e) =>
             {
                 switch (userComboBox.SelectedItem.ToString())
@@ -111,7 +126,7 @@ namespace SistemaRepartoG4
             // Crear Label para el icono de usuario
             Label userIconLabel = new Label();
             userIconLabel.Name = "userIconLabel";
-            userIconLabel.Text = "👤";
+            userIconLabel.Text = "👤"; //icono porque img se buguea 
             userIconLabel.Font = new Font("Segoe UI", 14F);
             userIconLabel.AutoSize = false;
             userIconLabel.Size = new Size(32, 32);
@@ -120,6 +135,7 @@ namespace SistemaRepartoG4
             userIconLabel.Location = new Point(userComboBox.Left - 35, 9);
             userIconLabel.BackColor = Color.Transparent;
 
+            //estelizar 
             userIconLabel.Click += (sender, e) => userComboBox.DroppedDown = true;
             userIconLabel.Cursor = Cursors.Hand;
 
@@ -190,6 +206,7 @@ namespace SistemaRepartoG4
             this.txtBuscar.Text = "Buscar por nombre";
             this.txtBuscar.ForeColor = SystemColors.GrayText;
 
+            //para que diga para que sirve ese input
             this.txtBuscar.Enter += (sender, e) =>
             {
                 if (this.txtBuscar.Text == "Buscar por nombre")
@@ -285,18 +302,25 @@ namespace SistemaRepartoG4
 
             this.Controls.Add(this.dgvPilotos);
 
+            //scrollbar vertical
             int marginHorizontal = 40;
             int marginTop = 170;
-            int marginBottom = 50;
 
-            this.dgvPilotos.Size = new Size(
-                1280 - (marginHorizontal * 2),
-                770 - marginTop - marginBottom
-            );
+            this.dgvPilotos.Location = new Point(marginHorizontal, marginTop);
+            this.dgvPilotos.Width = 1280 - (marginHorizontal * 2);
+
             this.dgvPilotos.Location = new Point(
                 marginHorizontal,
                 marginTop
             );
+
+            int filasVisibles = 15;
+            int alturaFilas = dgvPilotos.RowTemplate.Height * filasVisibles;
+            int alturaEncabezado = dgvPilotos.ColumnHeadersHeight;
+            int alturaTotal = alturaFilas + alturaEncabezado;
+            this.dgvPilotos.Height = alturaTotal;
+
+            this.dgvPilotos.ScrollBars = ScrollBars.Vertical;
 
             this.dgvPilotos.ColumnHeadersHeight = 55;
             this.dgvPilotos.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -323,57 +347,47 @@ namespace SistemaRepartoG4
 
             this.dgvPilotos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
+            //columas del form
             this.dgvPilotos.Columns.Clear();
             this.dgvPilotos.Columns.AddRange(
                 new DataGridViewTextBoxColumn()
                 {
-                    DataPropertyName = "id_conductor",
-                    HeaderText = "ID",
-                    Name = "colID",
-                    MinimumWidth = 60
+                    DataPropertyName = "id_conductor",//variable bd
+                    HeaderText = "ID", // titulo de la tabla
+                    Name = "colID", //identificador del campo
+                    Visible = false, //que no sa visible
+                    MinimumWidth = 50 //tamaño minimo
                 },
                 new DataGridViewTextBoxColumn()
                 {
                     DataPropertyName = "nombre_conductor",
                     HeaderText = "Nombres",
                     Name = "colNombre",
-                    Width = 150,
-                    MinimumWidth = 200
+                    Width = 100,
+                    MinimumWidth = 100
                 },
                 new DataGridViewTextBoxColumn()
                 {
                     HeaderText = "Apellidos",
                     Name = "colApellidos",
                     DataPropertyName = "apellido_conductor",
-                    MinimumWidth = 200
-                },
-                new DataGridViewTextBoxColumn()
-                {
-                    HeaderText = "Fecha Nacimiento",
-                    Name = "colFechaNacimiento",
-                    DataPropertyName = "fecha_nacimiento_conductor",
-                    MinimumWidth = 120
-                },
-                new DataGridViewTextBoxColumn()
-                {
-                    HeaderText = "Sexo",
-                    Name = "colSexo",
-                    DataPropertyName = "sexo_conductor",
-                    MinimumWidth = 50
+                    MinimumWidth = 100
                 },
                 new DataGridViewTextBoxColumn()
                 {
                     HeaderText = "Licencia",
                     Name = "colTipoLicencia",
                     DataPropertyName = "tipo_licencia_conductor",
-                    MinimumWidth = 70
+                    Width = 60,
+                    MinimumWidth = 60
                 },
                 new DataGridViewTextBoxColumn()
                 {
                     HeaderText = "Sucursal",
                     Name = "colSucursal",
                     DataPropertyName = "Sucursal",
-                    Width = 100
+                    Width = 80,
+                    MinimumWidth = 80
                 },
                 new DataGridViewTextBoxColumn()
                 {
@@ -381,13 +395,154 @@ namespace SistemaRepartoG4
                     HeaderText = "SucursalID",
                     Name = "colSucursalID",
                     Visible = false
+                },
+                new DataGridViewTextBoxColumn()
+                {
+                    DataPropertyName = "sexo_conductor",
+                    HeaderText = "Sexo",
+                    Name = "colSexo",
+                    Visible = false
+                },
+                new DataGridViewTextBoxColumn()
+                {
+                    DataPropertyName = "telefono_conductor",
+                    HeaderText = "Teléfono",
+                    Name = "colTelefono",
+                    Visible = false
+                },
+                new DataGridViewTextBoxColumn()
+                {
+                    DataPropertyName = "correo_conductor",
+                    HeaderText = "Correo",
+                    Name = "colCorreo",
+                    Visible = false
+                },
+                new DataGridViewTextBoxColumn()
+                {
+                    DataPropertyName = "calle_conductor",
+                    HeaderText = "Calle",
+                    Name = "colCalle",
+                    Visible = false
+                },
+                new DataGridViewTextBoxColumn()
+                {
+                    DataPropertyName = "avenida_conductor",
+                    HeaderText = "Avenida",
+                    Name = "colAvenida",
+                    Visible = false
+                },
+                new DataGridViewTextBoxColumn()
+                {
+                    DataPropertyName = "zona_conductor",
+                    HeaderText = "Zona",
+                    Name = "colZona",
+                    Visible = false
+                },
+                new DataGridViewTextBoxColumn()
+                {
+                    DataPropertyName = "ciudad_conductor",
+                    HeaderText = "Ciudad",
+                    Name = "colCiudad",
+                    Visible = false
+                },
+                new DataGridViewTextBoxColumn()
+                {
+                    DataPropertyName = "fecha_nacimiento_conductor",
+                    HeaderText = "Fecha de Nacimiento",
+                    Name = "colFechaNacimiento",
+                    Visible = false
+                },
+                new DataGridViewTextBoxColumn()
+                {
+                    DataPropertyName = "municipio_conductor",
+                    HeaderText = "Municipio",
+                    Name = "colMunicipio",
+                    Visible = false
                 }
-
             );
 
+            //para que identifique que tocaste
+            this.dgvPilotos.SelectionChanged += (s, e) =>
+            {
+                if (dgvPilotos.CurrentRow == null) return;
+                var row = dgvPilotos.CurrentRow;
+                txtSexo.Text = row.Cells["colSexo"].Value?.ToString();
+                txtLicencia.Text = row.Cells["colTipoLicencia"].Value?.ToString();
+                txtTelefono.Text = row.Cells["colTelefono"].Value?.ToString();
+                txtCorreo.Text = row.Cells["colCorreo"].Value?.ToString();
+                txtCalle.Text = row.Cells["colCalle"].Value?.ToString();
+                txtAvenida.Text = row.Cells["colAvenida"].Value?.ToString();
+                txtZona.Text = row.Cells["colZona"].Value?.ToString();
+                txtCiudad.Text = row.Cells["colCiudad"].Value?.ToString();
+                txtMunicipio.Text = row.Cells["colMunicipio"].Value?.ToString();
+            };
+
+            //grupo de contacto y direccion porque no caben/se ven feos todos los apos juntos en una sola tabla
+            // CONTACTO 
+            grpContacto = new GroupBox()
+            {
+                Text = "Contacto",
+                Location = new Point(50, 560), // 560 es para bajarlo
+                Size = new Size(360, 120)
+            };
+
+            Label lblSexo = new Label() { Text = "Sexo:", Location = new Point(10, 25), AutoSize = true };
+            txtSexo = new TextBox() { Location = new Point(100, 22), Width = 80, ReadOnly = true };
+
+            Label lblLicencia = new Label() { Text = "Licencia:", Location = new Point(190, 25), AutoSize = true };
+            txtLicencia = new TextBox() { Location = new Point(250, 22), Width = 80, ReadOnly = true };
+
+            Label lblTelefono = new Label() { Text = "Teléfono:", Location = new Point(10, 60), AutoSize = true };
+            txtTelefono = new TextBox() { Location = new Point(100, 57), Width = 230, ReadOnly = true };
+
+            Label lblCorreo = new Label() { Text = "Correo:", Location = new Point(10, 90), AutoSize = true };
+            txtCorreo = new TextBox() { Location = new Point(100, 87), Width = 230, ReadOnly = true };
+
+            grpContacto.Controls.AddRange(new Control[] {
+                lblSexo, txtSexo,
+                lblLicencia, txtLicencia,
+                lblTelefono, txtTelefono,
+                lblCorreo, txtCorreo
+            });
+            this.Controls.Add(grpContacto);
+
+            // DIRECCIÓN 
+            grpDireccion = new GroupBox()
+            {
+                Text = "Dirección",
+                Location = new Point(430, 560),
+                Size = new Size(420, 120)
+            };
+
+            Label lblCalle = new Label() { Text = "Calle:", Location = new Point(10, 25), AutoSize = true };
+            txtCalle = new TextBox() { Location = new Point(80, 22), Width = 120, ReadOnly = true };
+
+            Label lblAvenida = new Label() { Text = "Avenida:", Location = new Point(220, 25), AutoSize = true };
+            txtAvenida = new TextBox() { Location = new Point(290, 22), Width = 100, ReadOnly = true };
+
+            Label lblZona = new Label() { Text = "Zona:", Location = new Point(10, 60), AutoSize = true };
+            txtZona = new TextBox() { Location = new Point(80, 57), Width = 60, ReadOnly = true };
+
+            Label lblCiudad = new Label() { Text = "Ciudad:", Location = new Point(150, 60), AutoSize = true };
+            txtCiudad = new TextBox() { Location = new Point(220, 57), Width = 170, ReadOnly = true };
+
+            Label lblMunicipio = new Label() { Text = "Municipio:", Location = new Point(10, 90), AutoSize = true };
+            txtMunicipio = new TextBox() { Location = new Point(80, 87), Width = 310, ReadOnly = true };
+
+            grpDireccion.Controls.AddRange(new Control[] {
+                lblCalle, txtCalle,
+                lblAvenida, txtAvenida,
+                lblZona, txtZona,
+                lblCiudad, txtCiudad,
+                lblMunicipio, txtMunicipio
+            });
+            this.Controls.Add(grpDireccion);
+
+            //llamamos al crud, llamamos al obtener pilotos
             PilotosCRUD crud = new PilotosCRUD();
             dgvPilotos.DataSource = crud.ObtenerPilotos();
 
+            //centrar los datos de la tabla
             foreach (DataGridViewColumn col in dgvPilotos.Columns)
             {
                 col.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -398,7 +553,7 @@ namespace SistemaRepartoG4
             Panel separatorPanel = new Panel();
             separatorPanel.Height = 15;
             separatorPanel.BackColor = Color.White;
-            separatorPanel.Dock = DockStyle.Top;
+            separatorPanel.Dock = DockStyle.Top; //hasta el tope
 
             this.dgvPilotos.Controls.Add(separatorPanel);
             separatorPanel.BringToFront();
@@ -420,12 +575,12 @@ namespace SistemaRepartoG4
             this.btnEliminar.Location = new Point(startX + 4 * (buttonSize + buttonSpacing), buttonY);
 
             // btnRetroceder
-            this.btnRetroceder.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnRetroceder.Name = "btnRetroceder";
-            this.btnRetroceder.Size = new Size(buttonSize, buttonSize);
-            this.btnRetroceder.Text = "↩";
+            this.btnRetroceder.Font = new System.Drawing.Font("Segoe UI", 12F); //font
+            this.btnRetroceder.Name = "btnRetroceder"; //nombre
+            this.btnRetroceder.Size = new Size(buttonSize, buttonSize); //tamaño
+            this.btnRetroceder.Text = "↩"; //texto icono 
             this.btnRetroceder.UseVisualStyleBackColor = false;
-            this.btnRetroceder.Click += new System.EventHandler(this.btnRetroceder_Click);
+            this.btnRetroceder.Click += new System.EventHandler(this.btnRetroceder_Click); //funcion 
 
             // btnAgregar
             this.btnAgregar.Font = new System.Drawing.Font("Segoe UI", 14F);
@@ -499,7 +654,17 @@ namespace SistemaRepartoG4
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnRetroceder;
-
+        private System.Windows.Forms.GroupBox grpContacto;
+        private System.Windows.Forms.GroupBox grpDireccion;
+        private TextBox txtSexo;
+        private TextBox txtLicencia;
+        private TextBox txtTelefono;
+        private TextBox txtCorreo;
+        private TextBox txtCalle;
+        private TextBox txtAvenida;
+        private TextBox txtZona;
+        private TextBox txtCiudad;
+        private TextBox txtMunicipio;
     }
 
 }
