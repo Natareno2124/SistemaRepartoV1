@@ -166,6 +166,7 @@
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Usuarios";
             this.Text = "Usuarios";
+            this.Load += new System.EventHandler(this.Usuarios_Load);
             this.Pnl_lineaSuperior.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DB)).EndInit();
             this.ResumeLayout(false);
