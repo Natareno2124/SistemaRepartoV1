@@ -1,5 +1,5 @@
 ﻿//TransporteFormDESIGNER
-
+//Visualizacion de datos
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -24,8 +24,8 @@ namespace SistemaRepartoG4
         {
             //TAMAÑOS FIJOS 
             this.Size = new Size(1280, 770); // Tamaño inicial
-            this.MaximumSize = new Size(1280, 770); // Tamaño máximo
-            this.MinimumSize = new Size(1280, 770); // Tamaño mínimo
+            this.MaximumSize = new Size(1280, 770);
+            this.MinimumSize = new Size(1280, 770);
             this.StartPosition = FormStartPosition.CenterScreen; // Centrar en pantalla
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
 
@@ -61,7 +61,7 @@ namespace SistemaRepartoG4
             this.Controls.Add(headerPanel);
 
 
-            // Crear y configurar el ComboBox
+            // ComboBox de usuario
             ComboBox userComboBox = new ComboBox();
             userComboBox.Name = "userComboBox";
             userComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -88,6 +88,7 @@ namespace SistemaRepartoG4
 
             userComboBox.SelectedIndexChanged += (sender, e) =>
             {
+                //que mostrar dependiendo que select eligan 
                 switch (userComboBox.SelectedItem.ToString())
                 {
                     case "Cerrar sesión":
@@ -114,7 +115,6 @@ namespace SistemaRepartoG4
             userIconLabel.Location = new Point(userComboBox.Left - 35, 9);
             userIconLabel.BackColor = Color.Transparent;
 
-            // Interacción mejorada
             userIconLabel.Click += (sender, e) => userComboBox.DroppedDown = true;
             userIconLabel.Cursor = Cursors.Hand;
 
@@ -151,7 +151,6 @@ namespace SistemaRepartoG4
             hrLine.Location = new Point(20, lblTitulo.Bottom + 10);
             this.Controls.Add(hrLine);
 
-
             // Selects
             int desplazamientoDerecha = 15;
             int espacioDespuesDeLinea = 15;
@@ -163,8 +162,6 @@ namespace SistemaRepartoG4
             pnlBuscarOriginalX,
             hrLine.Bottom + espacioDespuesDeLinea
             );
-
-
 
             //campo de búsqueda
             pnlBuscar.BackColor = Color.White;
@@ -286,14 +283,20 @@ namespace SistemaRepartoG4
             int marginTop = 170;
             int marginBottom = 50;
 
-            this.dgvTransporte.Size = new Size(
-                1280 - (marginHorizontal * 2),
-                770 - marginTop - marginBottom
-            );
-            this.dgvTransporte.Location = new Point(
-                marginHorizontal,
-                marginTop
-            );
+            this.dgvTransporte.Width = 1280 - (marginHorizontal * 2);
+
+            //scrollbar vertical
+            this.Controls.Add(this.dgvTransporte);
+
+            this.dgvTransporte.Location = new Point(marginHorizontal, marginTop);
+            this.dgvTransporte.Width = 1280 - (marginHorizontal * 2);
+
+            int filasVisibles = 15;
+            int alturaFilas = dgvTransporte.RowTemplate.Height * filasVisibles;
+            int alturaEncabezado = dgvTransporte.ColumnHeadersHeight;
+            int alturaTotal = alturaFilas + alturaEncabezado;
+            this.dgvTransporte.Height = alturaTotal;
+            this.dgvTransporte.ScrollBars = ScrollBars.Vertical;
 
             this.dgvTransporte.ColumnHeadersHeight = 55;
             this.dgvTransporte.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -319,12 +322,13 @@ namespace SistemaRepartoG4
             this.dgvTransporte.RowTemplate.Height = 38;
 
             this.dgvTransporte.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            //columnas de la tabla 
             this.dgvTransporte.Columns.AddRange(
                 new DataGridViewTextBoxColumn()
                 {
-                    Name = "placa",
-                    HeaderText = "PLACA",
-                    DataPropertyName = "Placa",
+                    Name = "placa", //nombre
+                    HeaderText = "PLACA", //titulo de la columna
+                    DataPropertyName = "Placa", //variable
                     MinimumWidth = 60
                 },
                 new DataGridViewTextBoxColumn()
@@ -352,7 +356,7 @@ namespace SistemaRepartoG4
                 {
                     Name = "capacidad",
                     HeaderText = "CAPACIDAD",
-                    DataPropertyName = "capacidad",   
+                    DataPropertyName = "capacidad",
                     MinimumWidth = 100
                 },
                 new DataGridViewTextBoxColumn()
@@ -360,7 +364,7 @@ namespace SistemaRepartoG4
                     Name = "SucursalID",
                     HeaderText = "ID SUCURSAL",
                     DataPropertyName = "SucursalID",
-                    Visible = false               
+                    Visible = false
                 },
                 new DataGridViewTextBoxColumn()
                 {
@@ -373,14 +377,14 @@ namespace SistemaRepartoG4
                 {
                     Name = "TipoID",
                     HeaderText = "ID TIPO",
-                    DataPropertyName = "TipoID",    
+                    DataPropertyName = "TipoID",
                     Visible = false
                 },
                 new DataGridViewTextBoxColumn()
                 {
                     Name = "Tipo",
                     HeaderText = "TIPO",
-                    DataPropertyName = "Tipo",    
+                    DataPropertyName = "Tipo",
                     MinimumWidth = 120
                 },
                 new DataGridViewTextBoxColumn()
@@ -399,9 +403,11 @@ namespace SistemaRepartoG4
                 }
             );
 
+            //llamamos al crud y a obtener transporte
             TransporteCRUD crud = new TransporteCRUD();
             dgvTransporte.DataSource = crud.ObtenerTransportes();
 
+            //centrar los datos de la tabla 
             foreach (DataGridViewColumn col in dgvTransporte.Columns)
             {
                 col.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
