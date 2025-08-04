@@ -18,7 +18,7 @@ namespace SistemaRepartoG4
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Usuarios());
+            Application.Run(new Sucursales());
         }
     }
 }
