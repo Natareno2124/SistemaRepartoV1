@@ -30,6 +30,11 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Encargado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ruta_Recoleccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ruta_Entrega = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Sucursal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Btn_eliminar = new System.Windows.Forms.Button();
             this.Btn_guardar = new System.Windows.Forms.Button();
             this.Btn_editar = new System.Windows.Forms.Button();
@@ -43,21 +48,6 @@
             this.Lab_codigo = new System.Windows.Forms.Label();
             this.Lab_bodegas = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Encargado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ruta_Recoleccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ruta_Entrega = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Sucursal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Lab_codigo1 = new System.Windows.Forms.Label();
-            this.Lab_encargado1 = new System.Windows.Forms.Label();
-            this.Lab_rutasRecoleccion1 = new System.Windows.Forms.Label();
-            this.Lab_rutasEntrega1 = new System.Windows.Forms.Label();
-            this.Lab_sucursal1 = new System.Windows.Forms.Label();
-            this.txt_codigo = new System.Windows.Forms.TextBox();
-            this.txt_encargado = new System.Windows.Forms.TextBox();
-            this.txt_rutasRecoleccion = new System.Windows.Forms.TextBox();
-            this.txt_rutasEntrega = new System.Windows.Forms.TextBox();
-            this.txt_sucursal = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -65,9 +55,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(153)))), ((int)(((byte)(174)))));
-            this.panel1.Location = new System.Drawing.Point(196, 0);
+            this.panel1.Location = new System.Drawing.Point(1, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(745, 63);
+            this.panel1.Size = new System.Drawing.Size(940, 63);
             this.panel1.TabIndex = 1;
             // 
             // dataGridView1
@@ -79,10 +69,38 @@
             this.Ruta_Recoleccion,
             this.Ruta_Entrega,
             this.Sucursal});
-            this.dataGridView1.Location = new System.Drawing.Point(243, 335);
+            this.dataGridView1.Location = new System.Drawing.Point(26, 235);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(639, 196);
+            this.dataGridView1.Size = new System.Drawing.Size(880, 310);
             this.dataGridView1.TabIndex = 18;
+            // 
+            // codigo
+            // 
+            this.codigo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.codigo.FillWeight = 150F;
+            this.codigo.HeaderText = "Código";
+            this.codigo.Name = "codigo";
+            this.codigo.Width = 65;
+            // 
+            // Encargado
+            // 
+            this.Encargado.HeaderText = "Encargado";
+            this.Encargado.Name = "Encargado";
+            // 
+            // Ruta_Recoleccion
+            // 
+            this.Ruta_Recoleccion.HeaderText = "Ruta_Recoleccion";
+            this.Ruta_Recoleccion.Name = "Ruta_Recoleccion";
+            // 
+            // Ruta_Entrega
+            // 
+            this.Ruta_Entrega.HeaderText = "Ruta_Entrega";
+            this.Ruta_Entrega.Name = "Ruta_Entrega";
+            // 
+            // Sucursal
+            // 
+            this.Sucursal.HeaderText = "Sucursal";
+            this.Sucursal.Name = "Sucursal";
             // 
             // Btn_eliminar
             // 
@@ -137,7 +155,7 @@
             this.Btn_filtrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(153)))), ((int)(((byte)(174)))));
             this.Btn_filtrar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_filtrar.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.Btn_filtrar.Location = new System.Drawing.Point(243, 551);
+            this.Btn_filtrar.Location = new System.Drawing.Point(37, 561);
             this.Btn_filtrar.Name = "Btn_filtrar";
             this.Btn_filtrar.Size = new System.Drawing.Size(116, 30);
             this.Btn_filtrar.TabIndex = 13;
@@ -151,9 +169,9 @@
             this.panel3.Controls.Add(this.Lab_rutasRecoleccion);
             this.panel3.Controls.Add(this.Lab_encargado);
             this.panel3.Controls.Add(this.Lab_codigo);
-            this.panel3.Location = new System.Drawing.Point(243, 284);
+            this.panel3.Location = new System.Drawing.Point(26, 167);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(650, 45);
+            this.panel3.Size = new System.Drawing.Size(881, 45);
             this.panel3.TabIndex = 12;
             // 
             // Lab_sucursal
@@ -216,7 +234,7 @@
             // 
             this.Lab_bodegas.AutoSize = true;
             this.Lab_bodegas.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lab_bodegas.Location = new System.Drawing.Point(238, 97);
+            this.Lab_bodegas.Location = new System.Drawing.Point(20, 97);
             this.Lab_bodegas.Name = "Lab_bodegas";
             this.Lab_bodegas.Size = new System.Drawing.Size(133, 29);
             this.Lab_bodegas.TabIndex = 11;
@@ -225,141 +243,16 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
-            this.panel2.Location = new System.Drawing.Point(243, 129);
+            this.panel2.Location = new System.Drawing.Point(25, 129);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(650, 10);
+            this.panel2.Size = new System.Drawing.Size(881, 10);
             this.panel2.TabIndex = 10;
-            // 
-            // codigo
-            // 
-            this.codigo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.codigo.FillWeight = 150F;
-            this.codigo.HeaderText = "Código";
-            this.codigo.Name = "codigo";
-            this.codigo.Width = 65;
-            // 
-            // Encargado
-            // 
-            this.Encargado.HeaderText = "Encargado";
-            this.Encargado.Name = "Encargado";
-            // 
-            // Ruta_Recoleccion
-            // 
-            this.Ruta_Recoleccion.HeaderText = "Ruta_Recoleccion";
-            this.Ruta_Recoleccion.Name = "Ruta_Recoleccion";
-            // 
-            // Ruta_Entrega
-            // 
-            this.Ruta_Entrega.HeaderText = "Ruta_Entrega";
-            this.Ruta_Entrega.Name = "Ruta_Entrega";
-            // 
-            // Sucursal
-            // 
-            this.Sucursal.HeaderText = "Sucursal";
-            this.Sucursal.Name = "Sucursal";
-            // 
-            // Lab_codigo1
-            // 
-            this.Lab_codigo1.AutoSize = true;
-            this.Lab_codigo1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lab_codigo1.Location = new System.Drawing.Point(262, 179);
-            this.Lab_codigo1.Name = "Lab_codigo1";
-            this.Lab_codigo1.Size = new System.Drawing.Size(51, 16);
-            this.Lab_codigo1.TabIndex = 19;
-            this.Lab_codigo1.Text = "Codigo:";
-            this.Lab_codigo1.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // Lab_encargado1
-            // 
-            this.Lab_encargado1.AutoSize = true;
-            this.Lab_encargado1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lab_encargado1.Location = new System.Drawing.Point(240, 207);
-            this.Lab_encargado1.Name = "Lab_encargado1";
-            this.Lab_encargado1.Size = new System.Drawing.Size(73, 16);
-            this.Lab_encargado1.TabIndex = 20;
-            this.Lab_encargado1.Text = "Encargado:";
-            // 
-            // Lab_rutasRecoleccion1
-            // 
-            this.Lab_rutasRecoleccion1.AutoSize = true;
-            this.Lab_rutasRecoleccion1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lab_rutasRecoleccion1.Location = new System.Drawing.Point(516, 182);
-            this.Lab_rutasRecoleccion1.Name = "Lab_rutasRecoleccion1";
-            this.Lab_rutasRecoleccion1.Size = new System.Drawing.Size(140, 16);
-            this.Lab_rutasRecoleccion1.TabIndex = 21;
-            this.Lab_rutasRecoleccion1.Text = "Rutas De Recoleccion:";
-            // 
-            // Lab_rutasEntrega1
-            // 
-            this.Lab_rutasEntrega1.AutoSize = true;
-            this.Lab_rutasEntrega1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lab_rutasEntrega1.Location = new System.Drawing.Point(551, 207);
-            this.Lab_rutasEntrega1.Name = "Lab_rutasEntrega1";
-            this.Lab_rutasEntrega1.Size = new System.Drawing.Size(105, 16);
-            this.Lab_rutasEntrega1.TabIndex = 22;
-            this.Lab_rutasEntrega1.Text = "Ruta de Entrega:";
-            // 
-            // Lab_sucursal1
-            // 
-            this.Lab_sucursal1.AutoSize = true;
-            this.Lab_sucursal1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lab_sucursal1.Location = new System.Drawing.Point(249, 248);
-            this.Lab_sucursal1.Name = "Lab_sucursal1";
-            this.Lab_sucursal1.Size = new System.Drawing.Size(62, 16);
-            this.Lab_sucursal1.TabIndex = 23;
-            this.Lab_sucursal1.Text = "Sucursal:";
-            // 
-            // txt_codigo
-            // 
-            this.txt_codigo.Location = new System.Drawing.Point(311, 178);
-            this.txt_codigo.Name = "txt_codigo";
-            this.txt_codigo.Size = new System.Drawing.Size(185, 20);
-            this.txt_codigo.TabIndex = 24;
-            this.txt_codigo.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // txt_encargado
-            // 
-            this.txt_encargado.Location = new System.Drawing.Point(311, 210);
-            this.txt_encargado.Name = "txt_encargado";
-            this.txt_encargado.Size = new System.Drawing.Size(185, 20);
-            this.txt_encargado.TabIndex = 25;
-            // 
-            // txt_rutasRecoleccion
-            // 
-            this.txt_rutasRecoleccion.Location = new System.Drawing.Point(658, 178);
-            this.txt_rutasRecoleccion.Name = "txt_rutasRecoleccion";
-            this.txt_rutasRecoleccion.Size = new System.Drawing.Size(185, 20);
-            this.txt_rutasRecoleccion.TabIndex = 26;
-            // 
-            // txt_rutasEntrega
-            // 
-            this.txt_rutasEntrega.Location = new System.Drawing.Point(658, 210);
-            this.txt_rutasEntrega.Name = "txt_rutasEntrega";
-            this.txt_rutasEntrega.Size = new System.Drawing.Size(185, 20);
-            this.txt_rutasEntrega.TabIndex = 27;
-            // 
-            // txt_sucursal
-            // 
-            this.txt_sucursal.Location = new System.Drawing.Point(311, 247);
-            this.txt_sucursal.Name = "txt_sucursal";
-            this.txt_sucursal.Size = new System.Drawing.Size(185, 20);
-            this.txt_sucursal.TabIndex = 28;
             // 
             // Bodegas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(942, 616);
-            this.Controls.Add(this.txt_sucursal);
-            this.Controls.Add(this.txt_rutasEntrega);
-            this.Controls.Add(this.txt_rutasRecoleccion);
-            this.Controls.Add(this.txt_encargado);
-            this.Controls.Add(this.txt_codigo);
-            this.Controls.Add(this.Lab_sucursal1);
-            this.Controls.Add(this.Lab_rutasEntrega1);
-            this.Controls.Add(this.Lab_rutasRecoleccion1);
-            this.Controls.Add(this.Lab_encargado1);
-            this.Controls.Add(this.Lab_codigo1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.Btn_eliminar);
             this.Controls.Add(this.Btn_guardar);
@@ -402,15 +295,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Ruta_Recoleccion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ruta_Entrega;
         private System.Windows.Forms.DataGridViewTextBoxColumn Sucursal;
-        private System.Windows.Forms.Label Lab_codigo1;
-        private System.Windows.Forms.Label Lab_encargado1;
-        private System.Windows.Forms.Label Lab_rutasRecoleccion1;
-        private System.Windows.Forms.Label Lab_rutasEntrega1;
-        private System.Windows.Forms.Label Lab_sucursal1;
-        private System.Windows.Forms.TextBox txt_codigo;
-        private System.Windows.Forms.TextBox txt_encargado;
-        private System.Windows.Forms.TextBox txt_rutasRecoleccion;
-        private System.Windows.Forms.TextBox txt_rutasEntrega;
-        private System.Windows.Forms.TextBox txt_sucursal;
     }
 }
