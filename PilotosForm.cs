@@ -1,5 +1,5 @@
 ﻿//PilotosForm.cs
-
+//Formto, funciones logicas de pilotos, visualizacion datos
 using System;
 using System.Drawing;
 using System.Windows.Forms;
@@ -12,13 +12,13 @@ namespace SistemaRepartoG4
 {
     partial class PilotosForm : Form
     {
+        //llamamos al crud
         private PilotosCRUD crud = new PilotosCRUD();
 
         public PilotosForm()
         {
             InitializeComponent();
             ConfigurarEstilos();
-
         }
 
         private void ConfigurarEstilos()
@@ -27,7 +27,7 @@ namespace SistemaRepartoG4
             this.BackColor = Color.White;
             this.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
 
-            // Estilo de los botones redondos
+            // Estilo para botones redondos
             foreach (Button btn in new[] { btnAgregar, btnEditar, btnGuardar, btnEliminar, btnRetroceder })
             {
                 btn.FlatStyle = FlatStyle.Flat;
@@ -38,7 +38,7 @@ namespace SistemaRepartoG4
                 btn.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, btn.Width, btn.Height, 20, 20));
             }
 
-            // Estilo del DataGridView
+            // Estilo del DataGridView BASICO
             dgvPilotos.BorderStyle = BorderStyle.None;
             dgvPilotos.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dgvPilotos.EnableHeadersVisualStyles = false;
@@ -54,12 +54,14 @@ namespace SistemaRepartoG4
             int nLeftRect, int nTopRect, int nRightRect, int nBottomRect,
             int nWidthEllipse, int nHeightEllipse);
 
+        //funcionalidad del boton agregar
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             try
             {
                 using (var detalle = new PilotoDetalleForm())
                 {
+                    //validacion de ingreso de datos 
                     if (detalle.ShowDialog() == DialogResult.OK)
                     {
                         if (string.IsNullOrWhiteSpace(detalle.Nombres) || string.IsNullOrWhiteSpace(detalle.Apellidos))
@@ -76,14 +78,31 @@ namespace SistemaRepartoG4
                             return;
                         }
 
-                        // Insertar el nuevo piloto
+                        // Validar y convertir zona (string -> int) si no me tira error xd
+                        int zonaInt;
+                        if (!int.TryParse(detalle.Zona, out zonaInt))
+                        {
+                            MessageBox.Show("Zona inválida. Debe ser un número entero.", "Error",
+                                            MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return;
+                        }
+
+                        //llamamos desde el crud la funcion de insertar piloto
                         crud.InsertarPiloto(
+                            //llaamos las variables 
                             detalle.Nombres.Trim(),
                             detalle.Apellidos.Trim(),
                             detalle.FechaNacimiento,
                             detalle.Sexo,
                             detalle.TipoLicencia,
-                            detalle.IdSucursal
+                            detalle.IdSucursal,
+                            detalle.Telefono,
+                            detalle.Correo,
+                            detalle.Calle,
+                            detalle.Avenida,
+                            zonaInt,
+                            detalle.Ciudad,
+                            detalle.Municipio
                         );
 
                         var datosActualizados = crud.ObtenerPilotos();
@@ -100,6 +119,7 @@ namespace SistemaRepartoG4
                     }
                 }
             }
+            //mmensajes de error
             catch (MySqlException ex)
             {
                 MessageBox.Show($"Error de base de datos: {ex.Message}", "Error",
@@ -112,6 +132,8 @@ namespace SistemaRepartoG4
             }
         }
 
+
+        //logica boton de editar
         private void btnEditar_Click(object sender, EventArgs e)
         {
             if (dgvPilotos.SelectedRows.Count == 0)
@@ -120,12 +142,16 @@ namespace SistemaRepartoG4
                                 MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-
-            var requiredColumns = new[] { "colID", "colNombre", "colApellidos", "colFechaNacimiento",
-                                 "colSexo", "colTipoLicencia", "colSucursalID" };
+            //confirmamos que todas los campos esten 
+            var requiredColumns = new[] {
+                    "colID", "colNombre", "colApellidos", "colFechaNacimiento",
+                    "colSexo", "colTipoLicencia", "colSucursalID",
+                    "colTelefono", "colCorreo", "colCalle", "colAvenida", "colZona", "colCiudad", "colMunicipio"
+                };
 
             foreach (var col in requiredColumns)
             {
+                //mensaje de error si hay una columna faltante
                 if (!dgvPilotos.Columns.Contains(col))
                 {
                     MessageBox.Show($"Falta la columna requerida: {col}", "Error de configuración",
@@ -135,12 +161,11 @@ namespace SistemaRepartoG4
             }
 
             var row = dgvPilotos.SelectedRows[0];
-
             using (var detalle = new PilotoDetalleForm())
             {
                 try
                 {
-                    detalle.Nombres = GetCellValue(row, "colID");
+                    detalle.Nombres = GetCellValue(row, "colNombre");
                     detalle.Apellidos = GetCellValue(row, "colApellidos");
 
                     if (DateTime.TryParse(GetCellValue(row, "colFechaNacimiento"), out var fecha))
@@ -152,10 +177,19 @@ namespace SistemaRepartoG4
                     if (int.TryParse(GetCellValue(row, "colSucursalID"), out var sucursalId))
                         detalle.IdSucursal = sucursalId;
 
+                    detalle.Telefono = GetCellValue(row, "colTelefono");
+                    detalle.Correo = GetCellValue(row, "colCorreo");
+                    detalle.Calle = GetCellValue(row, "colCalle");
+                    detalle.Avenida = GetCellValue(row, "colAvenida");
+                    detalle.Zona = GetCellValue(row, "colZona");
+                    detalle.Ciudad = GetCellValue(row, "colCiudad");
+                    detalle.Municipio = GetCellValue(row, "colMunicipio");
+
                     if (detalle.ShowDialog() == DialogResult.OK)
                     {
                         if (int.TryParse(GetCellValue(row, "colID"), out var pilotoId))
                         {
+                            //llamamos al crud y la funcion de modificar piloto
                             crud.ModificarPiloto(
                                 pilotoId,
                                 detalle.Nombres,
@@ -163,7 +197,15 @@ namespace SistemaRepartoG4
                                 detalle.FechaNacimiento,
                                 detalle.Sexo,
                                 detalle.TipoLicencia,
-                                detalle.IdSucursal);
+                                detalle.IdSucursal,
+                                detalle.Telefono,
+                                detalle.Correo,
+                                detalle.Calle,
+                                detalle.Avenida,
+                                detalle.Zona,
+                                detalle.Ciudad,
+                                detalle.Municipio
+                            );
 
                             int firstVisibleRow = dgvPilotos.FirstDisplayedScrollingRowIndex;
                             dgvPilotos.DataSource = crud.ObtenerPilotos();
@@ -172,6 +214,7 @@ namespace SistemaRepartoG4
                         }
                     }
                 }
+                //mnsaje de error
                 catch (Exception ex)
                 {
                     MessageBox.Show($"Error al editar piloto: {ex.Message}", "Error",
@@ -180,11 +223,13 @@ namespace SistemaRepartoG4
             }
         }
 
+        //para saber el valor
         private string GetCellValue(DataGridViewRow row, string columnName)
         {
             return row.Cells[columnName].Value?.ToString() ?? "";
         }
 
+        //boton de guardar 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Cambios guardados");
@@ -198,7 +243,7 @@ namespace SistemaRepartoG4
                                 MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            int id = Convert.ToInt32(dgvPilotos.SelectedRows[0].Cells["ID"].Value);
+            int id = Convert.ToInt32(dgvPilotos.SelectedRows[0].Cells["colID"].Value);
             if (MessageBox.Show("¿Confirma eliminación?", "Confirmar",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {

@@ -1,5 +1,5 @@
 ﻿//TransporteForm
-
+//visualizacion, logica 
 using System;
 using System.Drawing;
 using System.Windows.Forms;
@@ -10,6 +10,7 @@ namespace SistemaRepartoG4
 {
     public partial class TransporteForm : Form
     {
+        //llamamos al crud
         private TransporteCRUD crud = new TransporteCRUD();
 
         public TransporteForm()
@@ -35,7 +36,7 @@ namespace SistemaRepartoG4
                 btn.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, btn.Width, btn.Height, 20, 20));
             }
 
-            // DataGridView
+            // DataGridView diseño BASICO
             dgvTransporte.BorderStyle = BorderStyle.None;
             dgvTransporte.EnableHeadersVisualStyles = false;
             dgvTransporte.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(44, 62, 80);
@@ -51,6 +52,7 @@ namespace SistemaRepartoG4
             int nLeftRect, int nTopRect, int nRightRect, int nBottomRect,
             int nWidthEllipse, int nHeightEllipse);
 
+        //boton agregar logica
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             using (var form = new TransporteDetalleForm())
@@ -59,15 +61,16 @@ namespace SistemaRepartoG4
                 {
                     try
                     {
+                        //llamamos del crud el meodo de insertar transporte
                         crud.InsertarTransporte(
                             form.Placa,
                             form.Marca,
                             form.Modelo,
                             form.Color,
                             form.Capacidad,
-                            form.IdSucursal,  // Este es el ID real
-                            form.IdTipo,      // Este es el ID real
-                            form.IdEstado     // Este es el ID real
+                            form.IdSucursal,
+                            form.IdTipo,
+                            form.IdEstado
                         );
 
                         dgvTransporte.DataSource = crud.ObtenerTransportes();
@@ -82,7 +85,7 @@ namespace SistemaRepartoG4
             }
         }
 
-
+        //logica del boton editar
         private void btnEditar_Click(object sender, EventArgs e)
         {
             if (dgvTransporte.SelectedRows.Count == 0) return;
