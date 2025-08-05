@@ -1,5 +1,6 @@
 ﻿//TransporteFormDESIGNER
 //Visualizacion de datos
+using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -405,7 +406,57 @@ namespace SistemaRepartoG4
 
             //llamamos al crud y a obtener transporte
             TransporteCRUD crud = new TransporteCRUD();
-            dgvTransporte.DataSource = crud.ObtenerTransportes();
+
+
+            // Dentro de tu constructor o método de inicialización, tras InitializeComponent():
+
+            // Funcionalidad de buscar por placa
+            DataTable dt = new TransporteCRUD().ObtenerTransportes();
+            transportesBinding = new BindingSource();
+            transportesBinding.DataSource = dt;
+            dgvTransporte.DataSource = transportesBinding;
+
+            // Cuando cambie el texto, aplica el filtro
+            txtBuscar.TextChanged += (s, e) =>
+            {
+                string txt = txtBuscar.Text.Trim().Replace("'", "''");
+
+                if (string.IsNullOrEmpty(txt) || txt == "Buscar por placa")
+                {
+                    transportesBinding.RemoveFilter();
+                }
+                else
+                {
+                    // Convertimos Placa (int) a string para usar LIKE
+                    transportesBinding.Filter =
+                        $"Convert(Placa, 'System.String') LIKE '%{txt}%'";
+                }
+            };
+
+            // Placeholder: al enfocar quita el texto por defecto
+            txtBuscar.GotFocus += (s, e) =>
+            {
+                if (txtBuscar.Text == "Buscar por placa")
+                {
+                    txtBuscar.Text = "";
+                    txtBuscar.ForeColor = SystemColors.WindowText;
+                }
+            };
+
+            // Placeholder: al perder foco, restaura si está vacío
+            txtBuscar.LostFocus += (s, e) =>
+            {
+                if (string.IsNullOrWhiteSpace(txtBuscar.Text))
+                {
+                    txtBuscar.Text = "Buscar por placa";
+                    txtBuscar.ForeColor = SystemColors.GrayText;
+                    transportesBinding.RemoveFilter();
+                }
+            };
+
+
+
+
 
             //centrar los datos de la tabla 
             foreach (DataGridViewColumn col in dgvTransporte.Columns)
@@ -520,6 +571,8 @@ namespace SistemaRepartoG4
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnRetroceder;
+
+        private BindingSource transportesBinding;
 
     }
 

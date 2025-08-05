@@ -228,14 +228,18 @@ namespace SistemaRepartoG4
             // cbRuta
             this.cbRuta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbRuta.FormattingEnabled = true;
-            this.cbRuta.Items.AddRange(new object[] {
+            cbRuta.Items.Clear();
+            cbRuta.Items.AddRange(new object[] {
                 "Buscar por ruta",
                 "Todas las rutas",
                 "Ruta Norte",
                 "Ruta Sur",
                 "Ruta Este",
-                "Ruta Oeste"});
-            this.cbRuta.SelectedIndex = 0;
+                "Ruta Oeste"
+            });
+            if (cbRuta.Items.Count > 0)
+                cbRuta.SelectedIndex = 0;
+
             this.cbRuta.Location = new Point(
                 cbRutaOriginalX,
                 hrLine.Bottom + espacioDespuesDeLinea
@@ -246,13 +250,18 @@ namespace SistemaRepartoG4
             // cbOrdenar
             this.cbOrdenar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbOrdenar.FormattingEnabled = true;
-            this.cbOrdenar.Items.AddRange(new object[] {
+            cbOrdenar.Items.Clear();
+            cbOrdenar.Items.AddRange(new object[] {
                 "Ordenar por",
                 "ID",
                 "Nombre",
-                "Nº Entregas"});
-            this.cbOrdenar.SelectedIndex = 0;
+                "Nº Entregas"
+            });
+            if (cbOrdenar.Items.Count > 0)
+                cbOrdenar.SelectedIndex = 0;
+
             this.cbOrdenar.Name = "cbOrdenar";
+            
             this.cbOrdenar.Location = new Point(
                 cbOrdenarOriginalX,
                 hrLine.Bottom + espacioDespuesDeLinea
@@ -540,7 +549,48 @@ namespace SistemaRepartoG4
 
             //llamamos al crud, llamamos al obtener pilotos
             PilotosCRUD crud = new PilotosCRUD();
-            dgvPilotos.DataSource = crud.ObtenerPilotos();
+
+
+            //Funcionalidad de buscar por nombre
+            DataTable dt = new PilotosCRUD().ObtenerPilotos();
+            pilotosBinding = new BindingSource();
+            pilotosBinding.DataSource = dt;
+            dgvPilotos.DataSource = pilotosBinding;
+
+            // Cuando cambie el texto, aplica el filtro
+            txtBuscar.TextChanged += (s, e) =>
+            {
+                string txt = txtBuscar.Text.Trim().Replace("'", "''");
+                if (string.IsNullOrEmpty(txt))
+                {
+                    pilotosBinding.RemoveFilter();
+                }
+                else
+                {
+                    pilotosBinding.Filter =
+                        $"nombre_conductor LIKE '%{txt}%' OR apellido_conductor LIKE '%{txt}%'";
+                }
+            };
+
+            //deja el placeholder
+            txtBuscar.GotFocus += (s, e) =>
+            {
+                if (txtBuscar.Text == "Buscar por nombre")
+                {
+                    txtBuscar.Text = "";
+                    txtBuscar.ForeColor = SystemColors.WindowText;
+                }
+            };
+            txtBuscar.LostFocus += (s, e) =>
+            {
+                if (string.IsNullOrWhiteSpace(txtBuscar.Text))
+                {
+                    txtBuscar.Text = "Buscar por nombre";
+                    txtBuscar.ForeColor = SystemColors.GrayText;
+                    pilotosBinding.RemoveFilter();
+                }
+            };
+
 
             //centrar los datos de la tabla
             foreach (DataGridViewColumn col in dgvPilotos.Columns)
@@ -640,6 +690,22 @@ namespace SistemaRepartoG4
             this.PerformLayout();
         }
 
+        private void AplicarFiltroCombinado(string rutaFilter = null)
+        {
+            string txt = txtBuscar.Text.Trim().Replace("'", "''");
+            string textFilter = string.IsNullOrEmpty(txt) || txt == "Buscar por nombre"
+                ? null
+                : $"(nombre_conductor LIKE '%{txt}%' OR apellido_conductor LIKE '%{txt}%')";
+            if (!string.IsNullOrEmpty(textFilter) && !string.IsNullOrEmpty(rutaFilter))
+                pilotosBinding.Filter = $"{textFilter} AND {rutaFilter}";
+            else if (!string.IsNullOrEmpty(textFilter))
+                pilotosBinding.Filter = textFilter;
+            else if (!string.IsNullOrEmpty(rutaFilter))
+                pilotosBinding.Filter = rutaFilter;
+            else
+                pilotosBinding.RemoveFilter();
+        }
+
         #endregion
         //declaracion de variables
         private System.Windows.Forms.Label lblTitulo;
@@ -656,6 +722,9 @@ namespace SistemaRepartoG4
         private System.Windows.Forms.Button btnRetroceder;
         private System.Windows.Forms.GroupBox grpContacto;
         private System.Windows.Forms.GroupBox grpDireccion;
+
+        private BindingSource pilotosBinding;
+
         private TextBox txtSexo;
         private TextBox txtLicencia;
         private TextBox txtTelefono;
@@ -665,6 +734,7 @@ namespace SistemaRepartoG4
         private TextBox txtZona;
         private TextBox txtCiudad;
         private TextBox txtMunicipio;
+
     }
 
 }
