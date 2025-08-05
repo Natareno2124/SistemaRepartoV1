@@ -19,7 +19,6 @@ namespace SistemaRepartoG4
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MenuPrincipal());
-
         }
     }
 }

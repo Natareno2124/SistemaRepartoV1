@@ -65,7 +65,7 @@ namespace WinFormsApp1
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(264, 55);
             this.button1.TabIndex = 0;
-            this.button1.Text = "REGISTRAR";
+            this.button1.Text = "GUARDAR";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -189,13 +189,14 @@ namespace WinFormsApp1
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Arial Black", 16.2F, System.Drawing.FontStyle.Bold);
+            this.label6.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
-            this.label6.Location = new System.Drawing.Point(73, 30);
+            this.label6.Location = new System.Drawing.Point(42, 36);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(381, 40);
+            this.label6.Size = new System.Drawing.Size(453, 28);
             this.label6.TabIndex = 13;
-            this.label6.Text = "REGISTRO DE USUARIO";
+            this.label6.Text = "REGISTRO/MODIFICACIÓN DE USUARIO";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // groupBox1
             // 
@@ -266,28 +267,7 @@ namespace WinFormsApp1
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1139, 658);
             this.panel2.TabIndex = 0;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
-            this.label5.Location = new System.Drawing.Point(73, 452);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(75, 19);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "Teléfono";
-            // 
-            // txtTel
-            // 
-            this.txtTel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(84)))), ((int)(((byte)(109)))));
-            this.txtTel.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtTel.Font = new System.Drawing.Font("Arial", 16.2F);
-            this.txtTel.Location = new System.Drawing.Point(73, 473);
-            this.txtTel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtTel.Name = "txtTel";
-            this.txtTel.Size = new System.Drawing.Size(383, 32);
-            this.txtTel.TabIndex = 12;
+
             // 
             // RegistroUsuarios
             // 
@@ -298,6 +278,7 @@ namespace WinFormsApp1
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "RegistroUsuarios";
+            this.Load += new System.EventHandler(this.RegistroUsuarios_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);

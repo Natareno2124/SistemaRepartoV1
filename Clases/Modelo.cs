@@ -86,7 +86,71 @@ namespace SistemaRepartoG4.Clases
 
         }
 
+        public string ModificarUsuario(UsuariosV usuario)
+        {
+            try
+            {
+                using (MySqlConnection conexion = ConectarDB.establecerConexion())
+                {
+                    conexion.Open();
 
+                    string query = @"UPDATE tbl_usuarios
+                             SET nombres_usuario = @nombres,
+                                 apellidos_usuario = @apellidos,
+                                 usuario = @usuario,
+                                 contrasena_usuario = @contrasena,
+                                 email_usuario = @email,
+                                 telefono_usuario = @telefono
+                             WHERE id_usuario = @id";
+
+                    MySqlCommand cmd = new MySqlCommand(query, conexion);
+
+                    cmd.Parameters.AddWithValue("@nombres", usuario.Nombres);
+                    cmd.Parameters.AddWithValue("@apellidos", usuario.Apellidos);
+                    cmd.Parameters.AddWithValue("@usuario", usuario.Usuario);
+                    cmd.Parameters.AddWithValue("@contrasena", usuario.Contrasena); // Ya debe estar hasheada
+                    cmd.Parameters.AddWithValue("@email", usuario.Email);
+                    cmd.Parameters.AddWithValue("@telefono", usuario.Telefono);
+                    cmd.Parameters.AddWithValue("@id", usuario.Id);
+
+                    int filasAfectadas = cmd.ExecuteNonQuery();
+
+                    conexion.Close();
+
+                    if (filasAfectadas > 0)
+                        return "";  // Sin error
+                    else
+                        return "No se encontró el usuario para actualizar";
+                }
+            }
+            catch (Exception ex)
+            {
+                return "Error al actualizar usuario: " + ex.Message;
+            }
+        }
+
+        public bool EliminarUsuario(int id)
+        {
+            try
+            {
+                MySqlConnection conexion = ConectarDB.establecerConexion();
+                conexion.Open();
+
+                string query = "DELETE FROM tbl_usuarios WHERE id_usuario = @id";
+                MySqlCommand cmd = new MySqlCommand(query, conexion);
+                cmd.Parameters.AddWithValue("@id", id);
+
+                int resultado = cmd.ExecuteNonQuery();
+                conexion.Close();
+
+                return resultado > 0;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al eliminar usuario: " + ex.Message);
+                return false;
+            }
+        }
 
 
     }
