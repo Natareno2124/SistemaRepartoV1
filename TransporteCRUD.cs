@@ -1,6 +1,5 @@
 ﻿//TransporteCRUD
 
-
 using System;
 using System.Data;
 using System.Windows.Forms;
@@ -11,6 +10,7 @@ namespace SistemaRepartoG4
 {
     public class TransporteCRUD
     {
+        //archivo de conecion y su funcion
         private ConectarDB conexion = new ConectarDB();
 
         public DataTable ObtenerTransportes()
@@ -18,22 +18,22 @@ namespace SistemaRepartoG4
             using (MySqlConnection conn = ConectarDB.establecerConexion())
             {
                 string query = @"
-            SELECT
-                v.id_placa AS Placa,
-                v.marca_vehiculo AS Marca,
-                v.modelo_vehiculo AS Modelo,
-                v.color_vehiculo AS Color,
-                v.capacidad_vehiculo AS Capacidad,
-                v.id_sucursal AS SucursalID,
-                s.codigo_sucursal AS Sucursal,
-                v.id_tipo_vehiculo AS TipoID,
-                tv.nombre_tipo_vehiculo AS Tipo,
-                v.id_estado_vehiculo AS EstadoID,
-                ev.nombre_estado_vehiculo AS EstadoVehiculo
-            FROM tbl_vehiculos v
-            LEFT JOIN tbl_sucursal s ON v.id_sucursal = s.id_sucursal
-            LEFT JOIN tbl_tipo_vehiculo tv ON v.id_tipo_vehiculo = tv.id_tipo_vehiculo
-            LEFT JOIN tbl_estado_vehiculo ev ON v.id_estado_vehiculo = ev.id_estado_vehiculo";
+                    SELECT
+                        v.id_placa AS Placa,
+                        v.marca_vehiculo AS Marca,
+                        v.modelo_vehiculo AS Modelo,
+                        v.color_vehiculo AS Color,
+                        v.capacidad_vehiculo AS Capacidad,
+                        v.id_sucursal AS SucursalID,
+                        s.codigo_sucursal AS Sucursal,
+                        v.id_tipo_vehiculo AS TipoID,
+                        tv.nombre_tipo_vehiculo AS Tipo,
+                        v.id_estado_vehiculo AS EstadoID,
+                        ev.nombre_estado_vehiculo AS EstadoVehiculo
+                    FROM tbl_vehiculos v
+                    LEFT JOIN tbl_sucursal s ON v.id_sucursal = s.id_sucursal
+                    LEFT JOIN tbl_tipo_vehiculo tv ON v.id_tipo_vehiculo = tv.id_tipo_vehiculo
+                    LEFT JOIN tbl_estado_vehiculo ev ON v.id_estado_vehiculo = ev.id_estado_vehiculo";
 
                 var adaptador = new MySqlDataAdapter(query, conn);
                 var tabla = new DataTable();
@@ -41,13 +41,11 @@ namespace SistemaRepartoG4
                 return tabla;
             }
         }
-
-
-
         public void InsertarTransporte(int placa, string marca, string modelo, string color, string capacidad,
                                       int idSucursal, int idTipo, int idEstado)
         {
             if (placa <= 0)
+                //validaciones
                 throw new ArgumentException("La placa debe ser un número positivo.");
             if (string.IsNullOrWhiteSpace(marca))
                 throw new ArgumentException("La marca es obligatoria.");
@@ -66,6 +64,7 @@ namespace SistemaRepartoG4
 
             using (MySqlConnection conn = ConectarDB.establecerConexion())
             {
+                //ABRIMOS LA CONEXION CON ESTO IMPORTANTE 
                 conn.Open();
 
                 string query = @"INSERT INTO tbl_vehiculos 
@@ -92,6 +91,7 @@ namespace SistemaRepartoG4
         public void ModificarTransporte(int placa, string marca, string modelo, string color, string capacidad,
                                         int idSucursal, int idTipo, int idEstado)
         {
+            //VALIDACIONES
             if (placa <= 0) throw new ArgumentException("La placa debe ser un número positivo.");
             if (string.IsNullOrWhiteSpace(marca)) throw new ArgumentException("La marca es obligatoria.");
             if (string.IsNullOrWhiteSpace(modelo)) throw new ArgumentException("El modelo es obligatorio.");
@@ -105,7 +105,7 @@ namespace SistemaRepartoG4
             {
                 if (conn == null)
                     throw new Exception("No se pudo establecer conexión con la base de datos.");
-
+                //abir conexion
                 conn.Open();
 
                 string query = @"UPDATE tbl_vehiculos SET
@@ -169,4 +169,3 @@ namespace SistemaRepartoG4
 
     }
 }
-

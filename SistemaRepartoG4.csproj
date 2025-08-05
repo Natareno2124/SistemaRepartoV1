@@ -111,8 +111,13 @@
       <DependentUpon>Bodegas.cs</DependentUpon>
     </Compile>
     <Compile Include="Clases\ConectarDB.cs" />
+
+    <Compile Include="Clases\CUsuarios.cs" />
+
     <Compile Include="Clases\ContactoSucursal.cs" />
+
     <Compile Include="Clases\Paquete.cs" />
+
     <Compile Include="Clases\Session.cs" />
     <Compile Include="Clases\DireccionSucursal.cs" />
     <Compile Include="Clases\Sucursal.cs" />

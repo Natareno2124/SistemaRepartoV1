@@ -1,5 +1,5 @@
 ﻿//TransporteDetalleDESIGNER
-
+//ventana de ingreso de datos DISEÑO
 using System;
 using System.Drawing;
 using System.Windows.Forms;
