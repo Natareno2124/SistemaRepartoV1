@@ -153,6 +153,7 @@
             this.txt_id_rutas.Name = "txt_id_rutas";
             this.txt_id_rutas.Size = new System.Drawing.Size(383, 32);
             this.txt_id_rutas.TabIndex = 2;
+            this.txt_id_rutas.TextChanged += new System.EventHandler(this.txt_id_rutas_TextChanged);
             // 
             // label5
             // 
@@ -260,7 +261,7 @@
             this.btn_registrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(153)))), ((int)(((byte)(174)))));
             this.btn_registrar.Font = new System.Drawing.Font("Arial Black", 10.8F, System.Drawing.FontStyle.Bold);
             this.btn_registrar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_registrar.Location = new System.Drawing.Point(425, 401);
+            this.btn_registrar.Location = new System.Drawing.Point(411, 394);
             this.btn_registrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_registrar.Name = "btn_registrar";
             this.btn_registrar.Size = new System.Drawing.Size(264, 55);

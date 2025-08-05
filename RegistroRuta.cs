@@ -26,5 +26,10 @@ namespace SistemaRepartoG4
         {
 
         }
+
+        private void txt_id_rutas_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
