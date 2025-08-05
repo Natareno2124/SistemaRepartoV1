@@ -1,5 +1,5 @@
 ﻿//TransporteDetalleForm
-
+//logica de la ventana de ingreso de datos
 using MySql.Data.MySqlClient;
 using SistemaRepartoG4.Clases;
 using System;
@@ -12,7 +12,6 @@ namespace SistemaRepartoG4
         public TransporteDetalleForm()
         {
             InitializeComponent();
-
             CargarSucursales();
             CargarTiposVehiculo();
             CargarEstadosVehiculo();
@@ -38,6 +37,7 @@ namespace SistemaRepartoG4
             }
         }
 
+        //funciones para cargar las sucursales y completar datos
         private void CargarSucursales()
         {
             cbSucursal.Items.Clear();
@@ -139,9 +139,6 @@ namespace SistemaRepartoG4
             cbEstado.SelectedIndex = 0;
         }
 
-
-
-
         private void BtnAceptar_Click(object sender, EventArgs e)
         {
             if (!int.TryParse(txtPlaca.Text.Trim(), out int placa) || placa <= 0)
@@ -231,7 +228,6 @@ namespace SistemaRepartoG4
                 cbSucursal.SelectedIndex = 0;
             }
         }
-
         public int IdTipo
         {
             get
@@ -279,3 +275,4 @@ namespace SistemaRepartoG4
         }
     }
 }
+

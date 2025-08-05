@@ -111,11 +111,37 @@ namespace SistemaRepartoG4.Clases
         }
 
 
+
         public string ctrlActualizar(UsuariosV usuario)
         {
             Modelo modelo = new Modelo();
             return modelo.ModificarUsuario(usuario);
         }
+
+        public Boolean validarContactoSucursal(ContactoSucursal contactoSucursal) {
+            if (string.IsNullOrEmpty(contactoSucursal.CorreoSucursal) ||
+            string.IsNullOrEmpty(contactoSucursal.TelefonoSucursal)
+            )
+            {
+                return false;
+            }
+            return true;
+        }
+
+        public Boolean validarDireccionSucursal(DireccionSucursal direccionSucursal) {
+            if (direccionSucursal.Zona > 0 ||
+            string.IsNullOrEmpty(direccionSucursal.Avenida) ||
+            string.IsNullOrEmpty(direccionSucursal.Municipo) ||
+            string.IsNullOrEmpty(direccionSucursal.Ciudad)
+            )
+            {
+                return false;
+            }
+            return true;
+
+        }
+
+
 
 
     }
