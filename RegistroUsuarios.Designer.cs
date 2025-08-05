@@ -42,14 +42,14 @@ namespace WinFormsApp1
             this.label3 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtTel = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.conPassword = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtTel = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -186,28 +186,6 @@ namespace WinFormsApp1
             this.label4.Text = "E-mail";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // txtTel
-            // 
-            this.txtTel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(84)))), ((int)(((byte)(109)))));
-            this.txtTel.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtTel.Font = new System.Drawing.Font("Arial", 16.2F);
-            this.txtTel.Location = new System.Drawing.Point(73, 473);
-            this.txtTel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtTel.Name = "txtTel";
-            this.txtTel.Size = new System.Drawing.Size(383, 32);
-            this.txtTel.TabIndex = 12;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
-            this.label5.Location = new System.Drawing.Point(73, 452);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(75, 19);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "Teléfono";
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -289,6 +267,7 @@ namespace WinFormsApp1
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1139, 658);
             this.panel2.TabIndex = 0;
+
             // 
             // RegistroUsuarios
             // 
@@ -321,13 +300,13 @@ namespace WinFormsApp1
         private Label label3;
         private TextBox txtEmail;
         private Label label4;
-        private TextBox txtTel;
-        private Label label5;
         private Label label6;
         private GroupBox groupBox1;
         private TextBox conPassword;
         private Label label7;
         private Panel panel1;
         private Panel panel2;
+        private TextBox txtTel;
+        private Label label5;
     }
 }
