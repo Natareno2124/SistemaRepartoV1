@@ -21,5 +21,10 @@ namespace SistemaRepartoG4
         {
 
         }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

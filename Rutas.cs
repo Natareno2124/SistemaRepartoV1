@@ -65,5 +65,15 @@ namespace SistemaRepartoG4
         {
 
         }
+
+        private void bnt_Guardar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Eliminar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
