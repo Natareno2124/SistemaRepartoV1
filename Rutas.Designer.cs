@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.bnt_ordenar = new System.Windows.Forms.Button();
+            this.ordenar = new System.Windows.Forms.Button();
             this.btn_Eliminar = new System.Windows.Forms.Button();
             this.bnt_Guardar = new System.Windows.Forms.Button();
             this.bnt_Editar = new System.Windows.Forms.Button();
@@ -41,28 +41,27 @@
             this.label10 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
-            this.lab_rutas = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.button6 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DB)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // bnt_ordenar
+            // ordenar
             // 
-            this.bnt_ordenar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(153)))), ((int)(((byte)(174)))));
-            this.bnt_ordenar.Location = new System.Drawing.Point(33, 820);
-            this.bnt_ordenar.Name = "bnt_ordenar";
-            this.bnt_ordenar.Size = new System.Drawing.Size(98, 55);
-            this.bnt_ordenar.TabIndex = 8;
-            this.bnt_ordenar.Text = "Ordenar";
-            this.bnt_ordenar.UseVisualStyleBackColor = false;
-            this.bnt_ordenar.Click += new System.EventHandler(this.button1_Click);
+            this.ordenar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(153)))), ((int)(((byte)(174)))));
+            this.ordenar.Location = new System.Drawing.Point(33, 820);
+            this.ordenar.Name = "ordenar";
+            this.ordenar.Size = new System.Drawing.Size(98, 55);
+            this.ordenar.TabIndex = 8;
+            this.ordenar.Text = "Ordenar";
+            this.ordenar.UseVisualStyleBackColor = false;
+            this.ordenar.Click += new System.EventHandler(this.button1_Click);
             // 
             // btn_Eliminar
             // 
@@ -76,7 +75,6 @@
             this.btn_Eliminar.TabIndex = 17;
             this.btn_Eliminar.Text = "Eliminar";
             this.btn_Eliminar.UseVisualStyleBackColor = false;
-            this.btn_Eliminar.Click += new System.EventHandler(this.btn_Eliminar_Click);
             // 
             // bnt_Guardar
             // 
@@ -90,7 +88,6 @@
             this.bnt_Guardar.TabIndex = 16;
             this.bnt_Guardar.Text = "Guardar";
             this.bnt_Guardar.UseVisualStyleBackColor = false;
-            this.bnt_Guardar.Click += new System.EventHandler(this.bnt_Guardar_Click);
             // 
             // bnt_Editar
             // 
@@ -104,7 +101,6 @@
             this.bnt_Editar.TabIndex = 15;
             this.bnt_Editar.Text = "Editar";
             this.bnt_Editar.UseVisualStyleBackColor = false;
-            this.bnt_Editar.Click += new System.EventHandler(this.bnt_Editar_Click);
             // 
             // bnt_Agregar
             // 
@@ -118,7 +114,6 @@
             this.bnt_Agregar.TabIndex = 14;
             this.bnt_Agregar.Text = "Agregar";
             this.bnt_Agregar.UseVisualStyleBackColor = false;
-            this.bnt_Agregar.Click += new System.EventHandler(this.bnt_Agregar_Click);
             // 
             // DB
             // 
@@ -215,17 +210,17 @@
             this.label11.TabIndex = 0;
             this.label11.Text = "No. Ruta";
             // 
-            // lab_rutas
+            // label3
             // 
-            this.lab_rutas.AutoSize = true;
-            this.lab_rutas.Font = new System.Drawing.Font("Arial Black", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lab_rutas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
-            this.lab_rutas.Location = new System.Drawing.Point(3, 68);
-            this.lab_rutas.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lab_rutas.Name = "lab_rutas";
-            this.lab_rutas.Size = new System.Drawing.Size(173, 56);
-            this.lab_rutas.TabIndex = 41;
-            this.lab_rutas.Text = "RUTAS";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial Black", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.label3.Location = new System.Drawing.Point(3, 68);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(173, 56);
+            this.label3.TabIndex = 41;
+            this.label3.Text = "RUTAS";
             // 
             // panel2
             // 
@@ -271,30 +266,19 @@
             this.panel3.Size = new System.Drawing.Size(1681, 17);
             this.panel3.TabIndex = 43;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(388, 175);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(189, 50);
-            this.button1.TabIndex = 45;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_2);
-            // 
             // Rutas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1683, 890);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.lab_rutas);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.DB);
-            this.Controls.Add(this.bnt_ordenar);
+            this.Controls.Add(this.ordenar);
             this.Controls.Add(this.btn_Eliminar);
             this.Controls.Add(this.bnt_Guardar);
             this.Controls.Add(this.bnt_Editar);
@@ -313,7 +297,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button bnt_ordenar;
+        private System.Windows.Forms.Button ordenar;
         private System.Windows.Forms.Button btn_Eliminar;
         private System.Windows.Forms.Button bnt_Guardar;
         private System.Windows.Forms.Button bnt_Editar;
@@ -326,11 +310,10 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label lab_rutas;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button1;
     }
 }
