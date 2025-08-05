@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SistemaRepartoG4.Clases;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -35,8 +36,16 @@ namespace SistemaRepartoG4
 
         private void button5_Click(object sender, EventArgs e)
         {
-            RegistroUsuarios ventana = new RegistroUsuarios(); // Instanciar la ventana
-            ventana.Show(); // Mostrarla
+            RegistroUsuarios ventana = new RegistroUsuarios();
+            ventana.ShowDialog();
+            CargarUsuarios();
+        }
+
+
+        private void CargarUsuarios()
+        {
+            var cUsuarios = new SistemaRepartoG4.Clases.CUsuarios();
+            cUsuarios.mostrarUsuarios(DB);
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -87,6 +96,74 @@ namespace SistemaRepartoG4
 
             DB.RowTemplate.Height = 28;
             DB.ColumnHeadersHeight = 35;
+        }
+
+        private void Btn_editar_Click(object sender, EventArgs e)
+        {
+            if (DB.SelectedRows.Count > 0)
+            {
+                DataGridViewRow fila = DB.SelectedRows[0];
+
+                UsuariosV usuario = new UsuariosV
+                {
+                    Id = Convert.ToInt32(fila.Cells["id_usuario"].Value),
+                    Nombres = fila.Cells["nombres_usuario"].Value.ToString(),
+                    Apellidos = fila.Cells["apellidos_usuario"].Value.ToString(),
+                    Usuario = fila.Cells["usuario"].Value.ToString(),
+                    Contrasena = fila.Cells["contrasena_usuario"].Value.ToString(),
+                    ConPassword = fila.Cells["contrasena_usuario"].Value.ToString(),
+                    Email = fila.Cells["email_usuario"].Value.ToString(),
+                    Telefono = fila.Cells["telefono_usuario"].Value.ToString()
+                };
+
+                RegistroUsuarios editarForm = new RegistroUsuarios(usuario);
+                editarForm.ShowDialog();
+
+                // Refrescar DataGridView
+                var cUsuarios = new Clases.CUsuarios();
+                cUsuarios.mostrarUsuarios(DB);
+            }
+            else
+            {
+                MessageBox.Show("Selecciona un usuario para editar");
+            }
+        }
+
+        private void Btn_eliminar_Click(object sender, EventArgs e)
+        {
+            if (DB.SelectedRows.Count > 0)
+            {
+                DialogResult confirm = MessageBox.Show("¿Estás seguro de que deseas eliminar este usuario?", "Confirmar eliminación", MessageBoxButtons.YesNo);
+
+                if (confirm == DialogResult.Yes)
+                {
+                    int id = Convert.ToInt32(DB.SelectedRows[0].Cells["id_usuario"].Value);
+                    Modelo modelo = new Modelo();
+                    bool eliminado = modelo.EliminarUsuario(id);
+
+                    if (eliminado)
+                    {
+                        MessageBox.Show("Usuario eliminado correctamente");
+                        new CUsuarios().mostrarUsuarios(DB);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error al eliminar el usuario");
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Selecciona un usuario para eliminar");
+            }
+        }
+
+        private void Btn_salir_Click(object sender, EventArgs e)
+        {
+            MenuPrincipal ventanaMenuPrincipal = new MenuPrincipal();
+            ventanaMenuPrincipal.FormClosed += (s, args) => this.Show();
+            ventanaMenuPrincipal.Show();
+            this.Hide();
         }
     }
 }
