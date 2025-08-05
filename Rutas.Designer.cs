@@ -69,7 +69,7 @@
             this.btn_Eliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
             this.btn_Eliminar.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Eliminar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btn_Eliminar.Location = new System.Drawing.Point(1466, 804);
+            this.btn_Eliminar.Location = new System.Drawing.Point(1583, 804);
             this.btn_Eliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Eliminar.Name = "btn_Eliminar";
             this.btn_Eliminar.Size = new System.Drawing.Size(84, 71);
@@ -83,7 +83,7 @@
             this.bnt_Guardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
             this.bnt_Guardar.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bnt_Guardar.ForeColor = System.Drawing.SystemColors.Control;
-            this.bnt_Guardar.Location = new System.Drawing.Point(1374, 804);
+            this.bnt_Guardar.Location = new System.Drawing.Point(1491, 804);
             this.bnt_Guardar.Margin = new System.Windows.Forms.Padding(4);
             this.bnt_Guardar.Name = "bnt_Guardar";
             this.bnt_Guardar.Size = new System.Drawing.Size(84, 71);
@@ -97,7 +97,7 @@
             this.bnt_Editar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
             this.bnt_Editar.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bnt_Editar.ForeColor = System.Drawing.SystemColors.Control;
-            this.bnt_Editar.Location = new System.Drawing.Point(1282, 804);
+            this.bnt_Editar.Location = new System.Drawing.Point(1399, 804);
             this.bnt_Editar.Margin = new System.Windows.Forms.Padding(4);
             this.bnt_Editar.Name = "bnt_Editar";
             this.bnt_Editar.Size = new System.Drawing.Size(84, 71);
@@ -111,7 +111,7 @@
             this.bnt_Agregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
             this.bnt_Agregar.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bnt_Agregar.ForeColor = System.Drawing.SystemColors.Control;
-            this.bnt_Agregar.Location = new System.Drawing.Point(1190, 804);
+            this.bnt_Agregar.Location = new System.Drawing.Point(1307, 804);
             this.bnt_Agregar.Margin = new System.Windows.Forms.Padding(4);
             this.bnt_Agregar.Name = "bnt_Agregar";
             this.bnt_Agregar.Size = new System.Drawing.Size(84, 71);
@@ -127,7 +127,7 @@
             this.DB.Margin = new System.Windows.Forms.Padding(4);
             this.DB.Name = "DB";
             this.DB.RowHeadersWidth = 51;
-            this.DB.Size = new System.Drawing.Size(1562, 475);
+            this.DB.Size = new System.Drawing.Size(1633, 475);
             this.DB.TabIndex = 38;
             // 
             // panel4
@@ -140,7 +140,7 @@
             this.panel4.Location = new System.Drawing.Point(157, 267);
             this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1438, 46);
+            this.panel4.Size = new System.Drawing.Size(1509, 46);
             this.panel4.TabIndex = 40;
             // 
             // label1
@@ -242,7 +242,7 @@
             // 
             this.comboBox2.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(1374, 20);
+            this.comboBox2.Location = new System.Drawing.Point(1489, 18);
             this.comboBox2.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(176, 24);
@@ -286,7 +286,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1642, 890);
+            this.ClientSize = new System.Drawing.Size(1683, 890);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
