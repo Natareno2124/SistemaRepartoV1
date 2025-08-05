@@ -49,5 +49,10 @@ namespace SistemaRepartoG4
         {
 
         }
+
+        private void cmReportar_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

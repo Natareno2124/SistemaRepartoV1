@@ -394,6 +394,7 @@
             this.cmReportar.Name = "cmReportar";
             this.cmReportar.Size = new System.Drawing.Size(398, 34);
             this.cmReportar.TabIndex = 16;
+            this.cmReportar.SelectedIndexChanged += new System.EventHandler(this.cmReportar_SelectedIndexChanged);
             // 
             // btnRegresar
             // 
