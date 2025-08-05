@@ -33,8 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-
-
     <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
       <HintPath>packages\BouncyCastle.Cryptography.2.5.1\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
     </Reference>
@@ -55,7 +53,6 @@
     </Reference>
     <Reference Include="MySql.Data, Version=9.4.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>packages\MySql.Data.9.4.0\lib\net462\MySql.Data.dll</HintPath>
-
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
@@ -101,6 +98,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgregarPaquete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarPaquete.Designer.cs">
+      <DependentUpon>AgregarPaquete.cs</DependentUpon>
+    </Compile>
     <Compile Include="Bodegas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,12 +112,25 @@
     </Compile>
     <Compile Include="Clases\ConectarDB.cs" />
     <Compile Include="Clases\ContactoSucursal.cs" />
+    <Compile Include="Clases\Paquete.cs" />
     <Compile Include="Clases\Session.cs" />
     <Compile Include="Clases\DireccionSucursal.cs" />
     <Compile Include="Clases\Sucursal.cs" />
     <Compile Include="Clases\Validar.cs" />
     <Compile Include="Clases\Modelo.cs" />
     <Compile Include="Clases\UsuariosV.cs" />
+    <Compile Include="EditarPaquete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarPaquete.Designer.cs">
+      <DependentUpon>EditarPaquete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EliminarPaquete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarPaquete.Designer.cs">
+      <DependentUpon>EliminarPaquete.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +152,13 @@
     <Compile Include="MisEntregas.Designer.cs">
       <DependentUpon>MisEntregas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Paquetes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Paquetes.Designer.cs">
+      <DependentUpon>Paquetes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaquetesCRUD.cs" />
     <Compile Include="PilotoDetalleForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -222,8 +245,17 @@
     <Compile Include="Usuarios.Designer.cs">
       <DependentUpon>Usuarios.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AgregarPaquete.resx">
+      <DependentUpon>AgregarPaquete.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Bodegas.resx">
       <DependentUpon>Bodegas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditarPaquete.resx">
+      <DependentUpon>EditarPaquete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminarPaquete.resx">
+      <DependentUpon>EliminarPaquete.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -236,6 +268,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MisEntregas.resx">
       <DependentUpon>MisEntregas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Paquetes.resx">
+      <DependentUpon>Paquetes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
