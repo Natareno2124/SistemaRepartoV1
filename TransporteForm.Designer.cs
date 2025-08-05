@@ -407,9 +407,6 @@ namespace SistemaRepartoG4
             //llamamos al crud y a obtener transporte
             TransporteCRUD crud = new TransporteCRUD();
 
-
-            // Dentro de tu constructor o método de inicialización, tras InitializeComponent():
-
             // Funcionalidad de buscar por placa
             DataTable dt = new TransporteCRUD().ObtenerTransportes();
             transportesBinding = new BindingSource();
@@ -432,8 +429,6 @@ namespace SistemaRepartoG4
                         $"Convert(Placa, 'System.String') LIKE '%{txt}%'";
                 }
             };
-
-            // Placeholder: al enfocar quita el texto por defecto
             txtBuscar.GotFocus += (s, e) =>
             {
                 if (txtBuscar.Text == "Buscar por placa")
@@ -442,8 +437,6 @@ namespace SistemaRepartoG4
                     txtBuscar.ForeColor = SystemColors.WindowText;
                 }
             };
-
-            // Placeholder: al perder foco, restaura si está vacío
             txtBuscar.LostFocus += (s, e) =>
             {
                 if (string.IsNullOrWhiteSpace(txtBuscar.Text))
@@ -453,10 +446,6 @@ namespace SistemaRepartoG4
                     transportesBinding.RemoveFilter();
                 }
             };
-
-
-
-
 
             //centrar los datos de la tabla 
             foreach (DataGridViewColumn col in dgvTransporte.Columns)
