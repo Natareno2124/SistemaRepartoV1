@@ -111,6 +111,13 @@ namespace SistemaRepartoG4.Clases
         }
 
 
+
+        public string ctrlActualizar(UsuariosV usuario)
+        {
+            Modelo modelo = new Modelo();
+            return modelo.ModificarUsuario(usuario);
+        }
+
         public Boolean validarContactoSucursal(ContactoSucursal contactoSucursal) {
             if (string.IsNullOrEmpty(contactoSucursal.CorreoSucursal) ||
             string.IsNullOrEmpty(contactoSucursal.TelefonoSucursal)
@@ -133,6 +140,7 @@ namespace SistemaRepartoG4.Clases
             return true;
 
         }
+
 
 
 

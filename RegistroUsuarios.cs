@@ -12,9 +12,13 @@ namespace WinFormsApp1
 {
     using System.Drawing;
     using SistemaRepartoG4.Clases;
+    using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
     public partial class RegistroUsuarios : Form
     {
+        private int? idUsuario = null;
+        private bool esEdicion = false;
+
         public RegistroUsuarios()
         {
             InitializeComponent();
@@ -22,6 +26,27 @@ namespace WinFormsApp1
             button1.BackColor = ColorTranslator.FromHtml("#8D99AE");
             BackColor = ColorTranslator.FromHtml("#2C546D");
         }
+
+        public RegistroUsuarios(UsuariosV usuario)
+        {
+            InitializeComponent();
+
+            esEdicion = true;
+            idUsuario = usuario.Id;
+
+            txtNombres.Text = usuario.Nombres;
+            txtApellidos.Text = usuario.Apellidos;
+            txtUserName.Text = usuario.Usuario;
+            txtPassword.Text = usuario.Contrasena;
+            conPassword.Text = usuario.Contrasena;
+            txtEmail.Text = usuario.Email;
+            txtTel.Text = usuario.Telefono;
+
+            groupBox1.BackColor = ColorTranslator.FromHtml("#8D99AE");
+            button1.BackColor = ColorTranslator.FromHtml("#8D99AE");
+            BackColor = ColorTranslator.FromHtml("#2C546D");
+        }
+
         private void AplicarColorATextBox(Control parent)
         {
             foreach (Control ctrl in parent.Controls)
@@ -92,46 +117,56 @@ namespace WinFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            UsuariosV usuario = new UsuariosV();
-            usuario.Nombres = txtNombres.Text;
-            usuario.Apellidos = txtApellidos.Text;
-            usuario.Usuario = txtUserName.Text;
-            usuario.Contrasena = txtPassword.Text;
-            usuario.ConPassword = conPassword.Text;
-            usuario.Email = txtEmail.Text;
-            usuario.Telefono = txtTel.Text;
+            if (comboRol.SelectedIndex == -1)
+            {
+                MessageBox.Show("Debe seleccionar un rol.");
+                return;
+            }
+            int rol = comboRol.SelectedIndex == 0 ? 1 : 2;
+            UsuariosV usuario = new UsuariosV
+            {
 
+                Nombres = txtNombres.Text,
+                Apellidos = txtApellidos.Text,
+                Usuario = txtUserName.Text,
+                Contrasena = txtPassword.Text,
+                ConPassword = conPassword.Text,
+                Email = txtEmail.Text,
+                Telefono = txtTel.Text,
+                Rol_usuario = rol
+            };
 
             try
             {
-
                 Validar validar = new Validar();
-                string respuesta = validar.ctrlRegistro(usuario);
+                string respuesta;
 
-                if (respuesta.Length > 0)
+                if (esEdicion)
                 {
+                    usuario.Id = idUsuario.Value;
+                    respuesta = validar.ctrlActualizar(usuario);
+                }
+                else
+                {
+                    respuesta = validar.ctrlRegistro(usuario);
+                }
 
+                if (!string.IsNullOrEmpty(respuesta))
+                {
                     MessageBox.Show(respuesta, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
-                    MessageBox.Show("Usuario registrado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-
+                    MessageBox.Show(esEdicion ? "Usuario actualizado correctamente" : "Usuario registrado correctamente",
+                                    "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close(); // cerrar formulario luego de guardar
                 }
-
-
-
-
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al registrar el usuario: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                MessageBox.Show("Error al guardar: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-
 
         private void txtNombres_TextChanged(object sender, EventArgs e)
         {
@@ -171,5 +206,19 @@ namespace WinFormsApp1
 
         }
 
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RegistroUsuarios_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
