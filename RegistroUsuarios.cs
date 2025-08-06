@@ -12,6 +12,7 @@ namespace WinFormsApp1
 {
     using System.Drawing;
     using SistemaRepartoG4.Clases;
+    using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
     public partial class RegistroUsuarios : Form
     {
@@ -116,15 +117,23 @@ namespace WinFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (comboRol.SelectedIndex == -1)
+            {
+                MessageBox.Show("Debe seleccionar un rol.");
+                return;
+            }
+            int rol = comboRol.SelectedIndex == 0 ? 1 : 2;
             UsuariosV usuario = new UsuariosV
             {
+
                 Nombres = txtNombres.Text,
                 Apellidos = txtApellidos.Text,
                 Usuario = txtUserName.Text,
                 Contrasena = txtPassword.Text,
                 ConPassword = conPassword.Text,
                 Email = txtEmail.Text,
-                Telefono = txtTel.Text
+                Telefono = txtTel.Text,
+                Rol_usuario = rol
             };
 
             try
@@ -203,6 +212,11 @@ namespace WinFormsApp1
         }
 
         private void RegistroUsuarios_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
         {
 
         }

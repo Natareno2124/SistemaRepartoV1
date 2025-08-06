@@ -50,6 +50,8 @@ namespace WinFormsApp1
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.comboRol = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -74,7 +76,7 @@ namespace WinFormsApp1
             this.Nombre.AutoSize = true;
             this.Nombre.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold);
             this.Nombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
-            this.Nombre.Location = new System.Drawing.Point(73, 86);
+            this.Nombre.Location = new System.Drawing.Point(73, 65);
             this.Nombre.Name = "Nombre";
             this.Nombre.Size = new System.Drawing.Size(80, 19);
             this.Nombre.TabIndex = 1;
@@ -86,7 +88,7 @@ namespace WinFormsApp1
             this.txtNombres.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombres.Font = new System.Drawing.Font("Arial", 16.2F);
             this.txtNombres.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.txtNombres.Location = new System.Drawing.Point(73, 107);
+            this.txtNombres.Location = new System.Drawing.Point(73, 86);
             this.txtNombres.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNombres.Name = "txtNombres";
             this.txtNombres.Size = new System.Drawing.Size(383, 32);
@@ -98,7 +100,7 @@ namespace WinFormsApp1
             this.txtApellidos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(84)))), ((int)(((byte)(109)))));
             this.txtApellidos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtApellidos.Font = new System.Drawing.Font("Arial", 16.2F);
-            this.txtApellidos.Location = new System.Drawing.Point(73, 166);
+            this.txtApellidos.Location = new System.Drawing.Point(73, 145);
             this.txtApellidos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtApellidos.Name = "txtApellidos";
             this.txtApellidos.Size = new System.Drawing.Size(383, 32);
@@ -109,7 +111,7 @@ namespace WinFormsApp1
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
-            this.label1.Location = new System.Drawing.Point(73, 145);
+            this.label1.Location = new System.Drawing.Point(73, 124);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(80, 19);
             this.label1.TabIndex = 3;
@@ -120,7 +122,7 @@ namespace WinFormsApp1
             this.txtUserName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(84)))), ((int)(((byte)(109)))));
             this.txtUserName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUserName.Font = new System.Drawing.Font("Arial", 16.2F);
-            this.txtUserName.Location = new System.Drawing.Point(73, 229);
+            this.txtUserName.Location = new System.Drawing.Point(73, 208);
             this.txtUserName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(383, 32);
@@ -131,7 +133,7 @@ namespace WinFormsApp1
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
-            this.label2.Location = new System.Drawing.Point(73, 208);
+            this.label2.Location = new System.Drawing.Point(73, 187);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(161, 19);
             this.label2.TabIndex = 5;
@@ -142,7 +144,7 @@ namespace WinFormsApp1
             this.txtPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(84)))), ((int)(((byte)(109)))));
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPassword.Font = new System.Drawing.Font("Arial", 16.2F);
-            this.txtPassword.Location = new System.Drawing.Point(73, 291);
+            this.txtPassword.Location = new System.Drawing.Point(73, 270);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
@@ -155,7 +157,7 @@ namespace WinFormsApp1
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
-            this.label3.Location = new System.Drawing.Point(73, 270);
+            this.label3.Location = new System.Drawing.Point(73, 249);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(100, 19);
             this.label3.TabIndex = 7;
@@ -167,7 +169,7 @@ namespace WinFormsApp1
             this.txtEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(84)))), ((int)(((byte)(109)))));
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEmail.Font = new System.Drawing.Font("Arial", 16.2F);
-            this.txtEmail.Location = new System.Drawing.Point(73, 412);
+            this.txtEmail.Location = new System.Drawing.Point(73, 391);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(383, 32);
@@ -179,7 +181,7 @@ namespace WinFormsApp1
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
-            this.label4.Location = new System.Drawing.Point(73, 391);
+            this.label4.Location = new System.Drawing.Point(73, 370);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(57, 19);
             this.label4.TabIndex = 9;
@@ -191,7 +193,7 @@ namespace WinFormsApp1
             this.txtTel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(84)))), ((int)(((byte)(109)))));
             this.txtTel.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTel.Font = new System.Drawing.Font("Arial", 16.2F);
-            this.txtTel.Location = new System.Drawing.Point(73, 473);
+            this.txtTel.Location = new System.Drawing.Point(73, 452);
             this.txtTel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTel.Name = "txtTel";
             this.txtTel.Size = new System.Drawing.Size(383, 32);
@@ -202,7 +204,7 @@ namespace WinFormsApp1
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
-            this.label5.Location = new System.Drawing.Point(73, 452);
+            this.label5.Location = new System.Drawing.Point(73, 431);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(75, 19);
             this.label5.TabIndex = 11;
@@ -223,6 +225,8 @@ namespace WinFormsApp1
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(153)))), ((int)(((byte)(174)))));
+            this.groupBox1.Controls.Add(this.comboRol);
+            this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.conPassword);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
@@ -239,11 +243,11 @@ namespace WinFormsApp1
             this.groupBox1.Controls.Add(this.txtUserName);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.ForeColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Location = new System.Drawing.Point(317, 28);
+            this.groupBox1.Location = new System.Drawing.Point(317, 2);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(523, 527);
+            this.groupBox1.Size = new System.Drawing.Size(523, 567);
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
@@ -253,7 +257,7 @@ namespace WinFormsApp1
             this.conPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(84)))), ((int)(((byte)(109)))));
             this.conPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.conPassword.Font = new System.Drawing.Font("Arial", 16.2F);
-            this.conPassword.Location = new System.Drawing.Point(73, 352);
+            this.conPassword.Location = new System.Drawing.Point(73, 331);
             this.conPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.conPassword.Name = "conPassword";
             this.conPassword.PasswordChar = '*';
@@ -265,7 +269,7 @@ namespace WinFormsApp1
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
-            this.label7.Location = new System.Drawing.Point(73, 331);
+            this.label7.Location = new System.Drawing.Point(73, 310);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(183, 19);
             this.label7.TabIndex = 14;
@@ -289,6 +293,29 @@ namespace WinFormsApp1
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1139, 658);
             this.panel2.TabIndex = 0;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold);
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.label8.Location = new System.Drawing.Point(73, 497);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(125, 19);
+            this.label8.TabIndex = 16;
+            this.label8.Text = "Rol de Usuario";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
+            // 
+            // comboRol
+            // 
+            this.comboRol.FormattingEnabled = true;
+            this.comboRol.Items.AddRange(new object[] {
+            "Administrador",
+            "Piloto"});
+            this.comboRol.Location = new System.Drawing.Point(73, 519);
+            this.comboRol.Name = "comboRol";
+            this.comboRol.Size = new System.Drawing.Size(383, 24);
+            this.comboRol.TabIndex = 18;
             // 
             // RegistroUsuarios
             // 
@@ -329,5 +356,7 @@ namespace WinFormsApp1
         private Label label7;
         private Panel panel1;
         private Panel panel2;
+        private Label label8;
+        private ComboBox comboRol;
     }
 }
