@@ -88,6 +88,7 @@
             this.txt_hora_final_ruta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(84)))), ((int)(((byte)(109)))));
             this.txt_hora_final_ruta.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_hora_final_ruta.Font = new System.Drawing.Font("Arial", 16.2F);
+            this.txt_hora_final_ruta.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.txt_hora_final_ruta.Location = new System.Drawing.Point(594, 169);
             this.txt_hora_final_ruta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_hora_final_ruta.Name = "txt_hora_final_ruta";
@@ -155,6 +156,7 @@
             this.txt_id_conductor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(84)))), ((int)(((byte)(109)))));
             this.txt_id_conductor.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_id_conductor.Font = new System.Drawing.Font("Arial", 16.2F);
+            this.txt_id_conductor.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.txt_id_conductor.Location = new System.Drawing.Point(594, 230);
             this.txt_id_conductor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_id_conductor.Name = "txt_id_conductor";
@@ -166,6 +168,7 @@
             this.txt_Nombre_de_Ruta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(84)))), ((int)(((byte)(109)))));
             this.txt_Nombre_de_Ruta.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Nombre_de_Ruta.Font = new System.Drawing.Font("Arial", 16.2F);
+            this.txt_Nombre_de_Ruta.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.txt_Nombre_de_Ruta.Location = new System.Drawing.Point(73, 169);
             this.txt_Nombre_de_Ruta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_Nombre_de_Ruta.Name = "txt_Nombre_de_Ruta";
@@ -199,6 +202,7 @@
             this.txt_hora_inicio_ruta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(84)))), ((int)(((byte)(109)))));
             this.txt_hora_inicio_ruta.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_hora_inicio_ruta.Font = new System.Drawing.Font("Arial", 16.2F);
+            this.txt_hora_inicio_ruta.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.txt_hora_inicio_ruta.Location = new System.Drawing.Point(594, 108);
             this.txt_hora_inicio_ruta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_hora_inicio_ruta.Name = "txt_hora_inicio_ruta";
@@ -211,6 +215,7 @@
             this.txtFecha_Ruta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(84)))), ((int)(((byte)(109)))));
             this.txtFecha_Ruta.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtFecha_Ruta.Font = new System.Drawing.Font("Arial", 16.2F);
+            this.txtFecha_Ruta.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.txtFecha_Ruta.Location = new System.Drawing.Point(73, 230);
             this.txtFecha_Ruta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtFecha_Ruta.Name = "txtFecha_Ruta";
