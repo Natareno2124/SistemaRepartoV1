@@ -36,7 +36,6 @@
             this.Ruta_Entrega = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Sucursal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Btn_eliminar = new System.Windows.Forms.Button();
-            this.Btn_guardar = new System.Windows.Forms.Button();
             this.Btn_editar = new System.Windows.Forms.Button();
             this.Btn_agregar = new System.Windows.Forms.Button();
             this.Btn_filtrar = new System.Windows.Forms.Button();
@@ -114,24 +113,12 @@
             this.Btn_eliminar.Text = "Eliminar";
             this.Btn_eliminar.UseVisualStyleBackColor = false;
             // 
-            // Btn_guardar
-            // 
-            this.Btn_guardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
-            this.Btn_guardar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_guardar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Btn_guardar.Location = new System.Drawing.Point(669, 552);
-            this.Btn_guardar.Name = "Btn_guardar";
-            this.Btn_guardar.Size = new System.Drawing.Size(116, 30);
-            this.Btn_guardar.TabIndex = 16;
-            this.Btn_guardar.Text = "Guardar";
-            this.Btn_guardar.UseVisualStyleBackColor = false;
-            // 
             // Btn_editar
             // 
             this.Btn_editar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
             this.Btn_editar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_editar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Btn_editar.Location = new System.Drawing.Point(550, 552);
+            this.Btn_editar.Location = new System.Drawing.Point(669, 551);
             this.Btn_editar.Name = "Btn_editar";
             this.Btn_editar.Size = new System.Drawing.Size(116, 30);
             this.Btn_editar.TabIndex = 15;
@@ -143,7 +130,7 @@
             this.Btn_agregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
             this.Btn_agregar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_agregar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Btn_agregar.Location = new System.Drawing.Point(428, 551);
+            this.Btn_agregar.Location = new System.Drawing.Point(547, 550);
             this.Btn_agregar.Name = "Btn_agregar";
             this.Btn_agregar.Size = new System.Drawing.Size(116, 30);
             this.Btn_agregar.TabIndex = 14;
@@ -155,7 +142,7 @@
             this.Btn_filtrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(153)))), ((int)(((byte)(174)))));
             this.Btn_filtrar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_filtrar.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.Btn_filtrar.Location = new System.Drawing.Point(37, 561);
+            this.Btn_filtrar.Location = new System.Drawing.Point(37, 552);
             this.Btn_filtrar.Name = "Btn_filtrar";
             this.Btn_filtrar.Size = new System.Drawing.Size(116, 30);
             this.Btn_filtrar.TabIndex = 13;
@@ -255,7 +242,6 @@
             this.ClientSize = new System.Drawing.Size(942, 616);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.Btn_eliminar);
-            this.Controls.Add(this.Btn_guardar);
             this.Controls.Add(this.Btn_editar);
             this.Controls.Add(this.Btn_agregar);
             this.Controls.Add(this.Btn_filtrar);
@@ -278,7 +264,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button Btn_eliminar;
-        private System.Windows.Forms.Button Btn_guardar;
         private System.Windows.Forms.Button Btn_editar;
         private System.Windows.Forms.Button Btn_agregar;
         private System.Windows.Forms.Button Btn_filtrar;

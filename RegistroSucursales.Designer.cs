@@ -52,6 +52,8 @@ namespace WinFormsApp1
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -164,6 +166,8 @@ namespace WinFormsApp1
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(153)))), ((int)(((byte)(174)))));
+            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.txtMunicipio);
             this.groupBox1.Controls.Add(this.label8);
@@ -295,6 +299,7 @@ namespace WinFormsApp1
             this.txtTelefonoContacto.PasswordChar = '*';
             this.txtTelefonoContacto.Size = new System.Drawing.Size(287, 25);
             this.txtTelefonoContacto.TabIndex = 15;
+            this.txtTelefonoContacto.TextChanged += new System.EventHandler(this.txtTelefonoContacto_TextChanged);
             // 
             // label7
             // 
@@ -328,6 +333,30 @@ namespace WinFormsApp1
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(854, 535);
             this.panel2.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.label1.Location = new System.Drawing.Point(396, 69);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 16);
+            this.label1.TabIndex = 24;
+            this.label1.Text = "ID Encargado";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(84)))), ((int)(((byte)(109)))));
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Arial", 16.2F);
+            this.textBox1.Location = new System.Drawing.Point(399, 87);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(206, 25);
+            this.textBox1.TabIndex = 28;
             // 
             // RegistroSucursales
             // 
@@ -369,5 +398,7 @@ namespace WinFormsApp1
         private TextBox txtZona;
         private Label label9;
         private TextBox txtMunicipio;
+        private Label label1;
+        private TextBox textBox1;
     }
 }

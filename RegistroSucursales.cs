@@ -159,5 +159,15 @@ namespace WinFormsApp1
         {
 
         }
+
+        private void txtTelefonoContacto_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

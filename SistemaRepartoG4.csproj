@@ -108,10 +108,12 @@
     <Compile Include="Clases\ContactoSucursal.cs" />
     <Compile Include="Clases\Session.cs" />
     <Compile Include="Clases\DireccionSucursal.cs" />
+    <Compile Include="Clases\Bodegas.cs" />
     <Compile Include="Clases\Sucursal.cs" />
     <Compile Include="Clases\Validar.cs" />
     <Compile Include="Clases\Modelo.cs" />
     <Compile Include="Clases\UsuariosV.cs" />
+    <Compile Include="EncargadoCRUD.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -181,6 +183,7 @@
       <DependentUpon>Sucursales.cs</DependentUpon>
     </Compile>
     <Compile Include="SucursalesCRUD.cs" />
+    <Compile Include="SucursalesDireccionCRUD.cs" />
     <Compile Include="Usuarios.cs">
       <SubType>Form</SubType>
     </Compile>
