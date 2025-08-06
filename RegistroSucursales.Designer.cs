@@ -235,12 +235,6 @@ namespace WinFormsApp1
             this.ResumeLayout(false);
 
         }
-
-        private void guardarSucursal_Click(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
         #endregion
 
         private Button button1;

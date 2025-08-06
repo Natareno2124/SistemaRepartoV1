@@ -42,7 +42,7 @@
             this.Btn_agregar = new System.Windows.Forms.Button();
             this.Btn_editar = new System.Windows.Forms.Button();
             this.Btn_eliminar = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridView1_CellContentClick = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Encargado = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,7 +50,7 @@
             this.Contacto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Horario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1_CellContentClick)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -209,18 +209,19 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridView1_CellContentClick.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1_CellContentClick.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
             this.codigo,
             this.Encargado,
             this.Dirección,
             this.Contacto,
             this.Horario});
-            this.dataGridView1.Location = new System.Drawing.Point(28, 225);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(854, 306);
-            this.dataGridView1.TabIndex = 9;
+            this.dataGridView1_CellContentClick.Location = new System.Drawing.Point(28, 225);
+            this.dataGridView1_CellContentClick.Name = "dataGridView1";
+            this.dataGridView1_CellContentClick.Size = new System.Drawing.Size(854, 306);
+            this.dataGridView1_CellContentClick.TabIndex = 9;
+            this.dataGridView1_CellContentClick.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
             // 
             // ID
             // 
@@ -258,7 +259,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.ClientSize = new System.Drawing.Size(942, 616);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridView1_CellContentClick);
             this.Controls.Add(this.Btn_eliminar);
             this.Controls.Add(this.Btn_editar);
             this.Controls.Add(this.Btn_agregar);
@@ -271,7 +272,7 @@
             this.Text = "Sucursales";
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1_CellContentClick)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -293,7 +294,7 @@
         private System.Windows.Forms.Button Btn_agregar;
         private System.Windows.Forms.Button Btn_editar;
         private System.Windows.Forms.Button Btn_eliminar;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridView1_CellContentClick;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Encargado;

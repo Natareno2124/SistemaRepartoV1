@@ -15,13 +15,19 @@ namespace SistemaRepartoG4
             using (MySqlConnection conn = ConectarDB.establecerConexion())
             {
                 string query = @"
-                    SELECT 
-                        s.id_sucursal,
-                        s.codigo_sucursal,
-                        s.id_encargado,
-                        s.id_direccion_sucursal,
-                        s.id_contacto_sucursal
-                    FROM tbl_sucursal s";
+    SELECT 
+        s.id_sucursal,
+        s.codigo_sucursal,
+        e.nombre_encargado,
+        e.apellido_encargado,
+        CONCAT(d.calle_sucursal, ', Av. ', d.avenida_sucursal, ', Zona ', d.zona_sucursal, ', ', d.ciudad_sucursal, ', ', d.municipio_sucursal) AS direccion_completa,
+        c.telefono_sucursal,
+        c.correo_sucursal
+    FROM tbl_sucursal s
+    JOIN tbl_encargado e ON s.id_encargado = e.id_encargado
+    JOIN tbl_direccion_sucursal d ON s.id_direccion_sucursal = d.id_direccion_sucursal
+    JOIN tbl_contacto_sucursal c ON s.id_contacto_sucursal = c.id_contacto_sucursal";
+
 
                 MySqlDataAdapter adaptador = new MySqlDataAdapter(query, conn);
                 DataTable tabla = new DataTable();
@@ -153,5 +159,7 @@ namespace SistemaRepartoG4
                 return tabla;
             }
         }
+
     }
+
 }

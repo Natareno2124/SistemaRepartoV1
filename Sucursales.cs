@@ -20,5 +20,13 @@ namespace SistemaRepartoG4
             RegistroSucursales registroSucursales = new RegistroSucursales();
             registroSucursales.Show();
         }
+
+        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+     
+        }
+
     }
 }
