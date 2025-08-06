@@ -497,13 +497,10 @@ namespace SistemaRepartoG4
 
             Label lblSexo = new Label() { Text = "Sexo:", Location = new Point(10, 25), AutoSize = true };
             txtSexo = new TextBox() { Location = new Point(100, 22), Width = 80, ReadOnly = true };
-
             Label lblLicencia = new Label() { Text = "Licencia:", Location = new Point(190, 25), AutoSize = true };
             txtLicencia = new TextBox() { Location = new Point(250, 22), Width = 80, ReadOnly = true };
-
             Label lblTelefono = new Label() { Text = "Teléfono:", Location = new Point(10, 60), AutoSize = true };
             txtTelefono = new TextBox() { Location = new Point(100, 57), Width = 230, ReadOnly = true };
-
             Label lblCorreo = new Label() { Text = "Correo:", Location = new Point(10, 90), AutoSize = true };
             txtCorreo = new TextBox() { Location = new Point(100, 87), Width = 230, ReadOnly = true };
 
@@ -525,16 +522,12 @@ namespace SistemaRepartoG4
 
             Label lblCalle = new Label() { Text = "Calle:", Location = new Point(10, 25), AutoSize = true };
             txtCalle = new TextBox() { Location = new Point(80, 22), Width = 120, ReadOnly = true };
-
             Label lblAvenida = new Label() { Text = "Avenida:", Location = new Point(220, 25), AutoSize = true };
             txtAvenida = new TextBox() { Location = new Point(290, 22), Width = 100, ReadOnly = true };
-
             Label lblZona = new Label() { Text = "Zona:", Location = new Point(10, 60), AutoSize = true };
             txtZona = new TextBox() { Location = new Point(80, 57), Width = 60, ReadOnly = true };
-
             Label lblCiudad = new Label() { Text = "Ciudad:", Location = new Point(150, 60), AutoSize = true };
             txtCiudad = new TextBox() { Location = new Point(220, 57), Width = 170, ReadOnly = true };
-
             Label lblMunicipio = new Label() { Text = "Municipio:", Location = new Point(10, 90), AutoSize = true };
             txtMunicipio = new TextBox() { Location = new Point(80, 87), Width = 310, ReadOnly = true };
 
@@ -549,7 +542,6 @@ namespace SistemaRepartoG4
 
             //llamamos al crud, llamamos al obtener pilotos
             PilotosCRUD crud = new PilotosCRUD();
-
 
             //Funcionalidad de buscar por nombre
             DataTable dt = new PilotosCRUD().ObtenerPilotos();
