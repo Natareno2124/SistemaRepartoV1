@@ -64,41 +64,46 @@ namespace WinFormsApp1
             AplicarColorALabel(this);
         }
 
-        private void guardarSucursal_Click(object sender, EventArgs e) { 
-            Sucursal sucursal = new Sucursal();
-            ContactoSucursal contactoSucursal = new ContactoSucursal();
-            DireccionSucursal direccionSucursal = new DireccionSucursal();
-            Validar validar = new Validar();
-            Boolean contactoSucursalValido = validar.validarContactoSucursal(contactoSucursal);
-
-            if (!contactoSucursalValido) {
-                MessageBox.Show("Todos los campos de contacto de sucursal son requeridos");
-                return;
-            }
-
-            contactoSucursal.TelefonoSucursal = txtTelefonoContacto.Text;
-            contactoSucursal.CorreoSucursal = txtCorreoContacto.Text;
-
-            Boolean direccionSucursalValido = validar.validarDireccionSucursal(direccionSucursal);
-
-            if (!contactoSucursalValido)
+        private void btnAgregarSucursal_Click(object sender, EventArgs e) {
+            try
             {
-                MessageBox.Show("Todos los campos de direccion de sucursal son requeridos");
-                return;
+                // Creamos la sucursal con los valores del formulario
+                Sucursal nuevaSucursal = new Sucursal
+                {
+                    CodigoSucursal = int.Parse(txtCodigoSucursal.Text),
+                    IdEncargado = int.Parse(txt_IdEncargado.Text),
+                    IdContactoSucursal = int.Parse(txt_IDContacto.Text),
+                    IdDireccionSucursal = int.Parse(txt_IDDireccion.Text)
+                };
+
+                // Insertamos la sucursal usando el CRUD
+                bool agregada = SucursalCRUD.InsertarSucursal(nuevaSucursal);
+
+                if (agregada)
+                {
+                    MessageBox.Show("Sucursal agregada correctamente.");
+                    LimpiarCampos();
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo agregar la sucursal.");
+                }
             }
-
-            direccionSucursal.Zona = Int32.Parse(txtZona.Text);
-            direccionSucursal.Avenida = txtAvenida.Text;
-            direccionSucursal.Ciudad = txtCiudad.Text;
-            direccionSucursal.Municipo = txtMunicipio.Text;
-
-
-            sucursal.CodigoSucursal = Int32.Parse(txtCodigoSucursal.Text);
-
-
-            MessageBox.Show("Creado Exitosamente");
-
-            
+            catch (FormatException)
+            {
+                MessageBox.Show("Por favor, verifica que todos los campos sean números válidos.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al agregar la sucursal: " + ex.Message);
+            }
+        }
+        private void LimpiarCampos()
+        {
+            txtCodigoSucursal.Clear();
+            txt_IdEncargado.Clear();
+            txt_IDContacto.Clear();
+            txt_IDDireccion.Clear();
         }
 
 
