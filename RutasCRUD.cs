@@ -143,7 +143,41 @@ namespace SistemaRepartoG4
                 }
             }
         }
-
+        public static RutaModel ObtenerRutaPorId(int id)
+        {
+            using (MySqlConnection conexion = ConectarDB.establecerConexion())
+            {
+                try
+                {
+                    conexion.Open();
+                    string query = "SELECT * FROM tbl_rutas WHERE id_ruta = @id";
+                    MySqlCommand cmd = new MySqlCommand(query, conexion);
+                    cmd.Parameters.AddWithValue("@id", id);
+                    MySqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        return new RutaModel
+                        {
+                            Id = reader.GetInt32("id_ruta"),
+                            Nombre = reader.GetString("nombre_ruta"),
+                            Fecha = reader.GetDateTime("fecha_ruta"),
+                            HoraInicio = reader.GetTimeSpan("hora_inicio_ruta"),
+                            HoraFinal = reader.GetTimeSpan("hora_final_ruta"),
+                            IdConductor = reader.GetInt32("id_conductor")
+                        };
+                    }
+                    else
+                    {
+                        return null; // No se encontró la ruta
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al obtener ruta: " + ex.Message);
+                    return null;
+                }
+            }
+        }
 
 
 

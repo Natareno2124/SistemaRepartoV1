@@ -65,7 +65,11 @@ namespace SistemaRepartoG4
 
         private void bnt_Editar_Click(object sender, EventArgs e)
         {
-
+            EditarRuta ventanaEditar = new EditarRuta();
+            ventanaEditar.FormClosed += (s, args) => this.Show();
+            ventanaEditar.ShowDialog(); 
+            this.Hide(); // Oculta la ventana actual (opcional)
+                         // CargarUsuarios();
 
         }
 

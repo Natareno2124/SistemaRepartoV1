@@ -128,6 +128,12 @@
     <Compile Include="EditarPaquete.Designer.cs">
       <DependentUpon>EditarPaquete.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditarRuta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarRuta.Designer.cs">
+      <DependentUpon>EditarRuta.cs</DependentUpon>
+    </Compile>
     <Compile Include="EliminarPaquete.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -269,6 +275,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EditarPaquete.resx">
       <DependentUpon>EditarPaquete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditarRuta.resx">
+      <DependentUpon>EditarRuta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EliminarPaquete.resx">
       <DependentUpon>EliminarPaquete.cs</DependentUpon>
