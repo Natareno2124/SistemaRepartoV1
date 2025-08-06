@@ -427,6 +427,7 @@ namespace SistemaRepartoG4
                 }
             };
             //foco al buscra
+
             txtBuscar.GotFocus += (s, e) =>
             {
                 if (txtBuscar.Text == "Buscar por placa")
