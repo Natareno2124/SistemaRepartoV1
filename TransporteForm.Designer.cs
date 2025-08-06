@@ -1,4 +1,3 @@
-﻿//TransporteFormDESIGNER
 //Visualizacion de datos
 using System.Data;
 using System.Drawing;
@@ -405,8 +404,7 @@ namespace SistemaRepartoG4
 
             //llamamos al crud y a obtener transporte
             TransporteCRUD crud = new TransporteCRUD();
-
-            //buscar por placa
+          
             DataTable dt = new TransporteCRUD().ObtenerTransportes();
             transportesBinding = new BindingSource();
             transportesBinding.DataSource = dt;
@@ -426,8 +424,6 @@ namespace SistemaRepartoG4
                         $"Convert(Placa, 'System.String') LIKE '%{txt}%'";
                 }
             };
-            //foco al buscra
-
             txtBuscar.GotFocus += (s, e) =>
             {
                 if (txtBuscar.Text == "Buscar por placa")

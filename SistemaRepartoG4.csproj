@@ -134,11 +134,44 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgregarPaquete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarPaquete.Designer.cs">
+      <DependentUpon>AgregarPaquete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bodegas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bodegas.Designer.cs">
+      <DependentUpon>Bodegas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Clases\ConectarDB.cs" />
+
+    <Compile Include="Clases\CUsuarios.cs" />
+
+    <Compile Include="Clases\ContactoSucursal.cs" />
+
+    <Compile Include="Clases\Paquete.cs" />
+
     <Compile Include="Clases\Session.cs" />
+    <Compile Include="Clases\DireccionSucursal.cs" />
+    <Compile Include="Clases\Sucursal.cs" />
     <Compile Include="Clases\Validar.cs" />
     <Compile Include="Clases\Modelo.cs" />
     <Compile Include="Clases\UsuariosV.cs" />
+    <Compile Include="EditarPaquete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarPaquete.Designer.cs">
+      <DependentUpon>EditarPaquete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EliminarPaquete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarPaquete.Designer.cs">
+      <DependentUpon>EliminarPaquete.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -172,6 +205,13 @@
     <Compile Include="MisEntregas.Designer.cs">
       <DependentUpon>MisEntregas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Paquetes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Paquetes.Designer.cs">
+      <DependentUpon>Paquetes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaquetesCRUD.cs" />
     <Compile Include="PilotoDetalleForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -187,6 +227,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegistroBodegas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroBodegas.Designer.cs">
+      <DependentUpon>RegistroBodegas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroSucursales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroSucursales.Designer.cs">
+      <DependentUpon>RegistroSucursales.cs</DependentUpon>
+    </Compile>
     <Compile Include="RegistroUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -239,6 +291,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Sidebar.resx</DependentUpon>
     </Compile>
+    <Compile Include="Sucursales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sucursales.Designer.cs">
+      <DependentUpon>Sucursales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SucursalesCRUD.cs" />
     <Compile Include="TransporteCRUD.cs" />
     <Compile Include="TransporteDetalleForm.cs">
       <SubType>Form</SubType>
@@ -258,6 +317,18 @@
     <Compile Include="Usuarios.Designer.cs">
       <DependentUpon>Usuarios.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AgregarPaquete.resx">
+      <DependentUpon>AgregarPaquete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bodegas.resx">
+      <DependentUpon>Bodegas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditarPaquete.resx">
+      <DependentUpon>EditarPaquete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminarPaquete.resx">
+      <DependentUpon>EliminarPaquete.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -270,6 +341,9 @@
     <EmbeddedResource Include="MisEntregas.resx">
       <DependentUpon>MisEntregas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Paquetes.resx">
+      <DependentUpon>Paquetes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -280,6 +354,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="RegistroBodegas.resx">
+      <DependentUpon>RegistroBodegas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistroSucursales.resx">
+      <DependentUpon>RegistroSucursales.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RegistroUsuarios.resx">
       <DependentUpon>RegistroUsuarios.cs</DependentUpon>
     </EmbeddedResource>
@@ -295,6 +375,9 @@
     <EmbeddedResource Include="Sidebar.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Sidebar1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sucursales.resx">
+      <DependentUpon>Sucursales.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Usuarios.resx">
       <DependentUpon>Usuarios.cs</DependentUpon>

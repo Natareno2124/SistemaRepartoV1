@@ -12,10 +12,12 @@ namespace SistemaRepartoG4.Clases
         public static MySqlConnection establecerConexion()
         {
 
+
             string servidor = "localhost";
             string database = "SistemaReparto_1";
             string usuario = "root";
             string password = "Infantes2124";
+
             string puerto = "3306";
 
             string cadenaConexion = "server=" + servidor + ";database=" + database + ";user=" + usuario + ";password=" + password + ";port=" + puerto + ";SslMode=none;";
