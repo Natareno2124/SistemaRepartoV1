@@ -30,7 +30,6 @@
         {
             this.ordenar = new System.Windows.Forms.Button();
             this.btn_Eliminar = new System.Windows.Forms.Button();
-            this.bnt_Guardar = new System.Windows.Forms.Button();
             this.bnt_Editar = new System.Windows.Forms.Button();
             this.bnt_Agregar = new System.Windows.Forms.Button();
             this.DB = new System.Windows.Forms.DataGridView();
@@ -55,7 +54,7 @@
             // ordenar
             // 
             this.ordenar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(153)))), ((int)(((byte)(174)))));
-            this.ordenar.Location = new System.Drawing.Point(33, 820);
+            this.ordenar.Location = new System.Drawing.Point(13, 532);
             this.ordenar.Name = "ordenar";
             this.ordenar.Size = new System.Drawing.Size(98, 55);
             this.ordenar.TabIndex = 8;
@@ -68,7 +67,7 @@
             this.btn_Eliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
             this.btn_Eliminar.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Eliminar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btn_Eliminar.Location = new System.Drawing.Point(1583, 804);
+            this.btn_Eliminar.Location = new System.Drawing.Point(1236, 533);
             this.btn_Eliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Eliminar.Name = "btn_Eliminar";
             this.btn_Eliminar.Size = new System.Drawing.Size(84, 71);
@@ -76,25 +75,12 @@
             this.btn_Eliminar.Text = "Eliminar";
             this.btn_Eliminar.UseVisualStyleBackColor = false;
             // 
-            // bnt_Guardar
-            // 
-            this.bnt_Guardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
-            this.bnt_Guardar.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bnt_Guardar.ForeColor = System.Drawing.SystemColors.Control;
-            this.bnt_Guardar.Location = new System.Drawing.Point(1491, 804);
-            this.bnt_Guardar.Margin = new System.Windows.Forms.Padding(4);
-            this.bnt_Guardar.Name = "bnt_Guardar";
-            this.bnt_Guardar.Size = new System.Drawing.Size(84, 71);
-            this.bnt_Guardar.TabIndex = 16;
-            this.bnt_Guardar.Text = "Guardar";
-            this.bnt_Guardar.UseVisualStyleBackColor = false;
-            // 
             // bnt_Editar
             // 
             this.bnt_Editar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
             this.bnt_Editar.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bnt_Editar.ForeColor = System.Drawing.SystemColors.Control;
-            this.bnt_Editar.Location = new System.Drawing.Point(1399, 804);
+            this.bnt_Editar.Location = new System.Drawing.Point(1144, 533);
             this.bnt_Editar.Margin = new System.Windows.Forms.Padding(4);
             this.bnt_Editar.Name = "bnt_Editar";
             this.bnt_Editar.Size = new System.Drawing.Size(84, 71);
@@ -107,22 +93,23 @@
             this.bnt_Agregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
             this.bnt_Agregar.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bnt_Agregar.ForeColor = System.Drawing.SystemColors.Control;
-            this.bnt_Agregar.Location = new System.Drawing.Point(1307, 804);
+            this.bnt_Agregar.Location = new System.Drawing.Point(1052, 533);
             this.bnt_Agregar.Margin = new System.Windows.Forms.Padding(4);
             this.bnt_Agregar.Name = "bnt_Agregar";
             this.bnt_Agregar.Size = new System.Drawing.Size(84, 71);
             this.bnt_Agregar.TabIndex = 14;
             this.bnt_Agregar.Text = "Agregar";
             this.bnt_Agregar.UseVisualStyleBackColor = false;
+            this.bnt_Agregar.Click += new System.EventHandler(this.bnt_Agregar_Click);
             // 
             // DB
             // 
             this.DB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DB.Location = new System.Drawing.Point(33, 321);
+            this.DB.Location = new System.Drawing.Point(13, 237);
             this.DB.Margin = new System.Windows.Forms.Padding(4);
             this.DB.Name = "DB";
             this.DB.RowHeadersWidth = 51;
-            this.DB.Size = new System.Drawing.Size(1633, 475);
+            this.DB.Size = new System.Drawing.Size(1307, 288);
             this.DB.TabIndex = 38;
             // 
             // panel4
@@ -132,10 +119,10 @@
             this.panel4.Controls.Add(this.label8);
             this.panel4.Controls.Add(this.label9);
             this.panel4.Controls.Add(this.label10);
-            this.panel4.Location = new System.Drawing.Point(157, 267);
+            this.panel4.Location = new System.Drawing.Point(137, 183);
             this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1509, 46);
+            this.panel4.Size = new System.Drawing.Size(1183, 46);
             this.panel4.TabIndex = 40;
             // 
             // label1
@@ -143,7 +130,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(1273, 9);
+            this.label1.Location = new System.Drawing.Point(994, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 21);
@@ -191,7 +178,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(153)))), ((int)(((byte)(174)))));
             this.panel1.Controls.Add(this.label11);
-            this.panel1.Location = new System.Drawing.Point(35, 267);
+            this.panel1.Location = new System.Drawing.Point(15, 183);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(115, 46);
@@ -256,6 +243,7 @@
             this.button6.TabIndex = 0;
             this.button6.Text = "Salir";
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // panel3
             // 
@@ -271,7 +259,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1683, 890);
+            this.ClientSize = new System.Drawing.Size(1352, 697);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label3);
@@ -280,7 +268,6 @@
             this.Controls.Add(this.DB);
             this.Controls.Add(this.ordenar);
             this.Controls.Add(this.btn_Eliminar);
-            this.Controls.Add(this.bnt_Guardar);
             this.Controls.Add(this.bnt_Editar);
             this.Controls.Add(this.bnt_Agregar);
             this.Name = "Rutas";
@@ -299,7 +286,6 @@
         #endregion
         private System.Windows.Forms.Button ordenar;
         private System.Windows.Forms.Button btn_Eliminar;
-        private System.Windows.Forms.Button bnt_Guardar;
         private System.Windows.Forms.Button bnt_Editar;
         private System.Windows.Forms.Button bnt_Agregar;
         private System.Windows.Forms.DataGridView DB;

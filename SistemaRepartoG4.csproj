@@ -111,19 +111,17 @@
       <DependentUpon>Bodegas.cs</DependentUpon>
     </Compile>
     <Compile Include="Clases\ConectarDB.cs" />
-
     <Compile Include="Clases\CUsuarios.cs" />
-
     <Compile Include="Clases\ContactoSucursal.cs" />
-
     <Compile Include="Clases\Paquete.cs" />
-
+    <Compile Include="Clases\RutaModel.cs" />
     <Compile Include="Clases\Session.cs" />
     <Compile Include="Clases\DireccionSucursal.cs" />
     <Compile Include="Clases\Sucursal.cs" />
     <Compile Include="Clases\Validar.cs" />
     <Compile Include="Clases\Modelo.cs" />
     <Compile Include="Clases\UsuariosV.cs" />
+    <Compile Include="Clases\ValidarRuta.cs" />
     <Compile Include="EditarPaquete.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +133,12 @@
     </Compile>
     <Compile Include="EliminarPaquete.Designer.cs">
       <DependentUpon>EliminarPaquete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EliminarRuta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarRuta.Designer.cs">
+      <DependentUpon>EliminarRuta.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -185,6 +189,12 @@
     <Compile Include="RegistroBodegas.Designer.cs">
       <DependentUpon>RegistroBodegas.cs</DependentUpon>
     </Compile>
+    <Compile Include="RegistroRutas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroRutas.Designer.cs">
+      <DependentUpon>RegistroRutas.cs</DependentUpon>
+    </Compile>
     <Compile Include="RegistroSucursales.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -209,6 +219,7 @@
     <Compile Include="Rutas.Designer.cs">
       <DependentUpon>Rutas.cs</DependentUpon>
     </Compile>
+    <Compile Include="RutasCRUD.cs" />
     <Compile Include="RutasPiloto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -262,6 +273,9 @@
     <EmbeddedResource Include="EliminarPaquete.resx">
       <DependentUpon>EliminarPaquete.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EliminarRuta.resx">
+      <DependentUpon>EliminarRuta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -289,6 +303,9 @@
     </Compile>
     <EmbeddedResource Include="RegistroBodegas.resx">
       <DependentUpon>RegistroBodegas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistroRutas.resx">
+      <DependentUpon>RegistroRutas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RegistroSucursales.resx">
       <DependentUpon>RegistroSucursales.cs</DependentUpon>

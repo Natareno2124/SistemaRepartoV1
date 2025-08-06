@@ -7,7 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using WinFormsApp1;
+//creado por Rocio Lopez 9959-23-740
 namespace SistemaRepartoG4
 {
     public partial class Rutas : Form
@@ -45,6 +46,24 @@ namespace SistemaRepartoG4
         private void button1_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void bnt_Agregar_Click(object sender, EventArgs e)
+        {
+            RegistroRutas ventanaAgregarRuta = new RegistroRutas();
+            ventanaAgregarRuta.FormClosed += (s, args) => this.Show();
+            ventanaAgregarRuta.ShowDialog();
+            this.Hide(); // Oculta la ventana actual (opcional)
+
+                         // CargarUsuarios();
+
+
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

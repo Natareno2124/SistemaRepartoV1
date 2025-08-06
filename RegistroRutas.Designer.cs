@@ -43,8 +43,7 @@
             this.txt_hora_inicio_ruta = new System.Windows.Forms.TextBox();
             this.txtFecha_Ruta = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.btn_registra = new System.Windows.Forms.Button();
-            this.cmb_id_conductor = new System.Windows.Forms.ComboBox();
+            this.btn_agregar = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -53,7 +52,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(67)))), ((int)(((byte)(88)))));
             this.panel2.Controls.Add(this.groupBox1);
-            this.panel2.Controls.Add(this.btn_registra);
+            this.panel2.Controls.Add(this.btn_agregar);
             this.panel2.Location = new System.Drawing.Point(12, 1);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1139, 658);
@@ -62,7 +61,6 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(153)))), ((int)(((byte)(174)))));
-            this.groupBox1.Controls.Add(this.cmb_id_conductor);
             this.groupBox1.Controls.Add(this.txt_hora_final_ruta);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
@@ -93,7 +91,6 @@
             this.txt_hora_final_ruta.Location = new System.Drawing.Point(594, 169);
             this.txt_hora_final_ruta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_hora_final_ruta.Name = "txt_hora_final_ruta";
-            this.txt_hora_final_ruta.PasswordChar = '*';
             this.txt_hora_final_ruta.Size = new System.Drawing.Size(383, 32);
             this.txt_hora_final_ruta.TabIndex = 15;
             // 
@@ -158,7 +155,7 @@
             this.txt_id_conductor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(84)))), ((int)(((byte)(109)))));
             this.txt_id_conductor.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_id_conductor.Font = new System.Drawing.Font("Arial", 16.2F);
-            this.txt_id_conductor.Location = new System.Drawing.Point(585, 288);
+            this.txt_id_conductor.Location = new System.Drawing.Point(594, 230);
             this.txt_id_conductor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_id_conductor.Name = "txt_id_conductor";
             this.txt_id_conductor.Size = new System.Drawing.Size(383, 32);
@@ -205,9 +202,9 @@
             this.txt_hora_inicio_ruta.Location = new System.Drawing.Point(594, 108);
             this.txt_hora_inicio_ruta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_hora_inicio_ruta.Name = "txt_hora_inicio_ruta";
-            this.txt_hora_inicio_ruta.PasswordChar = '*';
             this.txt_hora_inicio_ruta.Size = new System.Drawing.Size(383, 32);
             this.txt_hora_inicio_ruta.TabIndex = 8;
+            this.txt_hora_inicio_ruta.TextChanged += new System.EventHandler(this.txt_hora_inicio_ruta_TextChanged);
             // 
             // txtFecha_Ruta
             // 
@@ -231,28 +228,19 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "Hora inicio ruta";
             // 
-            // btn_registra
+            // btn_agregar
             // 
-            this.btn_registra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(153)))), ((int)(((byte)(174)))));
-            this.btn_registra.Font = new System.Drawing.Font("Arial Black", 10.8F, System.Drawing.FontStyle.Bold);
-            this.btn_registra.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_registra.Location = new System.Drawing.Point(449, 447);
-            this.btn_registra.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_registra.Name = "btn_registra";
-            this.btn_registra.Size = new System.Drawing.Size(264, 55);
-            this.btn_registra.TabIndex = 0;
-            this.btn_registra.Text = "REGISTRAR";
-            this.btn_registra.UseVisualStyleBackColor = false;
-            this.btn_registra.Click += new System.EventHandler(this.btn_guardar);
-            // 
-            // cmb_id_conductor
-            // 
-            this.cmb_id_conductor.FormattingEnabled = true;
-            this.cmb_id_conductor.Location = new System.Drawing.Point(594, 231);
-            this.cmb_id_conductor.Name = "cmb_id_conductor";
-            this.cmb_id_conductor.Size = new System.Drawing.Size(176, 24);
-            this.cmb_id_conductor.TabIndex = 16;
-            this.cmb_id_conductor.SelectedIndexChanged += new System.EventHandler(this.cmb_id_conductor_SelectedIndexChanged);
+            this.btn_agregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(153)))), ((int)(((byte)(174)))));
+            this.btn_agregar.Font = new System.Drawing.Font("Arial Black", 10.8F, System.Drawing.FontStyle.Bold);
+            this.btn_agregar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_agregar.Location = new System.Drawing.Point(449, 447);
+            this.btn_agregar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_agregar.Name = "btn_agregar";
+            this.btn_agregar.Size = new System.Drawing.Size(264, 55);
+            this.btn_agregar.TabIndex = 0;
+            this.btn_agregar.Text = "AGREGAR";
+            this.btn_agregar.UseVisualStyleBackColor = false;
+            this.btn_agregar.Click += new System.EventHandler(this.btn_guardar);
             // 
             // RegistroRutas
             // 
@@ -279,14 +267,13 @@
         private System.Windows.Forms.Label Nombre;
         private System.Windows.Forms.TextBox txt_Id_Ruta;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txt_id_conductor;
         private System.Windows.Forms.TextBox txt_Nombre_de_Ruta;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txt_hora_inicio_ruta;
         private System.Windows.Forms.TextBox txtFecha_Ruta;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btn_registra;
-        private System.Windows.Forms.ComboBox cmb_id_conductor;
+        private System.Windows.Forms.Button btn_agregar;
+        private System.Windows.Forms.TextBox txt_id_conductor;
     }
 }
