@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+//creado por Rocio Lopez 9959-23-740
 namespace SistemaRepartoG4
 {
     public partial class EliminarRuta : Form
