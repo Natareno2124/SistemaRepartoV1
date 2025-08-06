@@ -1,4 +1,10 @@
-﻿namespace SistemaRepartoG4
+﻿using System;
+using System.Drawing;
+using System.Windows.Forms;
+
+
+
+namespace SistemaRepartoG4
 {
     partial class Rutas
     {
@@ -274,6 +280,7 @@
             this.Controls.Add(this.bnt_Agregar);
             this.Name = "Rutas";
             this.Text = "Rutas";
+            this.Load += new System.EventHandler(this.Rutas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DB)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();

@@ -6,11 +6,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data;
+//creado por Rocio Lopez 9959-23-740
 
 namespace SistemaRepartoG4
 {
-    internal class RutasCRUD
+    public partial class RutasCRUD
     {
+                // Obtener todas las rutas
 
         public static bool AgregarRuta(RutaModel ruta)
         {

@@ -226,6 +226,12 @@
       <DependentUpon>Rutas.cs</DependentUpon>
     </Compile>
     <Compile Include="RutasCRUD.cs" />
+    <Compile Include="RutasForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RutasForm.Designer.cs">
+      <DependentUpon>RutasForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="RutasPiloto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -327,6 +333,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Rutas.resx">
       <DependentUpon>Rutas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RutasForm.resx">
+      <DependentUpon>RutasForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RutasPiloto.resx">
       <DependentUpon>RutasPiloto.cs</DependentUpon>

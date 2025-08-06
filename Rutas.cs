@@ -65,20 +65,32 @@ namespace SistemaRepartoG4
 
         private void bnt_Editar_Click(object sender, EventArgs e)
         {
+            this.Hide(); // Primero ocultamos la ventana actual
+
             EditarRuta ventanaEditar = new EditarRuta();
-            ventanaEditar.FormClosed += (s, args) => this.Show();
-            ventanaEditar.ShowDialog(); 
-            this.Hide(); // Oculta la ventana actual (opcional)
-                         // CargarUsuarios();
+            ventanaEditar.FormClosed += (s, args) => this.Show(); // Cuando se cierre, volvemos a mostrar esta ventana
+
+            ventanaEditar.Show(); // abre la ventana de forma no modal
+
 
         }
 
         private void btn_Eliminar_Click(object sender, EventArgs e)
         {
+            this.Hide(); // primero ocultamos la ventana actual
+
             EliminarRuta ventanaEliminarRuta = new EliminarRuta();
+
+            // cuando la ventana se cierre, vuelve a mostrar esta
             ventanaEliminarRuta.FormClosed += (s, args) => this.Show();
-            ventanaEliminarRuta.ShowDialog();
-            this.Hide();
+
+            ventanaEliminarRuta.Show(); // abre la ventana de forma normal 
+
+        }
+
+        private void Rutas_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
