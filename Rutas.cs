@@ -54,16 +54,27 @@ namespace SistemaRepartoG4
             ventanaAgregarRuta.FormClosed += (s, args) => this.Show();
             ventanaAgregarRuta.ShowDialog();
             this.Hide(); // Oculta la ventana actual (opcional)
-
                          // CargarUsuarios();
-
-
 
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void bnt_Editar_Click(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void btn_Eliminar_Click(object sender, EventArgs e)
+        {
+            EliminarRuta ventanaEliminarRuta = new EliminarRuta();
+            ventanaEliminarRuta.FormClosed += (s, args) => this.Show();
+            ventanaEliminarRuta.ShowDialog();
+            this.Hide();
         }
     }
 }

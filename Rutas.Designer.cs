@@ -74,6 +74,7 @@
             this.btn_Eliminar.TabIndex = 17;
             this.btn_Eliminar.Text = "Eliminar";
             this.btn_Eliminar.UseVisualStyleBackColor = false;
+            this.btn_Eliminar.Click += new System.EventHandler(this.btn_Eliminar_Click);
             // 
             // bnt_Editar
             // 
@@ -87,6 +88,7 @@
             this.bnt_Editar.TabIndex = 15;
             this.bnt_Editar.Text = "Editar";
             this.bnt_Editar.UseVisualStyleBackColor = false;
+            this.bnt_Editar.Click += new System.EventHandler(this.bnt_Editar_Click);
             // 
             // bnt_Agregar
             // 
