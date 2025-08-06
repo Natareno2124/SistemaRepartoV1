@@ -194,6 +194,7 @@ namespace SistemaRepartoG4.Clases
             this.Controls.Add(this.panel3);
             this.Name = "Login";
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.Login_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -269,6 +270,11 @@ namespace SistemaRepartoG4.Clases
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Login_Load(object sender, EventArgs e)
         {
 
         }

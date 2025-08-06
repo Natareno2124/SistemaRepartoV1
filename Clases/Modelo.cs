@@ -23,7 +23,7 @@ namespace SistemaRepartoG4.Clases
                 cmd.Parameters.AddWithValue("@contrasena", usuario.Contrasena);
                 cmd.Parameters.AddWithValue("@email", usuario.Email);
                 cmd.Parameters.AddWithValue("@telefono", usuario.Telefono);
-                cmd.Parameters.AddWithValue("@tipo_usuario", 1); // debe coincidir con el ID del rol
+                cmd.Parameters.AddWithValue("@tipo_usuario", usuario.Rol_usuario); // debe coincidir con el ID del rol
 
                 int resultado = cmd.ExecuteNonQuery();
                 conexion.Close();
