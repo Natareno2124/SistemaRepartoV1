@@ -38,9 +38,9 @@
             this.cmReportar = new System.Windows.Forms.ComboBox();
             this.btnRegresar = new System.Windows.Forms.Button();
             this.btnBuscarEntrega = new System.Windows.Forms.Button();
-            this.dataGridViewPaquetes = new System.Windows.Forms.DataGridView();
+            this.dataGridViewPedidos = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPaquetes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPedidos)).BeginInit();
             this.SuspendLayout();
             // 
             // lineadecorativa
@@ -168,23 +168,23 @@
             this.btnBuscarEntrega.UseVisualStyleBackColor = false;
             this.btnBuscarEntrega.Click += new System.EventHandler(this.btnBuscarEntrega_Click);
             // 
-            // dataGridViewPaquetes
+            // dataGridViewPedidos
             // 
-            this.dataGridViewPaquetes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewPaquetes.Location = new System.Drawing.Point(80, 240);
-            this.dataGridViewPaquetes.Name = "dataGridViewPaquetes";
-            this.dataGridViewPaquetes.RowHeadersWidth = 51;
-            this.dataGridViewPaquetes.RowTemplate.Height = 24;
-            this.dataGridViewPaquetes.Size = new System.Drawing.Size(1108, 360);
-            this.dataGridViewPaquetes.TabIndex = 31;
-            this.dataGridViewPaquetes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewPaquetes_CellContentClick);
+            this.dataGridViewPedidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewPedidos.Location = new System.Drawing.Point(80, 240);
+            this.dataGridViewPedidos.Name = "dataGridViewPedidos";
+            this.dataGridViewPedidos.RowHeadersWidth = 51;
+            this.dataGridViewPedidos.RowTemplate.Height = 24;
+            this.dataGridViewPedidos.Size = new System.Drawing.Size(1108, 360);
+            this.dataGridViewPedidos.TabIndex = 31;
+            this.dataGridViewPedidos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewPaquetes_CellContentClick);
             // 
             // MisEntregas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1262, 723);
-            this.Controls.Add(this.dataGridViewPaquetes);
+            this.Controls.Add(this.dataGridViewPedidos);
             this.Controls.Add(this.btnBuscarEntrega);
             this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.cmReportar);
@@ -198,7 +198,7 @@
             this.Text = "MisEntregas";
             this.Load += new System.EventHandler(this.MisEntregas_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPaquetes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPedidos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -216,6 +216,6 @@
         private System.Windows.Forms.ComboBox cmReportar;
         private System.Windows.Forms.Button btnRegresar;
         private System.Windows.Forms.Button btnBuscarEntrega;
-        private System.Windows.Forms.DataGridView dataGridViewPaquetes;
+        private System.Windows.Forms.DataGridView dataGridViewPedidos;
     }
 }
