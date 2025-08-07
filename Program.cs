@@ -20,7 +20,7 @@ namespace SistemaRepartoG4
             Application.SetCompatibleTextRenderingDefault(false);
 
 
-            Application.Run(new Bodegas());
+            Application.Run(new Usuarios());
 
 
         }
