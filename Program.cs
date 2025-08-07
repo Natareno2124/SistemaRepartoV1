@@ -20,7 +20,9 @@ namespace SistemaRepartoG4
             Application.SetCompatibleTextRenderingDefault(false);
 
 
+
             Application.Run(new MenuPrincipal());
+
 
 
         }

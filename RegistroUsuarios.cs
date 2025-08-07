@@ -122,6 +122,16 @@ namespace WinFormsApp1
                 MessageBox.Show("Debe seleccionar un rol.");
                 return;
             }
+            string correo = txtEmail.Text.Trim();
+            string patronCorreo = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
+
+            if (!System.Text.RegularExpressions.Regex.IsMatch(correo, patronCorreo))
+            {
+                MessageBox.Show("Ingrese un correo electrónico válido (ejemplo@dominio.com).", "Correo inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtEmail.Focus();
+                return;
+            }
+
             int rol = comboRol.SelectedIndex == 0 ? 1 : 2;
             UsuariosV usuario = new UsuariosV
             {

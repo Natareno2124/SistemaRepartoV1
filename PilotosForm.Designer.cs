@@ -225,41 +225,6 @@ namespace SistemaRepartoG4
                 }
             };
 
-            // cbRuta
-            this.cbRuta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbRuta.FormattingEnabled = true;
-            cbRuta.Items.Clear();
-            cbRuta.Items.AddRange(new object[] {
-                "Buscar por ruta",
-                "Todas las rutas",
-                "Ruta Norte",
-                "Ruta Sur",
-                "Ruta Este",
-                "Ruta Oeste"
-            });
-            if (cbRuta.Items.Count > 0)
-                cbRuta.SelectedIndex = 0;
-
-            this.cbRuta.Location = new Point(
-                cbRutaOriginalX,
-                hrLine.Bottom + espacioDespuesDeLinea
-            ); this.cbRuta.Name = "cbRuta";
-            this.cbRuta.Size = new System.Drawing.Size(200, 25);
-            this.cbRuta.TabIndex = 2;
-
-            // cbOrdenar
-            this.cbOrdenar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbOrdenar.FormattingEnabled = true;
-            cbOrdenar.Items.Clear();
-            cbOrdenar.Items.AddRange(new object[] {
-                "Ordenar por",
-                "ID",
-                "Nombre",
-                "Nº Entregas"
-            });
-            if (cbOrdenar.Items.Count > 0)
-                cbOrdenar.SelectedIndex = 0;
-
             this.cbOrdenar.Name = "cbOrdenar";
             
             this.cbOrdenar.Location = new Point(

@@ -96,7 +96,20 @@ namespace SistemaRepartoG4
                 ventanaMenuPrincipal.Show();
                 this.Hide();
 
-            
+
+        private void Paquetes_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            MenuPrincipal ventanaMenuPrincipal = new MenuPrincipal();
+            ventanaMenuPrincipal.FormClosed += (s, args) => this.Show();
+            ventanaMenuPrincipal.Show();
+            this.Hide();
+
         }
     }
 }
