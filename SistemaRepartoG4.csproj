@@ -152,10 +152,17 @@
     <Compile Include="Clases\Paquete.cs" />
     <Compile Include="Clases\Session.cs" />
     <Compile Include="Clases\DireccionSucursal.cs" />
+    <Compile Include="Clases\Bodegas.cs" />
     <Compile Include="Clases\Sucursal.cs" />
     <Compile Include="Clases\Validar.cs" />
     <Compile Include="Clases\Modelo.cs" />
     <Compile Include="Clases\UsuariosV.cs" />
+    <Compile Include="DireccionSucursales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DireccionSucursales.Designer.cs">
+      <DependentUpon>DireccionSucursales.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditarPaquete.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -318,6 +325,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Bodegas.resx">
       <DependentUpon>Bodegas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DireccionSucursales.resx">
+      <DependentUpon>DireccionSucursales.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditarPaquete.resx">
       <DependentUpon>EditarPaquete.cs</DependentUpon>
