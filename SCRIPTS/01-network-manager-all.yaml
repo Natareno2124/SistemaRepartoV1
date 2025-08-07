@@ -1,0 +1,44 @@
+# Let NetworkManager manage all devices on this system
+network:
+ ethernets:
+#   Adaptador conectado a red publica o internet
+  enp0s3:
+   addresses:
+#    - 192.168.0.6/24
+    - 172.20.10.6/28
+   dhcp4: false
+   routes:
+   - to: default
+#     via: 192.168.0.1
+     via: 172.20.10.1
+   nameservers:
+    addresses:
+    - 8.8.8.8
+    - 8.8.4.4
+#   Adaptador conectado a red privada
+  enp0s8:
+   addresses:
+    - 25.10.10.1/24
+   dhcp4: false
+   routes:
+   - to: default
+#     via: 192.168.0.6
+     via: 172.20.10.6
+   nameservers:
+    addresses:
+    - 8.8.8.8
+    - 8.8.4.4
+#   Adaptador conectado a red desmilitarizada DMZ
+  enp0s9:
+   addresses:
+    - 20.10.10.1/24
+   dhcp4: false
+   routes:
+   - to: default
+#     via: 192.168.0.6
+     via: 172.20.10.6
+   nameservers:
+    addresses:
+    - 8.8.8.8
+    - 8.8.4.4
+ version: 2
