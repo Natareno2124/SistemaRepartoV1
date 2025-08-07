@@ -36,14 +36,7 @@ namespace SistemaRepartoG4
 
         public void InsertarBodega(int codigo, int idEncargado, int idSucursal, int capacidad)
         {
-            if (codigo <= 0)
-                throw new ArgumentException("El código de bodega debe ser un número positivo.", nameof(codigo));
-            if (idEncargado <= 0)
-                throw new ArgumentException("El ID de encargado debe ser válido.", nameof(idEncargado));
-            if (idSucursal <= 0)
-                throw new ArgumentException("El ID de sucursal debe ser válido.", nameof(idSucursal));
-            if (capacidad <= 0)
-                throw new ArgumentException("La capacidad debe ser un número positivo.", nameof(capacidad));
+            
 
             string query = @"INSERT INTO tbl_bodega
                             (codigo_bodega, id_encargado, id_sucursal, capacidad_bodega)
