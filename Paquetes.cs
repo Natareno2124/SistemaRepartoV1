@@ -30,7 +30,7 @@ namespace SistemaRepartoG4
             // esto llamara al CRUD par que se muestren los datos en el dataGridView
             PaquetesCRUD.MostrarPaquetes(dataGridViewPaquetes);
         }
-        
+
 
         // aqui solo es para redirigir a la ventana de agregar
         private void Btn_agregar_paquete_Click(object sender, EventArgs e)
@@ -80,7 +80,7 @@ namespace SistemaRepartoG4
                 };
 
                 EditarPaquete ventanaEditar = new EditarPaquete(paquete);
-                ventanaEditar.FormClosed += (s, args) => PaquetesCRUD.MostrarPaquetes(dataGridViewPaquetes); 
+                ventanaEditar.FormClosed += (s, args) => PaquetesCRUD.MostrarPaquetes(dataGridViewPaquetes);
                 ventanaEditar.Show();
             }
             else
@@ -88,6 +88,13 @@ namespace SistemaRepartoG4
                 MessageBox.Show("Selecciona un paquete para editar.");
             }
         }
+
+            private void btnRegresar_Click(object sender, EventArgs e)
+            {
+                MenuPrincipal ventanaMenuPrincipal = new MenuPrincipal();
+                ventanaMenuPrincipal.FormClosed += (s, args) => this.Show();
+                ventanaMenuPrincipal.Show();
+                this.Hide();
 
 
         private void Paquetes_Load_1(object sender, EventArgs e)
