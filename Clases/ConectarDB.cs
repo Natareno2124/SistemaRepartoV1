@@ -14,9 +14,11 @@ namespace SistemaRepartoG4.Clases
 
 
             string servidor = "localhost";
+
             string database = "SistemaReparto2";
             string usuario = "root";
             string password = "1234";
+
             string puerto = "3306";
 
             string cadenaConexion = "server=" + servidor + ";database=" + database + ";user=" + usuario + ";password=" + password + ";port=" + puerto + ";SslMode=none;";
