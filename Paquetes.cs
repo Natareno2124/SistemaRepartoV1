@@ -87,5 +87,10 @@ namespace SistemaRepartoG4
                 MessageBox.Show("Selecciona un paquete para editar.");
             }
         }
+
+        private void Paquetes_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

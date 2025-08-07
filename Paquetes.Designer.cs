@@ -151,6 +151,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "Paquetes";
             this.Text = "Paquetes";
+            this.Load += new System.EventHandler(this.Paquetes_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPaquetes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
