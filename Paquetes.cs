@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WinFormsApp1;
 
 
 namespace SistemaRepartoG4
@@ -86,6 +87,14 @@ namespace SistemaRepartoG4
             {
                 MessageBox.Show("Selecciona un paquete para editar.");
             }
+        }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            MenuPrincipal ventanaMenuPrincipal = new MenuPrincipal();
+            ventanaMenuPrincipal.FormClosed += (s, args) => this.Show();
+            ventanaMenuPrincipal.Show();
+            this.Hide();
         }
     }
 }

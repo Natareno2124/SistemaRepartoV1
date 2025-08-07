@@ -36,6 +36,7 @@
             this.Btn_eliminar_paquete = new System.Windows.Forms.Button();
             this.Btn_editar_paquete = new System.Windows.Forms.Button();
             this.Btn_agregar_paquete = new System.Windows.Forms.Button();
+            this.btnRegresar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPaquetes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -136,11 +137,25 @@
             this.Btn_agregar_paquete.UseVisualStyleBackColor = false;
             this.Btn_agregar_paquete.Click += new System.EventHandler(this.Btn_agregar_paquete_Click);
             // 
+            // btnRegresar
+            // 
+            this.btnRegresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(153)))), ((int)(((byte)(174)))));
+            this.btnRegresar.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btnRegresar.ForeColor = System.Drawing.Color.White;
+            this.btnRegresar.Location = new System.Drawing.Point(80, 628);
+            this.btnRegresar.Name = "btnRegresar";
+            this.btnRegresar.Size = new System.Drawing.Size(172, 43);
+            this.btnRegresar.TabIndex = 28;
+            this.btnRegresar.Text = "Regresar";
+            this.btnRegresar.UseVisualStyleBackColor = false;
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
+            // 
             // Paquetes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1262, 723);
+            this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.Btn_eliminar_paquete);
             this.Controls.Add(this.Btn_editar_paquete);
             this.Controls.Add(this.Btn_agregar_paquete);
@@ -167,5 +182,6 @@
         private System.Windows.Forms.Button Btn_eliminar_paquete;
         private System.Windows.Forms.Button Btn_editar_paquete;
         private System.Windows.Forms.Button Btn_agregar_paquete;
+        private System.Windows.Forms.Button btnRegresar;
     }
 }

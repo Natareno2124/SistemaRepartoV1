@@ -44,10 +44,8 @@ namespace SistemaRepartoG4
 
         private void btnRutasPiloto_Click(object sender, EventArgs e)
         {
-            RutasPiloto ventanaRutasPiloto = new RutasPiloto();
-            ventanaRutasPiloto.FormClosed += (s, args) => this.Show();
-            ventanaRutasPiloto.Show();
-            this.Hide();
+            FormMap mapa = new FormMap();
+            mapa.ShowDialog();
         }
     }
 }

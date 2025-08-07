@@ -79,13 +79,13 @@
       <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Web.WebView2.Core">
-      <HintPath>..\microsoft.web.webview2.1.0.3351.48\lib\net462\Microsoft.Web.WebView2.Core.dll</HintPath>
+      <HintPath>..\..\OneDrive\Escritorio\microsoft.web.webview2.1.0.3351.48-20250806T230514Z-1-001\microsoft.web.webview2.1.0.3351.48\lib\net462\Microsoft.Web.WebView2.Core.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Web.WebView2.WinForms">
-      <HintPath>..\microsoft.web.webview2.1.0.3351.48\lib\net462\Microsoft.Web.WebView2.WinForms.dll</HintPath>
+      <HintPath>..\..\OneDrive\Escritorio\microsoft.web.webview2.1.0.3351.48-20250806T230514Z-1-001\microsoft.web.webview2.1.0.3351.48\lib\net462\Microsoft.Web.WebView2.WinForms.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Web.WebView2.Wpf">
-      <HintPath>..\microsoft.web.webview2.1.0.3351.48\lib\net462\Microsoft.Web.WebView2.Wpf.dll</HintPath>
+      <HintPath>..\..\OneDrive\Escritorio\microsoft.web.webview2.1.0.3351.48-20250806T230514Z-1-001\microsoft.web.webview2.1.0.3351.48\lib\net462\Microsoft.Web.WebView2.Wpf.dll</HintPath>
     </Reference>
     <Reference Include="MySql.Data, Version=9.4.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>packages\MySql.Data.9.4.0\lib\net462\MySql.Data.dll</HintPath>
@@ -147,13 +147,9 @@
       <DependentUpon>Bodegas.cs</DependentUpon>
     </Compile>
     <Compile Include="Clases\ConectarDB.cs" />
-
     <Compile Include="Clases\CUsuarios.cs" />
-
     <Compile Include="Clases\ContactoSucursal.cs" />
-
     <Compile Include="Clases\Paquete.cs" />
-
     <Compile Include="Clases\Session.cs" />
     <Compile Include="Clases\DireccionSucursal.cs" />
     <Compile Include="Clases\Sucursal.cs" />

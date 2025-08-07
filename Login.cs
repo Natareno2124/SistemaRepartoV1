@@ -19,6 +19,7 @@ namespace SistemaRepartoG4.Clases
         private Label label1;
         private Button button1;
         private Label label2;
+        private PictureBox pictureBox1;
         private Button btnIngresar;
 
         public Login()
@@ -28,6 +29,7 @@ namespace SistemaRepartoG4.Clases
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.btnIngresar = new System.Windows.Forms.Button();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.lblPassWord = new System.Windows.Forms.Label();
@@ -40,9 +42,12 @@ namespace SistemaRepartoG4.Clases
             this.panel4 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnIngresar
@@ -133,6 +138,7 @@ namespace SistemaRepartoG4.Clases
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Location = new System.Drawing.Point(517, 96);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(158, 158);
@@ -187,6 +193,16 @@ namespace SistemaRepartoG4.Clases
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(25, 25);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(104, 104);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // Login
             // 
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(67)))), ((int)(((byte)(88)))));
@@ -197,9 +213,11 @@ namespace SistemaRepartoG4.Clases
             this.Load += new System.EventHandler(this.Login_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -266,7 +284,10 @@ namespace SistemaRepartoG4.Clases
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-
+            RegistroUsuarios ventanaRegistro = new RegistroUsuarios();
+            ventanaRegistro.FormClosed += (s, args) => this.Show();
+            ventanaRegistro.Show();
+            this.Hide();
         }
 
         private void label2_Click(object sender, EventArgs e)
