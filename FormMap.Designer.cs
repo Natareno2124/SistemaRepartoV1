@@ -11,6 +11,7 @@ namespace SistemaRepartoG4
         private WebView2 webView;
         private Panel headerPanel;
         private TextBox txtOrigen;
+        private Button btnRetroceder;
         private TextBox txtDestino;
         private Button btnTrazar;
         private ComboBox userComboBox;
@@ -47,6 +48,22 @@ namespace SistemaRepartoG4
 
             int padding = 10;
             int controlHeight = 25;
+
+            btnRetroceder = new Button
+            {
+                Location = new Point(padding, (headerPanel.Height - controlHeight) / 2),
+                Size = new Size(30, controlHeight),
+                Text = "⬅",
+                BackColor = Color.FromArgb(44, 62, 80),
+                ForeColor = Color.White,
+                FlatStyle = FlatStyle.Flat,
+                Font = new Font("Segoe UI Emoji", 10F)
+            };
+            btnRetroceder.FlatAppearance.BorderSize = 0;
+            btnRetroceder.Click += new System.EventHandler(this.btnRetroceder_Click);
+            headerPanel.Controls.Add(btnRetroceder);
+
+
 
             // TextBox Origen
             txtOrigen = new TextBox
@@ -185,4 +202,5 @@ namespace SistemaRepartoG4
             };
         }
     }
+
 }

@@ -1,6 +1,7 @@
 ﻿//MAPA FORMS LOFICA
 using System;
 using System.Windows.Forms;
+using WinFormsApp1;
 
 namespace SistemaRepartoG4
 {
@@ -10,6 +11,13 @@ namespace SistemaRepartoG4
         {
             InitializeComponent();
             InicializarWebView();
+        }
+
+        private void btnRetroceder_Click(object sender, EventArgs e)
+        {
+            MenuPrincipal menu = new MenuPrincipal();
+            menu.Show();
+            this.Close();
         }
 
         private async void InicializarWebView()

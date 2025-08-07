@@ -202,40 +202,6 @@ namespace SistemaRepartoG4
                 }
             };
 
-            // cbRuta
-            this.cbRuta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbRuta.FormattingEnabled = true;
-            this.cbRuta.Items.AddRange(new object[] {
-                "Buscar por sucursal",
-                "Todas las sucursales",
-                "Sucursal Norte",
-                "Sucursal Sur",
-                "Sucursal Este",
-                "Sucursal Oeste"});
-            this.cbRuta.SelectedIndex = 0;
-            this.cbRuta.Location = new Point(
-                cbRutaOriginalX,
-                hrLine.Bottom + espacioDespuesDeLinea
-            ); this.cbRuta.Name = "cbRuta";
-            this.cbRuta.Size = new System.Drawing.Size(200, 25);
-            this.cbRuta.TabIndex = 2;
-
-            // cbOrdenar
-            this.cbOrdenar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbOrdenar.FormattingEnabled = true;
-            this.cbOrdenar.Items.AddRange(new object[] {
-                "Ordenar por",
-                "Placa",
-                "Estado"});
-            this.cbOrdenar.SelectedIndex = 0;
-            this.cbOrdenar.Name = "cbOrdenar";
-            this.cbOrdenar.Location = new Point(
-                cbOrdenarOriginalX,
-                hrLine.Bottom + espacioDespuesDeLinea
-            );
-            this.cbOrdenar.Size = new System.Drawing.Size(150, 25);
-            this.cbOrdenar.TabIndex = 3;
-
             // dgvPilotos
             this.dgvTransporte = new System.Windows.Forms.DataGridView();
             this.dgvTransporte.AutoGenerateColumns = false;
