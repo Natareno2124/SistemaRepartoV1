@@ -78,7 +78,7 @@ namespace WinFormsApp1
 
         private void btnBodega_Click(object sender, EventArgs e)
         {
-            Bodegas ventanaBodegas = new Bodegas();
+            BodegasForm ventanaBodegas = new BodegasForm();
             ventanaBodegas.FormClosed += (s, args) => this.Show();
             ventanaBodegas.Show();
             this.Hide();

@@ -1,4 +1,6 @@
-﻿namespace SistemaRepartoG4
+﻿//registro bodegas designer
+
+namespace SistemaRepartoG4
 {
     partial class RegistroBodegas
     {
@@ -123,6 +125,20 @@
             this.txtCodigoSucursal.Size = new System.Drawing.Size(383, 32);
             this.txtCodigoSucursal.TabIndex = 2;
             // 
+// txtCodigoBodega
+// 
+this.txtCodigoBodega = new System.Windows.Forms.TextBox();
+this.txtCodigoBodega.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(84)))), ((int)(((byte)(109)))));
+this.txtCodigoBodega.BorderStyle = System.Windows.Forms.BorderStyle.None;
+this.txtCodigoBodega.Font = new System.Drawing.Font("Arial", 16.2F);
+this.txtCodigoBodega.ForeColor = System.Drawing.SystemColors.HighlightText;
+this.txtCodigoBodega.Location = new System.Drawing.Point(73, 145); // Ajusta la posición según necesites
+this.txtCodigoBodega.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+this.txtCodigoBodega.Name = "txtCodigoBodega";
+this.txtCodigoBodega.Size = new System.Drawing.Size(383, 32);
+this.txtCodigoBodega.TabIndex = 41;
+
+            // 
             // btnRegistrar
             // 
             this.btnRegistrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(153)))), ((int)(((byte)(174)))));
@@ -135,7 +151,6 @@
             this.btnRegistrar.TabIndex = 0;
             this.btnRegistrar.Text = "REGISTRAR";
             this.btnRegistrar.UseVisualStyleBackColor = false;
-            this.btnRegistrar.Click += new System.EventHandler(this.button1_Click);
             // 
             // comboSucursal
             // 
@@ -232,7 +247,10 @@
         private System.Windows.Forms.TextBox txtCodigoSucursal;
         private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.Label label2;
+
+        private System.Windows.Forms.TextBox txtCodigoBodega;
         private System.Windows.Forms.TextBox txtCapacidad;
+
         public System.Windows.Forms.ComboBox comboSucursal;
         public System.Windows.Forms.ComboBox comboEncargado;
         private System.Windows.Forms.Label label1;
