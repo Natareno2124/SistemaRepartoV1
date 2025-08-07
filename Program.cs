@@ -21,7 +21,7 @@ namespace SistemaRepartoG4
 
 
 
-            Application.Run(new MenuPrincipal());
+            Application.Run(new Login());
 
 
 
