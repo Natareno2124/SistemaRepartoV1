@@ -1,4 +1,3 @@
-﻿//TransporteFormDESIGNER
 //Visualizacion de datos
 using System.Data;
 using System.Drawing;
@@ -60,7 +59,6 @@ namespace SistemaRepartoG4
             headerPanel.Height = 50; // Altura 
             headerPanel.BackColor = Color.FromArgb(141, 153, 174);
             this.Controls.Add(headerPanel);
-
 
             // ComboBox de usuario
             ComboBox userComboBox = new ComboBox();
@@ -406,14 +404,11 @@ namespace SistemaRepartoG4
 
             //llamamos al crud y a obtener transporte
             TransporteCRUD crud = new TransporteCRUD();
-
-            // Funcionalidad de buscar por placa
+          
             DataTable dt = new TransporteCRUD().ObtenerTransportes();
             transportesBinding = new BindingSource();
             transportesBinding.DataSource = dt;
             dgvTransporte.DataSource = transportesBinding;
-
-            // Cuando cambie el texto, aplica el filtro
             txtBuscar.TextChanged += (s, e) =>
             {
                 string txt = txtBuscar.Text.Trim().Replace("'", "''");

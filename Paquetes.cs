@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WinFormsApp1;
 
 
 namespace SistemaRepartoG4
@@ -88,8 +89,17 @@ namespace SistemaRepartoG4
             }
         }
 
+
         private void Paquetes_Load_1(object sender, EventArgs e)
         {
+
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            MenuPrincipal ventanaMenuPrincipal = new MenuPrincipal();
+            ventanaMenuPrincipal.FormClosed += (s, args) => this.Show();
+            ventanaMenuPrincipal.Show();
+            this.Hide();
 
         }
     }

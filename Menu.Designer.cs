@@ -33,20 +33,18 @@ namespace WinFormsApp1
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipal));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.btnAdministrador = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnUsuario = new System.Windows.Forms.Button();
             this.btnPaquetes = new System.Windows.Forms.Button();
             this.btnReportes = new System.Windows.Forms.Button();
-            this.btnRepartidores = new System.Windows.Forms.Button();
             this.btnSucursales = new System.Windows.Forms.Button();
             this.btnPilotos = new System.Windows.Forms.Button();
             this.btnTransportes = new System.Windows.Forms.Button();
             this.btnBodega = new System.Windows.Forms.Button();
             this.btnRutas = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -63,10 +61,8 @@ namespace WinFormsApp1
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.panel10 = new System.Windows.Forms.Panel();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.btn_cerrar_sesion = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel4.SuspendLayout();
@@ -95,6 +91,14 @@ namespace WinFormsApp1
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1265, 56);
             this.panel1.TabIndex = 0;
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Location = new System.Drawing.Point(36, 11);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(372, 22);
+            this.txtNombre.TabIndex = 20;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // btnAdministrador
             // 
@@ -160,6 +164,7 @@ namespace WinFormsApp1
             this.btnPaquetes.Text = "Paquetes";
             this.btnPaquetes.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnPaquetes.UseVisualStyleBackColor = false;
+            this.btnPaquetes.Click += new System.EventHandler(this.btnPaquetes_Click);
             // 
             // btnReportes
             // 
@@ -174,27 +179,14 @@ namespace WinFormsApp1
             this.btnReportes.Text = "Reportes";
             this.btnReportes.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnReportes.UseVisualStyleBackColor = false;
-            // 
-            // btnRepartidores
-            // 
-            this.btnRepartidores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(162)))), ((int)(((byte)(190)))));
-            this.btnRepartidores.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRepartidores.ForeColor = System.Drawing.Color.White;
-            this.btnRepartidores.Location = new System.Drawing.Point(80, 466);
-            this.btnRepartidores.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnRepartidores.Name = "btnRepartidores";
-            this.btnRepartidores.Size = new System.Drawing.Size(539, 94);
-            this.btnRepartidores.TabIndex = 6;
-            this.btnRepartidores.Text = "Repartidores";
-            this.btnRepartidores.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnRepartidores.UseVisualStyleBackColor = false;
+            this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
             // 
             // btnSucursales
             // 
             this.btnSucursales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(162)))), ((int)(((byte)(190)))));
             this.btnSucursales.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSucursales.ForeColor = System.Drawing.Color.White;
-            this.btnSucursales.Location = new System.Drawing.Point(80, 564);
+            this.btnSucursales.Location = new System.Drawing.Point(80, 466);
             this.btnSucursales.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSucursales.Name = "btnSucursales";
             this.btnSucursales.Size = new System.Drawing.Size(539, 94);
@@ -202,6 +194,7 @@ namespace WinFormsApp1
             this.btnSucursales.Text = "Sucursales";
             this.btnSucursales.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnSucursales.UseVisualStyleBackColor = false;
+            this.btnSucursales.Click += new System.EventHandler(this.btnSucursales_Click);
             // 
             // btnPilotos
             // 
@@ -216,6 +209,7 @@ namespace WinFormsApp1
             this.btnPilotos.Text = "Pilotos";
             this.btnPilotos.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnPilotos.UseVisualStyleBackColor = false;
+            this.btnPilotos.Click += new System.EventHandler(this.btnPilotos_Click);
             // 
             // btnTransportes
             // 
@@ -261,28 +255,6 @@ namespace WinFormsApp1
             this.btnRutas.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnRutas.UseVisualStyleBackColor = false;
             this.btnRutas.Click += new System.EventHandler(this.btnRutas_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 1);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(84, 67);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(162)))), ((int)(((byte)(190)))));
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Location = new System.Drawing.Point(480, 479);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(106, 68);
-            this.panel2.TabIndex = 13;
             // 
             // panel3
             // 
@@ -442,7 +414,7 @@ namespace WinFormsApp1
             // 
             this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(162)))), ((int)(((byte)(190)))));
             this.panel10.Controls.Add(this.pictureBox9);
-            this.panel10.Location = new System.Drawing.Point(480, 577);
+            this.panel10.Location = new System.Drawing.Point(480, 479);
             this.panel10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(106, 68);
@@ -460,13 +432,18 @@ namespace WinFormsApp1
             this.pictureBox9.TabIndex = 12;
             this.pictureBox9.TabStop = false;
             // 
-            // txtNombre
+            // btn_cerrar_sesion
             // 
-            this.txtNombre.Location = new System.Drawing.Point(36, 11);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(372, 22);
-            this.txtNombre.TabIndex = 20;
-            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
+            this.btn_cerrar_sesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(153)))), ((int)(((byte)(174)))));
+            this.btn_cerrar_sesion.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btn_cerrar_sesion.ForeColor = System.Drawing.Color.White;
+            this.btn_cerrar_sesion.Location = new System.Drawing.Point(80, 615);
+            this.btn_cerrar_sesion.Name = "btn_cerrar_sesion";
+            this.btn_cerrar_sesion.Size = new System.Drawing.Size(172, 43);
+            this.btn_cerrar_sesion.TabIndex = 29;
+            this.btn_cerrar_sesion.Text = "Cerrar Sesión";
+            this.btn_cerrar_sesion.UseVisualStyleBackColor = false;
+            this.btn_cerrar_sesion.Click += new System.EventHandler(this.btn_cerrar_sesion_Click);
             // 
             // MenuPrincipal
             // 
@@ -474,6 +451,7 @@ namespace WinFormsApp1
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.ClientSize = new System.Drawing.Size(1262, 723);
+            this.Controls.Add(this.btn_cerrar_sesion);
             this.Controls.Add(this.panel10);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
@@ -482,13 +460,11 @@ namespace WinFormsApp1
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel9);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.btnPilotos);
             this.Controls.Add(this.btnTransportes);
             this.Controls.Add(this.btnBodega);
             this.Controls.Add(this.btnRutas);
             this.Controls.Add(this.btnSucursales);
-            this.Controls.Add(this.btnRepartidores);
             this.Controls.Add(this.btnReportes);
             this.Controls.Add(this.btnPaquetes);
             this.Controls.Add(this.btnUsuario);
@@ -501,8 +477,6 @@ namespace WinFormsApp1
             this.Load += new System.EventHandler(this.MenuPrincipal_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel4.ResumeLayout(false);
@@ -532,14 +506,11 @@ namespace WinFormsApp1
         private Button btnUsuario;
         private Button btnPaquetes;
         private Button btnReportes;
-        private Button btnRepartidores;
         private Button btnSucursales;
         private Button btnPilotos;
         private Button btnTransportes;
         private Button btnBodega;
         private Button btnRutas;
-        private PictureBox pictureBox1;
-        private Panel panel2;
         private Panel panel3;
         private PictureBox pictureBox2;
         private Panel panel4;
@@ -558,5 +529,6 @@ namespace WinFormsApp1
         private PictureBox pictureBox9;
         private Button btnAdministrador;
         private TextBox txtNombre;
+        private Button btn_cerrar_sesion;
     }
 }

@@ -62,20 +62,66 @@ namespace WinFormsApp1
 
         private void btnTransportes_Click(object sender, EventArgs e)
         {
-
+            TransporteForm ventanaTransporte = new TransporteForm();
+            ventanaTransporte.FormClosed += (s, args) => this.Show();
+            ventanaTransporte.Show();
+            this.Hide();
         }
 
         private void btnRutas_Click(object sender, EventArgs e)
         {
-            Rutas ventanaRutas = new Rutas();
-            ventanaRutas.FormClosed += (s, args) => this.Show();
-            ventanaRutas.Show();
+            RutasForm ventanaRutasForm = new RutasForm();
+            ventanaRutasForm.FormClosed += (s, args) => this.Show();
+            ventanaRutasForm.Show();
             this.Hide();
         }
 
         private void btnBodega_Click(object sender, EventArgs e)
         {
+            Bodegas ventanaBodegas = new Bodegas();
+            ventanaBodegas.FormClosed += (s, args) => this.Show();
+            ventanaBodegas.Show();
+            this.Hide();
+        }
 
+        private void btnPaquetes_Click(object sender, EventArgs e)
+        {
+            Paquetes ventanaPaquetes = new Paquetes();
+            ventanaPaquetes.FormClosed += (s, args) => this.Show();
+            ventanaPaquetes.Show();
+            this.Hide();
+        }
+
+        private void btnReportes_Click(object sender, EventArgs e)
+        {
+            Reporte2 ventanaReporte = new Reporte2();
+            ventanaReporte.FormClosed += (s, args) => this.Show();
+            ventanaReporte.Show();
+            this.Hide();
+        }
+
+        private void btnPilotos_Click(object sender, EventArgs e)
+        {
+            PilotosForm ventanaPilotos = new PilotosForm();
+            ventanaPilotos.FormClosed += (s, args) => this.Show();
+            ventanaPilotos.Show();
+            this.Hide();
+        }
+
+        private void btnSucursales_Click(object sender, EventArgs e)
+        {
+            Sucursales ventanaSucursales = new Sucursales();
+            ventanaSucursales.FormClosed += (s, args) => this.Show();
+            ventanaSucursales.Show();
+            this.Hide();
+        }
+
+        private void btn_cerrar_sesion_Click(object sender, EventArgs e)
+        {
+            Login ventanaLogin = new Login();
+            ventanaLogin.FormClosed += (s, args) => this.Show();
+            ventanaLogin.Show();
+            this.Hide();
         }
     }
 }
