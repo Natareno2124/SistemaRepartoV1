@@ -13,11 +13,11 @@ namespace SistemaRepartoG4.Clases
         {
 
 
-            string servidor = "localhost";
+            string servidor = "192.168.0.8";
 
-            string database = "SistemaReparto2";
-            string usuario = "root";
-            string password = "1234";
+            string database = "SistemaReparto";
+            string usuario = "usuprueba";
+            string password = "123456";
 
             string puerto = "3306";
 
