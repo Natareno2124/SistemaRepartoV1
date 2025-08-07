@@ -1,4 +1,5 @@
-﻿using SistemaRepartoG4.Clases;
+﻿using MySql.Data.MySqlClient;
+using SistemaRepartoG4.Clases;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,13 +17,34 @@ namespace SistemaRepartoG4
         public MisEntregas()
         {
             InitializeComponent();
-            this.Load += Paquetes_Load;
+            this.Load += MostrarPedido;
         }
 
-        private void Paquetes_Load(object sender, EventArgs e)
+        private void MostrarPedido(object sender, EventArgs e)
         {
-            // esto llamara al CRUD par que se muestren los datos en el dataGridView
-            PaquetesCRUD.MostrarPaquetes(dataGridViewPaquetes);
+            
+            MisEntregas.MostrarPedido(dataGridViewPedidos);
+        }
+
+        public static void MostrarPedido(DataGridView dgv)
+        {
+            using (MySqlConnection conexion = ConectarDB.establecerConexion())
+            {
+                try
+                {
+                    conexion.Open();
+                    string query = "SELECT * FROM tbl_pedido";
+                    MySqlDataAdapter adaptador = new MySqlDataAdapter(query, conexion);
+                    System.Data.DataTable tabla = new System.Data.DataTable();
+                    adaptador.Fill(tabla);
+                    dgv.DataSource = tabla;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al mostrar pedido: " + ex.Message);
+                }
+            }
+
         }
 
         private void btnReportar_Click(object sender, EventArgs e)
@@ -85,13 +107,13 @@ namespace SistemaRepartoG4
 
             bool encontrado = false;
 
-            foreach (DataGridViewRow fila in dataGridViewPaquetes.Rows)
+            foreach (DataGridViewRow fila in dataGridViewPedidos.Rows)
             {
                 if (fila.Cells["id_guia_madre"].Value != null &&
                     fila.Cells["id_guia_madre"].Value.ToString() == guiaBuscar)
                 {
                     fila.Selected = true;
-                    dataGridViewPaquetes.FirstDisplayedScrollingRowIndex = fila.Index; 
+                    dataGridViewPedidos.FirstDisplayedScrollingRowIndex = fila.Index; 
                     encontrado = true;
                     break;
                 }
@@ -102,5 +124,7 @@ namespace SistemaRepartoG4
                 MessageBox.Show("No se encontró una fila con esa guía madre.");
             }
         }
+
+
     }
 }
